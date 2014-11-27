@@ -19,6 +19,7 @@ stylesheets[all][] = 'css/blocks.css'
 stylesheets[all][] = 'css/navigation.css'
 stylesheets[all][] = 'css/fonts.css'
 stylesheets[all][] = 'css/typo.css'
+stylesheets[all][] = 'css/custom.css'
 
 ; Seperate CSS3 to css3.css
 stylesheets[all][] = 'css/css3.css'

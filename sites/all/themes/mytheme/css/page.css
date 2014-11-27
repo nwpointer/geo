@@ -182,6 +182,7 @@ body.front #main-content .region-content {
   font-weight: 100;
   line-height: 96px;
   min-height: 96px;
+  background-size: cover !important;
 }
 
 #main-title-outer .container {

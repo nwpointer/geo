@@ -65,13 +65,13 @@ function tb_university_preprocess_node(&$vars) {
   }
   
   $vars['first_image'] = false;
-  foreach($vars['content'] as $key => $image) {
-    if(isset($image['#field_type']) && isset($image['#weight']) && $image['#weight'] == -1 && $image['#field_type'] == 'image') {
-      $vars['first_image'] = drupal_render($image);
-      unset($vars['content'][$key]);
-      break;
-    }
-  }
+  // foreach($vars['content'] as $key => $image) {
+  //   if(isset($image['#field_type']) && isset($image['#weight']) && $image['#weight'] == -1 && $image['#field_type'] == 'image') {
+  //     $vars['first_image'] = drupal_render($image);
+  //     unset($vars['content'][$key]);
+  //     break;
+  //   }
+  // }
 
 }
 

@@ -96,8 +96,10 @@
       ?>
     </div>
   <?php endif; ?>
+
+  <?php #$first_image = "<img src='http://sobrefotos.com/wp-content/uploads/2009/03/colores-en-rusia.jpg'>"?>
  
-  <?php if($first_image) print $first_image?>
+  <?php #if($first_image) print $first_image ?>
   <?php if ($title && !$page): ?>
     <div class="header article-header">
       <?php print render($title_prefix); ?>

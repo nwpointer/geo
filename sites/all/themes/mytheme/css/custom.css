@@ -1,0 +1,10 @@
+#header-wrapper{
+	display: none;
+}
+
+#slideshow-wrapper{
+	/*max-height: 500px;*/
+}
+.region-slideshow .views-field-field-slideshow:after, .region-slideshow .views-field-field-slideshow:before{
+	display: none;
+}

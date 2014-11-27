@@ -156,6 +156,7 @@
     <!-- PANEL FIRST -->
     <div id="panel-first-wrapper" class="wrapper panel panel-first">
       <div class="container <?php print $grid; ?> clearfix">
+
         <?php print $panel_first; ?>
       </div>
     </div>
@@ -170,11 +171,14 @@
   <!-- //PANEL SECOND -->
   <?php endif; ?>
 
+  <!-- CUSTOMIZED -->
+  <?php $page_header = "style=" . "background:url('http://sp.ria.ru/images/15619/60/156196082.jpg')"; ?>
+
   <div id="main-wrapper" class="wrapper">
 	<?php if(!$is_front): ?>
 		<?php print render($title_prefix); ?>
 			<?php if ($title): ?>
-			 <div id="main-title-outer">
+			 <div id="main-title-outer" <?php print $page_header ?>>
 				 <div class="container clearfix">
 					<h1 id="page-title"><span><?php print $title; ?></span></h1>
 				 </div>
