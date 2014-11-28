@@ -1,10 +1,12 @@
 (function ($) {
   var options = {
-    valueNames: [ "title", "country" ],
+    valueNames: [ "title", "country", "path" ],
     item: '<li><h3 class="title"></h3><p class="country"></p></li>'
   };
 
-  window.userList = new List("users", options);
+  
+
+  App.programList = new List("programs", options);
 
   App.requestPrograms();
 

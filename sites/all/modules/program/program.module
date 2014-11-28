@@ -15,14 +15,14 @@ function program_search() {
 	
 	drupal_add_js($program_module_path .'/js/libs/list.js', array('scope'=>'footer') );
   drupal_add_js($program_module_path .'/js/libs/underscore.js', array('scope'=>'footer') );
-  drupal_add_js($program_module_path .'/js/ajax.js', array('scope'=>'footer') );
+  drupal_add_js($program_module_path .'/js/api.js', array('scope'=>'footer') );
 	drupal_add_js($program_module_path .'/js/program.js', array('scope'=>'footer'));
 	drupal_add_css(
 		$program_module_path . '/program.css', 
 		array('group' => CSS_DEFAULT, 'type' => 'file')
 	);
   return array('#markup' => '
-  	<div id="users">
+  	<div id="programs">
         <input class="search" placeholder="Search" />
         <button class="sort" data-sort="title">
           Sort by title
@@ -31,10 +31,6 @@ function program_search() {
           Sort by country
         </button>
         <ul class="list">
-          <li>
-            <h3 class="title">Jonny Stromberg</h3>
-            <p class="country">1986</p>
-          </li>
         </ul>
       </div>
   ');
