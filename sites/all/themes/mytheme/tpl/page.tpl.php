@@ -172,13 +172,13 @@
   <?php endif; ?>
 
   <!-- CUSTOMIZED -->
-  <?php $page_header = "style=" . "background:url('http://sp.ria.ru/images/15619/60/156196082.jpg')"; ?>
+  <?php #$page_header_background = "style=" . "background:url('http://sp.ria.ru/images/15619/60/156196082.jpg')"; ?>
 
   <div id="main-wrapper" class="wrapper">
 	<?php if(!$is_front): ?>
 		<?php print render($title_prefix); ?>
 			<?php if ($title): ?>
-			 <div id="main-title-outer" <?php print $page_header ?>>
+			 <div id="main-title-outer" <?php if(isset($page_header_background)){ print $page_header_background; } ?>>
 				 <div class="container clearfix">
 					<h1 id="page-title"><span><?php print $title; ?></span></h1>
 				 </div>
