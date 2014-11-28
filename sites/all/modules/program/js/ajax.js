@@ -1,42 +1,78 @@
+window.App = {};
+App.programs = [];
+App.terms = [];
+window.Api = window.location.origin + '/rest';
+
 (function ($) {
-  window.programs = [];
-  window.programIDs = [];
-  var url = window.location.origin + "/rest/node";
-  $.ajax(url, {
-    success: function(data){
-      for(i=0; i<data.length; i++){
-        if(data[i].type == "program"){
-          window.programs.push(data[i]);
-        }
+  function request(url, callback){
+    $.ajax(url, {
+      success: function(data){
+         if(typeof callback === "function"){
+          callback(data);
+         }
+      },
+      error: function(){
+        console.log(url + "fail");
       }
-      render();
-    },
-    error: function(){
-      console.log("fail");
-    }
-  });
+    });
+  };
+  function synchronousRequest(url, callback){
+    $.ajax(url, {
+      success: function(data){
+         if(typeof callback === "function"){
+          response = callback(data);
+         }
+      },
+      error: function(){
+        console.log(url + "fail");
+      },
+      async: false
+    });
+  };
 
-  // function request(url, output, callback){
-  //   url = window.location.origin + url;
-  //   $.ajax(url, {
-  //     success: function(data){
-  //       for(i=0; i<data.length; i++){
-  //         if(data[i].type == "program"){
-  //           output.push(data[i]);
-  //         }
-  //       }
-  //       render();
-  //     },
-  //     error: function(){
-  //       console.log(url + "fail");
-  //     }
-  //   });
-  // }
-
-  function render(){
-    programs = window.programs;
-    for(i=0; i<programs.length; i++){
-      window.userList.add(programs[i]);
-    }
+  App.requestPrograms = function(){
+    url = Api + '/node';
+    request(url, function(data){
+      data = _.select(data, function(node){ return node.type == "program";});
+      App.programUrls = _.pluck(data, "uri");
+      _.each(App.programUrls, App.requestProgram);
+      
+    });
   }
+
+  App.requestProgram = function(url){
+    request(url, function(data){
+      program = {}
+      program.country = getTermName(data.field_country);
+      program.title = data.title;
+      program.academicStanding = getCustomfield(data.field_academic_standing);
+      App.programs.push(program);
+    });
+  }
+
+  function getCustomfield(field){
+      return field.und[0].value;
+  }
+
+  function getTermName(field){
+    term = getTerm(field);
+    return term.name;
+  }
+  function getTerm(field){
+    tid=field.und[0].tid;
+    url = Api + '/term/' + tid;
+    if(typeof App.terms[tid] === "undefined"){
+      synchronousRequest(url, function(data){
+        App.terms[data.tid] = data;
+      });
+    }
+    return App.terms[tid];
+  }
+
+  // function render(){
+  //   programs = window.programs;
+  //   for(i=0; i<programs.length; i++){
+  //     window.userList.add(programs[i]);
+  //   }
+  // }
 })(jQuery);

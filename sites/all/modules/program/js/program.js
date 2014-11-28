@@ -6,4 +6,6 @@
 
   window.userList = new List("users", options);
 
+  App.requestPrograms();
+
 })(jQuery);
