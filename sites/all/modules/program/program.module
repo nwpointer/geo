@@ -1,8 +1,8 @@
 <?php
 
 function program_menu() {
-	$items['program'] = array(
-	  'title' => 'program',
+	$items['programs'] = array(
+	  'title' => 'programs',
 	  'page callback' => 'program_search',
 	  'access arguments' => array('access simple page'),
 	);
@@ -23,7 +23,7 @@ function program_search() {
 	);
   return array('#markup' => '
   	<div id="programs">
-        <input class="search" placeholder="Search" />
+        <input class="search" placeholder="Search"/>
         <button class="sort" data-sort="title">
           Sort by title
         </button>

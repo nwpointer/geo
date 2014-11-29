@@ -3,8 +3,99 @@
 }
 
 #slideshow-wrapper{
-	/*max-height: 500px;*/
+	background:url('http://www.ahastudyabroad.org/images/Full_Banners/cover120.jpg');
+	background-size:cover;
+	height: 500px;
 }
 .region-slideshow .views-field-field-slideshow:after, .region-slideshow .views-field-field-slideshow:before{
 	display: none;
+}
+.list {
+  font-family:sans-serif;
+  margin:0;
+  padding:20px 0 0;
+}
+.region.region-slideshow{
+	position: relative;
+	top: 250px;
+}
+.region.region-slideshow h1{
+	color:white !important;
+	text-transform: capitalize;
+	max-width: 500px;
+	margin-top:-30px;
+	text-shadow: 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+input {
+  z-index: 900;
+  border:solid 1px #ccc;
+  border-radius: 5px;
+  padding:7px 14px;
+  margin-bottom:10px
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+}
+input:focus {
+  outline:none;
+  border-color:#aaa;
+}
+.list{
+  background: url("http://www.curtmfg.com/Content/img/ajax-loader3.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100px;
+}
+.sort {
+  padding:8px 30px;
+  border-radius: 6px;
+  border:none;
+  display:inline-block;
+  color:#fff;
+  text-decoration: none;
+  background-color: #28a8e0;
+  height:30px;
+  position: relative;
+  left:8px;
+}
+.sort:hover {
+  text-decoration: none;
+  background-color:#1b8aba;
+}
+.sort:focus {
+  outline:none;
+}
+.sort:after {
+	display: none;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
+}
+.sort.asc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:13px;
+  right:-5px;
+}
+.sort.desc:after {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #fff;
+  content:"";
+  position: relative;
+  top:-10px;
+  right:-5px;
 }

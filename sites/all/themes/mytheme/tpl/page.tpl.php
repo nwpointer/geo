@@ -172,7 +172,13 @@
   <?php endif; ?>
 
   <!-- CUSTOMIZED -->
-  <?php #$page_header_background = "style=" . "background:url('http://sp.ria.ru/images/15619/60/156196082.jpg')"; ?>
+  <?php 
+  if(isset($node->field_header_background['und'][0]['uri'])){
+  $page_header_background_uri = $node->field_header_background['und'][0]['uri'];
+  $page_header_backgroung_src = file_create_url($page_header_background_uri);
+  $page_header_background = "style=" . "background:url('". $page_header_backgroung_src ."')"; 
+  }
+  ?>
 
   <div id="main-wrapper" class="wrapper">
 	<?php if(!$is_front): ?>

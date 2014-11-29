@@ -36,6 +36,7 @@ scripts[] = 'js/jquery.matchHeights.min.js'
 scripts[] = 'js/tb_university.js'
 scripts[] = 'js/tb_responsive.js'
 scripts[] = 'js/tb.plugins.js'
+scripts[] = 'js/programSearchbar.js'
 
 ; Responsive
 stylesheets[only screen and (min-width: 959px) and (max-width: 1049px)][] = 'css/screens/tablet.css'

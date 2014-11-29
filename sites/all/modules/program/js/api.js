@@ -1,5 +1,6 @@
 window.App = {};
 App.terms = [];
+App.programView = {};
 window.Api = window.location.origin + '/rest';
 
 (function ($) {
@@ -35,7 +36,6 @@ window.Api = window.location.origin + '/rest';
       data = _.select(data, function(node){ return node.type == "program";});
       App.programUrls = _.pluck(data, "uri");
       _.each(App.programUrls, App.requestProgram);
-      console.log('nodes loaded');
     });
   }
 
@@ -46,7 +46,9 @@ window.Api = window.location.origin + '/rest';
       program.title = data.title;
       program.path = data.path;
       program.academicStanding = getCustomfield(data.field_academic_standing);
-      App.programList.add(program);
+      App.programView.render(program);
+
+      
     });
   }
 
