@@ -12,7 +12,9 @@ function getParameterByName(name) {
 
   var options = {
     valueNames: [ "title", "country", "path" ],
-    item: '<li><a class="program"><h3 class="title"></h3></a><p class="country"></p></li>'
+    item: '<li><a class="program"><h3 class="title"></h3></a><p class="country"></p></li>',
+    page: 10,
+    plugins: [ ListPagination({}) ]
   };
 
   App.programList = new List("programs", options);
@@ -21,7 +23,6 @@ function getParameterByName(name) {
     App.programList.add(program);
     App.programList.search($("input.search").val());
     $('#programs li:last-child a.program').attr('href', program.path);
-    
   }
 
   App.requestPrograms();
