@@ -23,15 +23,21 @@ function program_search() {
 		array('group' => CSS_DEFAULT, 'type' => 'file')
 	);
   return array('#markup' => '
+
   	<div id="programs">
         <input class="search" placeholder="Search"/>
+        <button class="sort" data-sort="title">
+          search
+        </button>
         <div class="catagories">
-          <button class="sort" data-sort="title">
-            Sort by title
-          </button>
-          <button class="sort" data-sort="country">
-            Sort by country
-          </button>
+          <select name="filter" id="discipline">
+            <option selected disabled>filter by discipline</option>
+            <option value="one">math</option>
+          </select>
+          <select name="filter" id="term">
+            <option selected disabled>filter by term</option>
+            <option value="one">fall</option>
+          </select>
         </div>
         <ul class="list">
         </ul>
