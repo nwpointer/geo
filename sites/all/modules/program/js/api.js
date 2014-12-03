@@ -45,6 +45,7 @@ window.Api = window.location.origin + '/rest';
       program.country = getTermName(data.field_country);
       program.term = getTermName(data.field_term);
       program.title = data.title;
+      program.discipline = getTermName(data.field_discipline);
       program.url = data.path;
       program.academicStanding = getCustomfield(data.field_academic_standing);
       program.image = getBackground(data.field_header_background);

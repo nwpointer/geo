@@ -12,7 +12,7 @@ function getParameterByName(name) {
 
   var options = {
     valueNames: [ "title", "country" ],
-    item: '<li><a class="url"><div class="img-wrap"><img class="image" width="100%"></div><div class="content"><h3 class="title"></h3><p class="term"></p></div></a></li>' //,
+    item: '<li><a class="url"><div class="img-wrap"><img class="image" width="100%"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p></div></a></li>' //,
     //page: 3,
     //plugins: [ ListPagination({}) ]
   };
