@@ -13,8 +13,8 @@ function program_menu() {
 function program_search() {
 	$program_module_path = drupal_get_path('module', 'program');
 	
-	drupal_add_js($program_module_path .'/js/libs/list.js', array('scope'=>'footer') );
-  drupal_add_js($program_module_path .'/js/libs/list.pagination.js', array('scope'=>'footer') );
+	drupal_add_js($program_module_path .'/js/libs/listjs/dist/list.js', array('scope'=>'footer') );
+  drupal_add_js($program_module_path .'/js/libs/listjs/list.pagination.js', array('scope'=>'footer') );
   drupal_add_js($program_module_path .'/js/libs/underscore.js', array('scope'=>'footer') );
   drupal_add_js($program_module_path .'/js/api.js', array('scope'=>'footer') );
 	drupal_add_js($program_module_path .'/js/program.js', array('scope'=>'footer'));
