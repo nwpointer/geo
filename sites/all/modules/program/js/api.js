@@ -43,8 +43,9 @@ window.Api = window.location.origin + '/rest';
     request(url, function(data){
       program = {}
       program.country = getTermName(data.field_country);
+      program.term = getTermName(data.field_term);
       program.title = data.title;
-      program.path = data.path;
+      program.url = data.path;
       program.academicStanding = getCustomfield(data.field_academic_standing);
       program.image = getBackground(data.field_header_background);
       // console.log(program);
