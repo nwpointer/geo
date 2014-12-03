@@ -133,13 +133,13 @@
       <a class="tb-main-menu-button responsive-menu-button" href="javascript:void(0);" title="Navigation Icon">Navigation</a>
       <div class="container <?php print $grid; ?>">
         <div class="grid-inner clearfix">
-          <div id="mainlogo">
+          <!-- <div id="mainlogo">
             <?php if ($logo): ?>
               <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" id="logo">
                 <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
               </a>
             <?php endif; ?>
-          </div>
+          </div> -->
           <?php print $menu_bar; ?>
         </div>
       </div>
