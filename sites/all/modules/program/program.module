@@ -4,7 +4,7 @@ function program_menu() {
 	$items['programs'] = array(
 	  'title' => 'programs',
 	  'page callback' => 'program_search',
-	  'access arguments' => array('access simple page'),
+	  'access arguments' => array('access content'),
 	);
 
 	return $items;
@@ -25,18 +25,23 @@ function program_search() {
   return array('#markup' => '
   	<div id="programs">
         <input class="search" placeholder="Search"/>
-        <button class="sort" data-sort="title">
-          Sort by title
-        </button>
-        <button class="sort" data-sort="country">
-          Sort by country
-        </button>
+        <div class="catagories">
+          <button class="sort" data-sort="title">
+            Sort by title
+          </button>
+          <button class="sort" data-sort="country">
+            Sort by country
+          </button>
+        </div>
         <ul class="list">
         </ul>
         <br />
-        page:
-        <ul class="pagination">
-        
+        <!-- results: -->
+        <!-- <ul class="pag-nav">
+          <li id="first"><a><</a></li>
+          <li id="last"><a>></a></li>
+        </ul> -->
+        <ul class="pagination"> 
         </ul>
       </div>
   ');

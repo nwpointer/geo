@@ -1,3 +1,22 @@
+.superfish-1-select{
+  margin-top:.9rem;
+}
+
+#menu-bar-wrapper{
+  position: fixed;
+  width: 100%;
+}
+
+#page-title{
+  margin-top:65px;
+}
+.front #page{
+  margin-top: 29px;
+}
+.menu.sf-menu.sf-style-university li.active-trail a, .menu.sf-menu.sf-style-university li a.active{
+  border-top-color:rgba(0,0,0,.0) !important;
+}
+
 #header-wrapper{
 	display: none;
 }
@@ -45,7 +64,7 @@ input:focus {
   border-color:#aaa;
 }
 .list{
-  background: url("http://www.curtmfg.com/Content/img/ajax-loader3.gif");
+  /*background: url("http://www.curtmfg.com/Content/img/ajax-loader3.gif");*/
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100px;

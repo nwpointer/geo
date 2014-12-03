@@ -46,10 +46,26 @@ window.Api = window.location.origin + '/rest';
       program.title = data.title;
       program.path = data.path;
       program.academicStanding = getCustomfield(data.field_academic_standing);
+      program.image = getBackground(data.field_header_background);
+      // console.log(program);
       App.programView.render(program);
-
-      
     });
+  }
+
+  function getBackground(field){
+      if(typeof field.und === 'undefined'){
+        bk = 'http://abhijit67.blog.com/files/2012/02/mount-everast.jpg';
+      }else{
+        baseLocation = 'http://geo.local:8083/sites/geo.local/files/';
+        filename = field.und[0].filename;
+        bk = baseLocation + filename;
+      }
+     return bk;
+  }
+
+  function getEl(items){
+    item = items[items.length -1];
+    return $(item.elm);
   }
 
   function getCustomfield(field){
