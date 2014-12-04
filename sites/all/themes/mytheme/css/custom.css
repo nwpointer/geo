@@ -6,6 +6,17 @@
   margin-bottom: 1rem;
 }
 
+.region-slideshow p{
+  font-size: 12px;
+}
+
+a.sort{
+  height: 20px;
+  color:white;
+}
+a.sort:hover{
+  color:white;
+}
 
 p{
   max-width: 600px;

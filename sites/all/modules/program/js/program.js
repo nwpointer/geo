@@ -27,6 +27,8 @@ function getParameterByName(name) {
   App.programView.render = function(){
     App.programList.add(program);
     App.programList.add(program); 
+    // App.programList.add(program);
+    // App.programList.add(program);
     App.programList.search($("input.search").val());
     // $('#programs li:last-child a.program').attr('href', program.path);
     // $('#programs li:last-child img').attr('src', program.image);

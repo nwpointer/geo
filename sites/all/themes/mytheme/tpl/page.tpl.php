@@ -249,6 +249,15 @@
           <div id="sidebar-first-wrapper" class="sidebar tb-main-box <?php print $sidebar_first_width; ?> grid-last">
             <div class="grid-inner clearfix">
               <?php print $sidebar_first; ?>
+              <?php 
+                if(isset($node->field_application_link['und'][0]['value'])){
+                  echo('
+                    <a href="' .  $node->field_application_link['und'][0]['value'] . '"class="sort">
+                      apply now
+                    </a>
+                  ');
+                }
+              ?>
             </div>
           </div>
           <!-- /#SIDEBAR FIRST -->

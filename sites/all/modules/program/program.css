@@ -22,14 +22,10 @@
 }
 .pag-nav li{
   position: relative;
-  /*border-top:1px solid #f6f6f6;*/
   z-index: 10;
 }
 .pagination{
-  /*border:1px solid #f6f6f6;*/
   box-sizing:border-box;
-  /*padding:0px 32px 0px 29px;*/
-
 }
 .img-wrap{
   display:flex;
