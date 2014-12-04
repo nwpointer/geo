@@ -1,3 +1,16 @@
+#discipline{
+  margin-right: 8px;
+}
+
+.list li p{
+  font-size: 14px;
+}
+.list li h3{
+  font-size: 16px;
+  margin-bottom: -4px;
+  margin-top: 8px;
+}
+
 .pagination, .pag-nav{
   width: 100%;
   position: relative;
@@ -19,14 +32,25 @@
 
 }
 .img-wrap{
-  max-height: 147px;
-  overflow: hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  min-height: 127px;
+  max-height: 127px;
+}
+.img-wrap img {
+  flex-shrink:2;
+  min-width:170%;
+  min-height:100%;
+  min-height: 127px;
 }
 
 .catagories{
   display: inline-block;
   margin-top:8px;
-
+  float:right;
+  margin-right:20px;
 }
 
 .pagination li, .pag-nav li{

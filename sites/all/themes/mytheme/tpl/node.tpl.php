@@ -83,10 +83,10 @@
   <?php if ($display_submitted): ?>
     <div class="footer submitted">
       <?php print $user_picture; ?>
-      <?php print '<div class="time pubdate" title="' . $datetime . '">'.t($created_date).'</div>'; ?>
+      <?php #print '<div class="time pubdate" title="' . $datetime . '">'.t($created_date).'</div>'; ?>
       <div class="info-wrapper">
         <?php 
-          if($node_category) print '<span class="node-category"> <span class="category-in">'.t('In').' </span>'.render($node_category).'</span>';
+          #if($node_category) print '<span class="node-category"> <span class="category-in">'.t('In').' </span>'.render($node_category).'</span>'; 
           print '<span class="author">'.t('By').' '.$name.'</span>';
           print '<span class="comment-comments">'.render($comments_count).'</span>';
         ?>

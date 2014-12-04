@@ -1,3 +1,17 @@
+#main-content h3.field-label{
+  background: #66895C;
+  padding: .5rem;
+  color: #FFF;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+
+p{
+  max-width: 600px;
+  font-size: 16px;
+}
+
 .superfish-1-select{
   margin-top:.9rem;
 }
@@ -49,6 +63,10 @@
   max-width: 40px;
   max-height: 40px;
 
+}
+
+.search, #search-term{
+  min-width: 170px;
 }
 
 input {

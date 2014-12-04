@@ -1,5 +1,7 @@
 <?php
 
+include 'utilityFucntions.php';
+
 function program_menu() {
 	$items['programs'] = array(
 	  'title' => 'programs',
@@ -11,33 +13,33 @@ function program_menu() {
 }
 
 function program_search() {
-	$program_module_path = drupal_get_path('module', 'program');
-	
-	drupal_add_js($program_module_path .'/js/libs/listjs/dist/list.js', array('scope'=>'footer') );
-  drupal_add_js($program_module_path .'/js/libs/listjs/list.pagination.js', array('scope'=>'footer') );
-  drupal_add_js($program_module_path .'/js/libs/underscore.js', array('scope'=>'footer') );
-  drupal_add_js($program_module_path .'/js/api.js', array('scope'=>'footer') );
-	drupal_add_js($program_module_path .'/js/program.js', array('scope'=>'footer'));
-	drupal_add_css(
-		$program_module_path . '/program.css', 
-		array('group' => CSS_DEFAULT, 'type' => 'file')
-	);
+  $program_module_path = drupal_get_path('module', 'program');
+  
+  loadjs(array(
+      '/js/libs/listjs/dist/list.js',
+      '/js/libs/listjs/list.pagination.js',
+      '/js/libs/underscore.js',
+      'js/libs/jquery.sticky-kit.js',
+      '/js/api.js',
+      '/js/program.js'
+  ));
+
+  loadcss(array(
+    '/program.css'
+  ));
+
   return array('#markup' => '
 
   	<div id="programs">
-        <input class="search" placeholder="Search"/>
+        <input class="search" placeholder="Where do you want to study?"/>
         <button class="sort" data-sort="title">
           search
         </button>
         <div class="catagories">
-          <select name="filter" id="discipline">
-            <option selected disabled>filter by discipline</option>
-            <option value="one">math</option>
-          </select>
-          <select name="filter" id="term">
-            <option selected disabled>filter by term</option>
-            <option value="one">fall</option>
-          </select>
+        filter by:
+        ' . selectFrom('discipline')
+          .selectFrom('term') 
+        .'
         </div>
         <ul class="list">
         </ul>
