@@ -49,8 +49,10 @@ window.Api = window.location.origin + '/rest';
       program.url = data.path;
       program.academicStanding = getCustomfield(data.field_academic_standing);
       program.image = getBackground(data.field_header_background);
-      // console.log(program);
-      App.programView.render(program);
+      program.enrollment_required = getCustomfield(data.field_enrollment_required);
+      if(App.enrolled || program.enrollment_required == '0'){
+        App.programView.render(program);
+      }
     });
   }
 

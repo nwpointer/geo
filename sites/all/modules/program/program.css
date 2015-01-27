@@ -49,6 +49,8 @@
   margin-right:20px;
 }
 
+
+
 .pagination li, .pag-nav li{
   background:#eee;
   width: 19.5px;
@@ -184,4 +186,26 @@ input:focus {
   position: relative;
   top:-10px;
   right:-5px;
+}
+#question{
+  text-align: center;  
+  margin-bottom: 400px;
+}
+
+#programs{
+  display: none;
+}
+
+#enrollment_notice{
+  position: relative;
+  text-align: right;
+  right:20px;
+  top:-40px;
+  margin-bottom: -19px;
+  display: none;
+}
+
+#change{
+  color:#28A8E0;
+  text-decoration: underline;
 }

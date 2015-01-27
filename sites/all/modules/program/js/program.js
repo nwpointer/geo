@@ -6,13 +6,51 @@ function getParameterByName(name) {
 }
 
 (function ($) {
-  // make search tools sticky
-  // $('#programs').stick_in_parent();
+  // check for cookie
+  enrolled = App.getCookie("enrolled");
+  if(enrolled != ""){
+    showSearchResult(enrolled == "true" ? true : false);
+  }
 
+  // ask for enrollment status & set enrollment varaible
+  $('#yes').click(function(){
+    showSearchResult(true);
+    console.log('true!!!')
+  });
+  $('#no').click(function(){
+    showSearchResult(false);
+  });
+
+  $('#change').click(function(){
+    App.setCookie("");
+    $('#programs .list').empty();
+    App.programList.clear();
+    $('#enrollment_notice').hide();
+    $('#question').show();
+    $('#programs').hide();
+  });
+
+
+  function updateNotice(){
+    $('#enrollment_notice').show();
+    $('#enrollment_notice span').text(App.enrolled ? 'UO students' : 'All students');
+  }
+
+  // hide enrollment questioner
+  // show filtered results
+  function showSearchResult(enrolled){
+    App.enrolled = enrolled;
+    App.requestPrograms();
+    $('#question').hide();
+    $('#programs').show();
+    updateNotice();
+    
+    // save cookie
+    App.setCookie("enrolled", enrolled, 7);
+  }
 
   // search
   $("input.search").val(getParameterByName('searchterm'));
-
 
   var options = {
     valueNames: [ "title", "country" ],
@@ -26,7 +64,7 @@ function getParameterByName(name) {
 
   App.programView.render = function(){
     App.programList.add(program);
-    App.programList.add(program); 
+    // App.programList.add(program); 
     // App.programList.add(program);
     // App.programList.add(program);
     App.programList.search($("input.search").val());
@@ -34,7 +72,7 @@ function getParameterByName(name) {
     // $('#programs li:last-child img').attr('src', program.image);
   }
 
-  App.requestPrograms();
+  
 
  $('#discipline').change(function() {
    console.log( this.value); // or $(this).val()

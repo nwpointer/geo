@@ -21,6 +21,7 @@ function program_search() {
       '/js/libs/underscore.js',
       'js/libs/jquery.sticky-kit.js',
       '/js/api.js',
+      '/js/cookies.js',
       '/js/program.js'
   ));
 
@@ -29,8 +30,17 @@ function program_search() {
   ));
 
   return array('#markup' => '
+    <div id="enrollment_notice">
+      Showing results for: <span></span> <a id="change" href="#">change</a>
+    </div>
+    <div id="question">
+      Are you currently enrolled as a student of the University of Oregon? <br>
+      <button id="yes">yes</button>
+      <button id="no">no</button>
+    </div>
 
   	<div id="programs">
+    
         <input class="search" placeholder="Where do you want to study?"/>
         <button class="sort" data-sort="title">
           search
