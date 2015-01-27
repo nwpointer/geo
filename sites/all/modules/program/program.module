@@ -19,10 +19,11 @@ function program_search() {
       '/js/libs/listjs/dist/list.js',
       '/js/libs/listjs/list.pagination.js',
       '/js/libs/underscore.js',
-      'js/libs/jquery.sticky-kit.js',
+      '/js/sieve.js',
       '/js/api.js',
       '/js/cookies.js',
       '/js/program.js'
+
   ));
 
   loadcss(array(
