@@ -47,10 +47,7 @@ function program_search() {
           search
         </button>
         <div class="catagories">
-        filter by:
-        ' . selectFrom('discipline')
-          .selectFrom('term') 
-        .'
+        filter by:' . selectFrom(array('discipline', 'term')) .'
         </div>
         <ul class="list">
         </ul>

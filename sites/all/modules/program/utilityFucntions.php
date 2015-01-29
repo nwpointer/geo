@@ -1,6 +1,6 @@
 <?php 
 
-function getTermsfrom($taxonomy){
+function getOptionsfrom($taxonomy){
   $terms = array();
   $myvoc = taxonomy_vocabulary_machine_name_load($taxonomy);
   $tree = taxonomy_get_tree($myvoc->vid);
@@ -11,15 +11,30 @@ function getTermsfrom($taxonomy){
 }
 
 function selectFrom($taxonomy){
-  $terms = getTermsfrom($taxonomy);
-  $html = '<select name="filter" id="' . $taxonomy . '">';
-  $html .= '<option selected disabled value="null">filter by ' . $taxonomy . '</option>';
-  foreach($terms as $term){
-    $html .= '<option value="' . $term . '">' . $term . '</option>';
+  $terms = array();
+  $options = array();
+  $html = ' ';
+  foreach ($taxonomy as $term) {
+    array_push($terms, $term);
+    array_push($options, getOptionsfrom($term));
   }
-  $html .= '<option value="null"> All ' . $taxonomy . 's</option>';
-  $html .= '</select>';
+  
+  $html .= renderSelect('filter by', $terms);
+  $html .= '<select id="placeholder"></select>';
+  foreach ($options as $key => $value) {
+    $html .= renderSelect($terms[$key], $value); 
+  }
   return $html;
+}
+
+function renderSelect($term, $options){
+    $html = '<select name="filter" id="' . strtok($term, " ") . '">';
+    $html .= '<option selected disabled value="null">' . $term . '</option>';
+    foreach ($options as $value) {
+      $html .= '<option value="' . $value . '">' . $value . '</option>';
+    }
+    $html .= '</select>';
+    return $html;
 }
 
 function loadjs($scripts, $location = "footer"){

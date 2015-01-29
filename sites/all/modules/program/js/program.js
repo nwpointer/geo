@@ -98,6 +98,15 @@ function getParameterByName(name) {
    }
  });
 
+ $('.catagories select:not(#filter, #placeholder)').toggle();
+
+ $('#filter').change( function() {
+    // alert($(this).val());
+    $('#placeholder').hide();
+
+    var cat = $(this).val();
+    $('#' + cat).show();
+ });
  // App.programList.filter(function(item){
  //  if (item.values().id > 1) {
  //         return true;
