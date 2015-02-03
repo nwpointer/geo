@@ -101,11 +101,16 @@ function getParameterByName(name) {
  $('.catagories select:not(#filter, #placeholder)').toggle();
 
  $('#filter').change( function() {
-    // alert($(this).val());
     $('#placeholder').hide();
+    $('select:not(#filter)').hide();
 
-    var cat = $(this).val();
-    $('#' + cat).show();
+    var catagory = $(this).val();
+    $('#' + catagory).show();
+
+    if($(this).val() == 'reset'){
+      App.programList.filter();
+      $('#filter').val('null');
+    }
  });
  // App.programList.filter(function(item){
  //  if (item.values().id > 1) {

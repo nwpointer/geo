@@ -18,9 +18,11 @@ function selectFrom($taxonomy){
     array_push($terms, $term);
     array_push($options, getOptionsfrom($term));
   }
+
+
   
-  $html .= renderSelect('filter by', $terms);
-  $html .= '<select id="placeholder"></select>';
+  $html .= renderSelect('filter', $terms);
+  // $html .= '<select id="placeholder"></select>';
   foreach ($options as $key => $value) {
     $html .= renderSelect($terms[$key], $value); 
   }
@@ -33,6 +35,7 @@ function renderSelect($term, $options){
     foreach ($options as $value) {
       $html .= '<option value="' . $value . '">' . $value . '</option>';
     }
+    $html .= '<option id="reset" value="reset">reset</option>';
     $html .= '</select>';
     return $html;
 }
