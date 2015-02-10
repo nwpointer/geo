@@ -15,7 +15,7 @@ function getParameterByName(name) {
   // ask for enrollment status & set enrollment varaible
   $('#yes').click(function(){
     showSearchResult(true);
-    console.log('true!!!')
+    // console.log('true!!!')
   });
   $('#no').click(function(){
     showSearchResult(false);
@@ -23,11 +23,11 @@ function getParameterByName(name) {
 
   $('#change').click(function(){
     App.setCookie("");
-    $('#programs .list').empty();
-    App.programList.clear();
+    $('#programList .list').empty();
+    App.programs.clear();
     $('#enrollment_notice').hide();
     $('#question').show();
-    $('#programs').hide();
+    $('#programList').hide();
   });
 
 
@@ -40,9 +40,9 @@ function getParameterByName(name) {
   // show filtered results
   function showSearchResult(enrolled){
     App.enrolled = enrolled;
-    App.requestPrograms();
+    App.programs.multiFresh();
     $('#question').hide();
-    $('#programs').show();
+    $('#programList').show();
     updateNotice();
     
     // save cookie
@@ -52,66 +52,66 @@ function getParameterByName(name) {
   // search
   $("input.search").val(getParameterByName('searchterm'));
 
-  var options = {
-    valueNames: [ "title", "country" ],
-    item: '<li><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p></div></a></li>'//,
-    //page: 6,
-    //plugins: [ ListPagination({}) ]
-  };
+  // var options = {
+  //   valueNames: [ "title", "country" ],
+  //   item: '<li><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p></div></a></li>'//,
+  //   //page: 6,
+  //   //plugins: [ ListPagination({}) ]
+  // };
 
-  App.programList = new List("programs", options);
+  // App.programList = new List("programs", options);
   
 
-  App.programView.render = function(){
-    App.programList.add(program);
-    // App.programList.add(program); 
-    // App.programList.add(program);
-    // App.programList.add(program);
-    // App.programList.search($("input.search").val());
-    // $('#programs li:last-child a.program').attr('href', program.path);
-    // $('#programs li:last-child img').attr('src', program.image);
-  }
+  // App.programView.render = function(){
+  //   App.programList.add(program);
+  //   // App.programList.add(program); 
+  //   // App.programList.add(program);
+  //   // App.programList.add(program);
+  //   // App.programList.search($("input.search").val());
+  //   // $('#programs li:last-child a.program').attr('href', program.path);
+  //   // $('#programs li:last-child img').attr('src', program.image);
+  // }
 
   
 
- $('#discipline').change(function() {
-   console.log( this.value); // or $(this).val()
-   selection = this;
-   if(this.value =='null'){
-    App.programList.filter();
-   }else{
-    App.programList.filter(function(item){
-      return item.values().discipline == selection.value;
-    });
-   }
- });
+ // $('#discipline').change(function() {
+ //   console.log( this.value); // or $(this).val()
+ //   selection = this;
+ //   if(this.value =='null'){
+ //    App.programList.filter();
+ //   }else{
+ //    App.programList.filter(function(item){
+ //      return item.values().discipline == selection.value;
+ //    });
+ //   }
+ // });
 
- $('#term').change(function() {
-   console.log( this.value); // or $(this).val()
-   selection = this;
-   if(this.value =='null'){
-    App.programList.filter();
-   }else{
-    App.programList.filter(function(item){
-      return item.values().term == selection.value;
-    });
-   }
- });
+ // $('#term').change(function() {
+ //   console.log( this.value); // or $(this).val()
+ //   selection = this;
+ //   if(this.value =='null'){
+ //    App.programList.filter();
+ //   }else{
+ //    App.programList.filter(function(item){
+ //      return item.values().term == selection.value;
+ //    });
+ //   }
+ // });
 
- $('.catagories select:not(#filter, #placeholder)').toggle();
+ // $('.catagories select:not(#filter, #placeholder)').toggle();
 
- $('#filter').change( function() {
-    $('#placeholder').hide();
-    $('select:not(#filter)').hide();
+ // $('#filter').change( function() {
+ //    $('#placeholder').hide();
+ //    $('select:not(#filter)').hide();
 
-    var catagory = $(this).val();
-    $('#' + catagory).show();
+ //    var catagory = $(this).val();
+ //    $('#' + catagory).show();
 
-    if($(this).val() == 'reset'){
-      App.programList.filter();
-      $('#filter').val('null');
-    }
- });
+ //    if($(this).val() == 'reset'){
+ //      App.programList.filter();
+ //      $('#filter').val('null');
+ //    }
+ // });
  // App.programList.filter(function(item){
  //  if (item.values().id > 1) {
  //         return true;

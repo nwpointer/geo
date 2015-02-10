@@ -43,8 +43,7 @@ window.Api = window.location.origin + '/rest';
   App.requestProgram = function(url){
     callback = this.callback;
     request(url, function(data){
-      // converts data to consumable format
-      
+      // converts data to consumable format 
       program = {
         country: getTermName(data.field_country),
         term: getTermName(data.field_term),
@@ -55,12 +54,10 @@ window.Api = window.location.origin + '/rest';
         image: getBackground(data.field_header_background),
         enrollment_required: getCustomfield(data.field_enrollment_required)
       };
-      // if(App.enrolled || program.enrollment_required == '0'){
-        // App.programView.render(program);
-        // console.log(program);
-      // }
-      // this.callback();
-      this.callback();
+      if(App.enrolled || program.enrollment_required == '0'){
+        this.callback();
+        console.log(program);
+      }
     });
   }
 

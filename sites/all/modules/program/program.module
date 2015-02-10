@@ -31,8 +31,8 @@ function program_search() {
       '/js/jquery.multiple-select.js',
       '/js/api.js',
       '/js/cookies.js',
+      '/index.js',
       '/js/program.js',
-      '/index.js'
   ));
 
   loadcss(array(

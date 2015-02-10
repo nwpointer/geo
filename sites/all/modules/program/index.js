@@ -3,12 +3,14 @@
 //list.js initializations
 var options = { 
   valueNames: [ 'discipline', 'country', 'term'] ,
-  item: '<li><a class="discipline"></a> <br /><span class="url"></span><p class="country"></p></li>'//,
+  // item: '<li><a class="discipline"></a> <br /><span class="url"></span><p class="country"></p></li>'//,
+  item: '<li><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p></div></a></li>'
 };
 
 App.programs = new List('programList', options);
 
-App.requestPrograms(function(){
+App.programs.multiFresh = function(){
+  App.requestPrograms(function(){
   App.programs.add(program);
   App.programs.update();
   updateList();
@@ -32,10 +34,8 @@ App.requestPrograms(function(){
       placeholder: $(this).data('placeholder')
     });
   });
-
-
 });
-
+}
 
 var catagories = {}; // the catagories user can use from
 var validSelections = {}; // selectable options in select dropdown
