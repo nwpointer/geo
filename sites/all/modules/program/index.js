@@ -10,23 +10,30 @@ var options = {
 App.programs = new List('programList', options);
 
 App.programs.multiFresh = function(){
+  $(".ms-drop.bottom").empty();
+  
+  foreachCatagory(function(catagories){
+    validSelections[catagories] = [];
+    dropdownof(catagories).empty();
+  });
+
   App.requestPrograms(function(){
   App.programs.add(program);
   App.programs.update();
   updateList();
 
-
   // update mulit-select
   for (var property in program) {
-    // console.log(validSelections[property]);
     if(validSelections[property]){
+
       validSelections[property].push(program[property]);
       $(function(){
         item = program[property];
-        dropdownof(property).append('<option value="'+item+'">'+ item +'</option>')
+        $("." + property + "_s").append('<option class="'+ item +'"value="'+item+'">'+ item +'</option>');
       });
     }
   };
+
   $('select').each(function(){
     $(this).multipleSelect({
       onClick: updateList,
@@ -46,6 +53,7 @@ foreachCatagory(function(catagories){
 
 //3 helper functions 
 var updateList = function(){
+
   App.programs.filter(function(item) {
     filter = true;
     foreachCatagory(function(option){
@@ -67,34 +75,34 @@ function dropdownof(option){
 }
  
 // after page load... 
-$(function(){
-  updateList();
-  // // register eventhandlers for 
-  // foreachCatagory(function(catagory){
-  //   dropdownof(catagory).change(updateList);
-  // });
+// $(function(){
+//   updateList();
+//   // // register eventhandlers for 
+//   // foreachCatagory(function(catagory){
+//   //   dropdownof(catagory).change(updateList);
+//   // });
   
-  // look through list for field values
-  _(App.programs.items).each(function(item){
-    foreachCatagory(function(catagory){
-      validSelections[catagory].push(item.values()[catagory]);
-    }); 
-  });
+//   // look through list for field values
+//   _(App.programs.items).each(function(item){
+//     foreachCatagory(function(catagory){
+//       validSelections[catagory].push(item.values()[catagory]);
+//     }); 
+//   });
 
-  // add unique field values to select drop down
-  foreachCatagory(function(option){
-    _(validSelections[option]).uniq().each(function(item){
-        dropdownof(option).append('<option value="'+item+'">'+ item +'</option>')
-      });
-  });
+//   // add unique field values to select drop down
+//   foreachCatagory(function(option){
+//     _(validSelections[option]).uniq().each(function(item){
+//         dropdownof(option).append('<option value="'+item+'">'+ item +'</option>')
+//       });
+//   });
 
-  // registers eventhandlers for multi select
-  $('select').each(function(){
-    $(this).multipleSelect({
-      onClick: updateList,
-      selectAll: true,
-      placeholder: $(this).data('placeholder')
-    });
-  });
-});
+//   // registers eventhandlers for multi select
+//   $('select').each(function(){
+//     $(this).multipleSelect({
+//       onClick: updateList,
+//       selectAll: true,
+//       placeholder: $(this).data('placeholder')
+//     });
+//   });
+// });
 })(jQuery);

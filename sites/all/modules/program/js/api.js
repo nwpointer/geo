@@ -56,7 +56,6 @@ window.Api = window.location.origin + '/rest';
       };
       if(App.enrolled || program.enrollment_required == '0'){
         this.callback();
-        console.log(program);
       }
     });
   }

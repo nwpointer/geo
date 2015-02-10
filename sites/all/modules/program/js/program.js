@@ -25,6 +25,7 @@ function getParameterByName(name) {
     App.setCookie("");
     $('#programList .list').empty();
     App.programs.clear();
+    $(".ms-drop.bottom ul").empty();
     $('#enrollment_notice').hide();
     $('#question').show();
     $('#programList').hide();
