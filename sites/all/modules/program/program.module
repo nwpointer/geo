@@ -15,20 +15,81 @@ function program_menu() {
 function program_search() {
   $program_module_path = drupal_get_path('module', 'program');
   
-  loadjs(array(
-      '/js/libs/listjs/dist/list.js',
-      '/js/libs/listjs/list.pagination.js',
-      '/js/libs/underscore.js',
-      '/js/sieve.js',
-      '/js/api.js',
-      '/js/cookies.js',
-      '/js/program.js'
+  // loadjs(array(
+  //     '/js/libs/listjs/dist/list.js',
+  //     '/js/libs/listjs/list.pagination.js',
+  //     '/js/libs/underscore.js',
+  //     '/js/sieve.js',
+  //     '/js/api.js',
+  //     '/js/cookies.js',
+  //     '/js/program.js',
+  //     '/index.js'
+  // ));
 
+  loadjs(array(
+      '/js/api.js',
+      '/index.js'
   ));
 
   loadcss(array(
-    '/program.css'
+    '/program.css',
+    '/multiple-select.css'
   ));
+
+  return array('#markup' => '
+    <div id="users">
+  <input class="search" placeholder="Search" />
+  <div id="catagories">
+  <select class="title_s" multiple style="width:120px;" data-placeholder="Choose a title">
+  </select>
+  <select class="url_s" multiple style="width:120px;" data-placeholder="Choose a url">
+  </select>
+
+  <select class="country_s" multiple style="width:150px;" data-placeholder="Choose a country">
+
+  </select>
+  </div>
+
+  <ul class="list">
+    <!--<li>
+      <h3 class="title">Jonny Wayn</h3>
+      <p class="country">1986</p>
+    </li>
+    <li>
+      <h3 class="title">Jonas</h3>
+      <p class="country">1985</p>
+    </li>
+    <li>
+      <h3 class="title">Jonas</h3>
+      <p class="country">1985</p>
+    </li>    
+    <li>
+      <h3 class="title">Jonas</h3>
+      <p class="country">1985</p>
+    </li>
+    <li>
+      <h3 class="title">Martina</h3>
+      <p class="country">1986</p>
+    </li>
+    <li>
+      <h3 class="title">Gustaf</h3>
+      <p class="country">1983</p>
+    </li> -->
+  </ul>
+
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//wenzhixin.net.cn/p/multiple-select/assets/multiple-select/jquery.multiple.select.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.0/list.min.js"></script>
+  ');
+
+
+
+
+
+
 
   return array('#markup' => '
     <div id="enrollment_notice">

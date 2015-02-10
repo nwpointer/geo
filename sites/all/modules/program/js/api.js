@@ -30,29 +30,37 @@ window.Api = window.location.origin + '/rest';
     });
   };
 
-  App.requestPrograms = function(){
+  App.requestPrograms = function(callback){
     url = Api + '/node';
     request(url, function(data){
       data = _.select(data, function(node){ return node.type == "program";});
       App.programUrls = _.pluck(data, "uri");
-      _.each(App.programUrls, App.requestProgram);
+      // _.each(App.programUrls, App.requestProgram);
+      App.programUrls.forEach(App.requestProgram.bind({callback:callback}));
     });
   }
 
   App.requestProgram = function(url){
+    callback = this.callback;
     request(url, function(data){
-      program = {}
-      program.country = getTermName(data.field_country);
-      program.term = getTermName(data.field_term);
-      program.title = data.title;
-      program.discipline = getTermName(data.field_discipline);
-      program.url = data.path;
-      program.academicStanding = getCustomfield(data.field_academic_standing);
-      program.image = getBackground(data.field_header_background);
-      program.enrollment_required = getCustomfield(data.field_enrollment_required);
-      if(App.enrolled || program.enrollment_required == '0'){
-        App.programView.render(program);
-      }
+      // converts data to consumable format
+      
+      program = {
+        country: getTermName(data.field_country),
+        term: getTermName(data.field_term),
+        title: data.title,
+        discipline: getTermName(data.field_discipline),
+        url: data.path,
+        academicStanding: getCustomfield(data.field_academic_standing),
+        image: getBackground(data.field_header_background),
+        enrollment_required: getCustomfield(data.field_enrollment_required)
+      };
+      // if(App.enrolled || program.enrollment_required == '0'){
+        // App.programView.render(program);
+        // console.log(program);
+      // }
+      // this.callback();
+      this.callback();
     });
   }
 
