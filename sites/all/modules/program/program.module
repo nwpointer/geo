@@ -27,7 +27,11 @@ function program_search() {
   // ));
 
   loadjs(array(
+      '/js/libs/listjs/dist/list.js',
+      '/js/jquery.multiple-select.js',
       '/js/api.js',
+      '/js/cookies.js',
+      '/js/program.js',
       '/index.js'
   ));
 
@@ -37,52 +41,38 @@ function program_search() {
   ));
 
   return array('#markup' => '
-    <div id="users">
+  <div id="enrollment_notice">
+    Showing results for: <span></span> <a id="change" href="#">change</a>
+  </div>
+  <div id="question">
+    Are you currently enrolled as a student of the University of Oregon? <br>
+    <button id="yes">yes</button>
+    <button id="no">no</button>
+  </div>
+  
+
+
+  <div id="programList">
   <input class="search" placeholder="Search" />
   <div id="catagories">
-  <select class="title_s" multiple style="width:120px;" data-placeholder="Choose a title">
-  </select>
-  <select class="url_s" multiple style="width:120px;" data-placeholder="Choose a url">
-  </select>
+    <select class="discipline_s" multiple style="width:150px;" data-placeholder="Choose a disipline">
+    </select>
 
-  <select class="country_s" multiple style="width:150px;" data-placeholder="Choose a country">
+    <select class="country_s" multiple style="width:150px;" data-placeholder="Choose a country">
+    </select>
 
-  </select>
+    <select class="term_s" multiple style="width:150px;" data-placeholder="Choose a term">
+    </select>
   </div>
 
   <ul class="list">
-    <!--<li>
-      <h3 class="title">Jonny Wayn</h3>
-      <p class="country">1986</p>
-    </li>
-    <li>
-      <h3 class="title">Jonas</h3>
-      <p class="country">1985</p>
-    </li>
-    <li>
-      <h3 class="title">Jonas</h3>
-      <p class="country">1985</p>
-    </li>    
-    <li>
-      <h3 class="title">Jonas</h3>
-      <p class="country">1985</p>
-    </li>
-    <li>
-      <h3 class="title">Martina</h3>
-      <p class="country">1986</p>
-    </li>
-    <li>
-      <h3 class="title">Gustaf</h3>
-      <p class="country">1983</p>
-    </li> -->
+    <!-- list contents are loaded ansycronously -->
   </ul>
 
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="//wenzhixin.net.cn/p/multiple-select/assets/multiple-select/jquery.multiple.select.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.0/list.min.js"></script>
   ');
 
 

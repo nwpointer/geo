@@ -1,10 +1,12 @@
+(function ($){
+
 //list.js initializations
 var options = { 
-  valueNames: [ 'title', 'country', 'url'] ,
-  item: '<li><a class="title"></a> <br /><span class="url"></span><p class="country"></p></li>'//,
+  valueNames: [ 'discipline', 'country', 'term'] ,
+  item: '<li><a class="discipline"></a> <br /><span class="url"></span><p class="country"></p></li>'//,
 };
 
-App.programs = new List('users', options);
+App.programs = new List('programList', options);
 
 App.requestPrograms(function(){
   App.programs.add(program);
@@ -17,7 +19,6 @@ App.requestPrograms(function(){
     // console.log(validSelections[property]);
     if(validSelections[property]){
       validSelections[property].push(program[property]);
-      console.log(validSelections[property]);
       $(function(){
         item = program[property];
         dropdownof(property).append('<option value="'+item+'">'+ item +'</option>')
@@ -34,7 +35,6 @@ App.requestPrograms(function(){
 
 
 });
-
 
 
 var catagories = {}; // the catagories user can use from
@@ -97,3 +97,4 @@ $(function(){
     });
   });
 });
+})(jQuery);
