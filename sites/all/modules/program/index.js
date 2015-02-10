@@ -7,6 +7,13 @@ var options = {
   item: '<li><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p></div></a></li>'
 };
 
+var catagories = {}; // the catagories user can use from
+var validSelections = {}; // selectable options in select dropdown
+// initialize validSelections
+foreachCatagory(function(catagories){
+  validSelections[catagories] = [];
+});
+
 App.programs = new List('programList', options);
 
 App.programs.multiFresh = function(){
@@ -18,42 +25,36 @@ App.programs.multiFresh = function(){
   });
 
   App.requestPrograms(function(){
-  App.programs.add(program);
-  App.programs.update();
-  updateList();
+    App.programs.add(program);
+    App.programs.search($("input.search").val());
+    App.programs.update();
+    updateList();
 
-  // update mulit-select
-  for (var property in program) {
-    if(validSelections[property]){
+    // update mulit-select
+    for (var property in program) {
+      if(validSelections[property]){
 
-      validSelections[property].push(program[property]);
-      $(function(){
-        item = program[property];
-        $("." + property + "_s").append('<option class="'+ item +'"value="'+item+'">'+ item +'</option>');
+        validSelections[property].push(program[property]);
+        $(function(){
+          item = program[property];
+          $("." + property + "_s").append('<option class="'+ item +'"value="'+item+'">'+ item +'</option>');
+        });
+      }
+    };
+
+    $('select').each(function(){
+      $(this).multipleSelect({
+        onClick: updateList,
+        selectAll: false,
+        placeholder: $(this).data('placeholder')
       });
-    }
-  };
-
-  $('select').each(function(){
-    $(this).multipleSelect({
-      onClick: updateList,
-      selectAll: true,
-      placeholder: $(this).data('placeholder')
     });
+    // App.programList.search($("input.search").val());
   });
-});
 }
-
-var catagories = {}; // the catagories user can use from
-var validSelections = {}; // selectable options in select dropdown
-// initialize validSelections
-foreachCatagory(function(catagories){
-  validSelections[catagories] = [];
-});
 
 //3 helper functions 
 var updateList = function(){
-
   App.programs.filter(function(item) {
     filter = true;
     foreachCatagory(function(option){
@@ -73,36 +74,4 @@ function foreachCatagory(f){
 function dropdownof(option){
   return $("." + option + "_s");
 }
- 
-// after page load... 
-// $(function(){
-//   updateList();
-//   // // register eventhandlers for 
-//   // foreachCatagory(function(catagory){
-//   //   dropdownof(catagory).change(updateList);
-//   // });
-  
-//   // look through list for field values
-//   _(App.programs.items).each(function(item){
-//     foreachCatagory(function(catagory){
-//       validSelections[catagory].push(item.values()[catagory]);
-//     }); 
-//   });
-
-//   // add unique field values to select drop down
-//   foreachCatagory(function(option){
-//     _(validSelections[option]).uniq().each(function(item){
-//         dropdownof(option).append('<option value="'+item+'">'+ item +'</option>')
-//       });
-//   });
-
-//   // registers eventhandlers for multi select
-//   $('select').each(function(){
-//     $(this).multipleSelect({
-//       onClick: updateList,
-//       selectAll: true,
-//       placeholder: $(this).data('placeholder')
-//     });
-//   });
-// });
 })(jQuery);
