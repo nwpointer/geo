@@ -27,13 +27,13 @@ App.programs.multiFresh = function(){
   App.requestPrograms(function(){
     App.programs.add(program);
     App.programs.search($("input.search").val());
-    App.programs.update();
-    updateList();
+    // App.programs.update();
+    // updateList();
 
     // update mulit-select
     for (var property in program) {
-      if(validSelections[property]){
-
+      if(validSelections[property] && validSelections[property].indexOf(program[property]) == -1){
+        console.log();
         validSelections[property].push(program[property]);
         $(function(){
           item = program[property];
