@@ -53,7 +53,7 @@ function program_search() {
 
 
   <div id="programList">
-  <input class="search" placeholder="Search" />
+  <input class="search" placeholder="Search" /> <br><br>
   <div id="catagories">
     <select class="discipline_s" multiple style="width:150px;" data-placeholder="Choose a disipline">
     </select>
@@ -64,7 +64,7 @@ function program_search() {
     <select class="term_s" multiple style="width:150px;" data-placeholder="Choose a term">
     </select>
   </div>
-
+<br><br>
   <ul class="list">
     <!-- list contents are loaded ansycronously -->
   </ul>

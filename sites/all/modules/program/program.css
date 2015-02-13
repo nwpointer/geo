@@ -45,7 +45,7 @@
 .catagories{
   display: inline-block;
   margin-top:8px;
-  float:right;
+  float:left;
   margin-right:20px;
 }
 
@@ -300,3 +300,10 @@ input:focus {
   right:-5px;
 } 
 
+#catagories, .search{
+  float:left !important;
+  /*margin-top:1rem;*/
+}
+.search{
+  margin-right:2rem;
+}

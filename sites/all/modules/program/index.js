@@ -2,7 +2,7 @@
 
 //list.js initializations
 var options = { 
-  valueNames: [ 'discipline', 'country', 'term'] ,
+  valueNames: [ 'discipline', 'country', 'term', 'pricing', 'regions'] ,
   // item: '<li><a class="discipline"></a> <br /><span class="url"></span><p class="country"></p></li>'//,
   item: '<li><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p></div></a></li>'
 };
