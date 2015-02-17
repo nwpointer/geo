@@ -63,6 +63,12 @@ function program_search() {
 
     <select class="term_s" multiple style="width:150px;" data-placeholder="Choose a term">
     </select>
+
+    <select class="price_s" multiple style="width:150px;" data-placeholder="Choose a price">
+    </select>
+
+    <select class="region_s" multiple style="width:150px;" data-placeholder="Choose a region">
+    </select>
   </div>
 <br><br>
   <ul class="list">

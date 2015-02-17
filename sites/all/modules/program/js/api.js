@@ -52,8 +52,11 @@ window.Api = window.location.origin + '/rest';
         url: data.path,
         academicStanding: getCustomfield(data.field_academic_standing),
         image: getBackground(data.field_header_background),
-        enrollment_required: getCustomfield(data.field_enrollment_required)
+        enrollment_required: getCustomfield(data.field_enrollment_required),
+        price: getCustomfield(data.field_program_fee),
+        region: getTermName(data.field_continent)
       };
+      console.log(program);
       if(App.enrolled || program.enrollment_required == '0'){
         this.callback();
       }
