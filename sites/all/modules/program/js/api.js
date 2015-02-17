@@ -53,7 +53,7 @@ window.Api = window.location.origin + '/rest';
         academicStanding: getCustomfield(data.field_academic_standing),
         image: getBackground(data.field_header_background),
         enrollment_required: getCustomfield(data.field_enrollment_required),
-        price: getCustomfield(data.field_program_fee),
+        price: getPricefield(data.field_program_fee),
         region: getTermName(data.field_continent)
       };
       console.log(program);
@@ -81,6 +81,17 @@ window.Api = window.location.origin + '/rest';
 
   function getCustomfield(field){
       return field.und[0].value;
+  }
+
+  function getPricefield(field){
+    price = parseInt(getCustomfield(field).replace(/\D/g,''));
+    if(price < 4000){
+      return "low";
+    }else if( price < 800000){
+      return "medium";
+    } else {
+      return "high";
+    }
   }
 
   function getTermName(field){

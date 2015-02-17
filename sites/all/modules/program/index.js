@@ -4,7 +4,7 @@
 var options = { 
   valueNames: [ 'discipline', 'country', 'term', 'price', 'region'],
   // item: '<li><a class="discipline"></a> <br /><span class="url"></span><p class="country"></p></li>'//,
-  item: '<li><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p></div></a></li>'
+  item: '<li><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h3 class="title"></h3><p class="term"></p><p class="discipline"></p><p class="price"></p></div></a></li>'
 };
 
 var catagories = {}; // the catagories user can use from
@@ -16,7 +16,7 @@ foreachCatagory(function(catagories){
 
 App.programs = new List('programList', options);
 
-App.programs.multiFresh = function(){
+App.programs.populate = function(){
   $(".ms-drop.bottom").empty();
   
   foreachCatagory(function(catagories){

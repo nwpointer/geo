@@ -41,7 +41,7 @@ function getParameterByName(name) {
   // show filtered results
   function showSearchResult(enrolled){
     App.enrolled = enrolled;
-    App.programs.multiFresh();
+    App.programs.populate();
     $('#question').hide();
     $('#programList').show();
     updateNotice();
