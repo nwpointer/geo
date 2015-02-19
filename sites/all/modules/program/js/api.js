@@ -85,12 +85,12 @@ window.Api = window.location.origin + '/rest';
 
   function getPricefield(field){
     price = parseInt(getCustomfield(field).replace(/\D/g,''));
-    if(price < 4000){
-      return "low";
-    }else if( price < 800000){
-      return "medium";
+    if(price < 6000){
+      return "$6,000";
+    }else if( price < 10000){
+      return "$6,000-$10,000";
     } else {
-      return "high";
+      return "$10,000+";
     }
   }
 
