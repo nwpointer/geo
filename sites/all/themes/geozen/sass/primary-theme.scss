@@ -1,0 +1,44 @@
+
+#footer{
+	background:#004F27;
+	.block{
+		@include zen-grid-flow-item( 4 );
+		// float:left;
+		// margin:0px
+	}
+}
+
+// .submitted{
+// 	display:none;
+// }
+
+// #footer{
+// 	
+// }
+
+#header{
+	background:url('../images/hero.jpg');
+	background-size:cover;
+	color:white;
+	padding:2rem 0rem 10rem;
+	text-shadow: 2px 2px rgba(0,0,0,.5);
+	a{
+		text-decoration:none;
+		color:white;
+	}
+
+	h1:not(.header__site-name){
+		font-size:3rem;
+
+	}
+}
+#logo, #site-name{
+	display:none;
+}
+
+// // .region-sidebar-first{
+// // 	width:30% !important;
+
+// // 	background:red;
+// // }
+

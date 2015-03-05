@@ -1,0 +1,6 @@
+guard 'livereload' do
+  watch(%r{css/.+\.(css)$})
+  watch(%r{templates/.+\.(html|php)})
+end
+
+guard :compass
