@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>style</title>
+	<link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+	<style>
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			/*font-size: 200px;*/
+			font-size: 14px;
+			font-family: 'Nixie One', cursive;
+		}
+		ul#breadcrumbs li{
+			display: inline;
+			background-color: #F0F0F0;
+			font-family: 'Open sans';
+			text-transform: uppercase;
+			letter-spacing: .4rem;
+			font-size:.7rem;
+			/*line-height: 1.5rem;*/
+			height: 3rem;
+			display: inline-block;
+			padding:0 .25rem 0 .25rem;
+			font-weight: 700;
+			color:rgba(0,0,0,.4);
+			margin:0 -1.25rem 0 2.5rem;
+			position: relative;
+			-webkit-transition: color .25s; /* For Safari 3.1 to 6.0 */
+    		transition: color .25s;
+		}
+
+		ul#breadcrumbs li:hover{
+			color:rgba(0,0,0,.7);
+		}
+		ul#breadcrumbs li:hover img{
+			opacity: 0.8;
+    		filter: alpha(opacity=80);
+		}
+
+		ul#breadcrumbs li span{
+			position: relative;
+			top:-1.25rem;
+		}
+
+		#breadcrumbs img{
+			height: 1.5rem;
+			position: relative;
+			top:.5rem;
+			opacity: 0.4;
+    		filter: alpha(opacity=40);
+    		-webkit-transition: opacity .25s; /* For Safari 3.1 to 6.0 */
+    		transition: opacity .25s;
+		}
+
+		ul#breadcrumbs li:after{
+			content: '';
+			width: 0; 
+			height: 0; 
+			border-top: 1.5rem solid rgba(255, 255, 255, 0);
+			border-bottom: 1.5rem solid rgba(255, 255, 255, 0);
+			border-left: 1rem solid #F0F0F0;
+			display: inline-block;
+			line-height: 0rem;
+			position: relative;
+			left:1.25rem;
+			/*float: left;*/
+		}
+		ul#breadcrumbs li:before{
+			content: '';
+			width: 0; 
+			height: 0; 
+			border-top: 1.5rem solid #F0F0F0;
+			border-bottom: 1.5rem solid #F0F0F0;
+			border-left: 1rem solid rgba(255, 255, 255, 0);
+			display: inline-block;
+			line-height: 0rem;
+			position: relative;
+			left:-1.25rem;
+			/*float: left;*/
+		}
+		#breadcrumbs li:first-child{
+			margin-left: 0px !important;
+		}
+		#breadcrumbs li:first-child:before{
+			border-left: 1.25rem solid #F0F0F0;
+			border-top: 0rem solid #F0F0F0;
+			border-bottom: 0rem solid #F0F0F0;
+
+		}
+
+		#bar{
+			height: 4rem;
+			background: #FED201;
+			display: inline-block;
+			width: 100%;
+		}
+		.content{
+			padding:2.8rem;
+			display: block;
+			width: 80%;
+			margin: auto;
+		}
+		h1,h2,h3,h4,h5,h6{
+			text-transform: capitalize;
+			margin-top: 1.5rem;
+		}
+		h1{
+			font-size:7.594em;
+			font-family: 'open sans';
+			text-transform: capitalize;
+			margin-bottom: 1.5rem;
+			line-height: 1em;
+		}
+		h2{
+			font-size:5.063em;
+		}
+		h3{
+			font-size:3.375em;
+			letter-spacing: .1rem;
+		}
+		h4{
+			font-size:2.25em;
+			font-family: georgia;
+  			color: rgba(0,0,0,.8);
+		}
+		h5{
+			font-size:1.5em;
+			font-family: georgia;
+ 			color: rgba(0,0,0,.8);
+		}
+		p{
+			margin-top:1rem;
+			font-family: 'open sans';
+			line-height: 1.5rem;
+			max-width: 50rem;
+		}
+		.blackBack{
+			color:white;
+			background: rgba(0,0,0,.8);
+			display: inline-block;
+			padding: 0 1rem;
+			text-transform: uppercase;
+			letter-spacing: .2rem;
+		}
+
+		#hero{
+			background: 
+			/*linear-gradient(
+		      rgba(0, 0, 0, 0.35), 
+		      rgba(50, 60, 20, 0.05)
+		    ),*/
+		    linear-gradient(
+		      rgba(0, 0, 0,.2), 
+		      rgba(0, 0, 0, .6)
+		    ),
+		    /*url("http://famouswonders.com/wp-content/uploads/2009/03/forum_romanum_rom.jpg"),*/
+		    url("https://photos-5.dropbox.com/t/2/AADDo7x3vI8MFIdCSZi153oYV4YkLXL4Fn3YZuZZG3NPLA/12/291310503/jpeg/32x32/3/_/1/2/forest-landscape-mountains-4019.jpeg/CKeX9IoBIAEgAiADKAEoAg/C3PrOKS9iCxL9n0RsQqh7_RBU0xgI3xWwzVDgJ2dk2E?size=1280x960"),
+		    url("http://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Trevi_Pano.jpg/1920px-Trevi_Pano.jpg"),
+			url("https://photos-3.dropbox.com/t/2/AACL0DK6LBdxrObOfOMEyB3b7w8ys3dHs9PdkLJ8Q_P7_w/12/291310503/jpeg/32x32/3/_/1/2/evening-forest-landscape-397.jpg/CKeX9IoBIAEgAiADKAEoAg/HWNUb16wkDlWf6yKu0uJI349kkGqwXNi4subOah9kqM?size=1280x960");
+			background-size:cover;
+			min-height: 45rem; 
+			/*text-align: center;*/
+		}
+
+		#hero p, #hero input{
+			max-width: 400px;
+		}
+
+		#hero h1{
+			
+			margin-bottom:3rem;
+			margin-top:3rem;
+			max-width: 1000px;
+			text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+			font-family: "nixie one";
+			text-transform: uppercase;
+			letter-spacing: .3rem;
+			/*text-align: center;
+			margin:auto;*/
+			
+			font-weight:100;
+		}
+
+		#hero img{
+			float:left;
+		}
+
+		#hero input[type="text"]{
+			background: none;
+			border:2px solid white;
+			background: rgba(0,0,0,.1);
+			color:white;
+			outline: none;
+			line-height: 2.5rem;
+			font-size: 1.25rem;
+			width:250px !important;
+			display: inline-block;
+		}
+
+		#hero input[type="submit"]{
+			 width:200px;
+			 line-height: 2.86rem;
+			 position: relative;
+			 top:-.08rem;
+			 outline:none;
+			left:.5rem;
+		}
+
+		#hero .content{
+			padding-top:1.5rem;
+		}
+
+		#footer{
+			height: 20rem;
+			background: rgba(0,0,0,.9);
+			position: relative;
+		}
+
+		#footer #bar{
+			position: absolute;
+			bottom: 0px;
+			background: #004F27;
+		}
+		.half{
+			width:50%;
+			padding:0 2rem 0 0;
+			box-sizing:border-box;
+			float:left;
+			overflow: auto;
+		}
+		hr{
+			background: rgba(0,0,0,.1);
+			border-top:0px;
+			border-left:0px;
+			height: 1px;
+		}
+		.center{
+			text-align: center;
+		}
+
+		form{
+			width:40%;
+			/*margin:auto;*/
+			display: block;
+			background: #fafafa;
+			border:1px solid #F0F0F0;
+			margin-top:1.5rem;
+			padding:1.5rem 2.5rem 3rem;
+			max-width: 20rem;
+			box-shadow: 1px 2px 4px rgba(0,0,0,.15);
+			float:left;
+		}
+
+		input{
+			width:100%;
+			line-height: 2rem;
+			padding:0 .75rem;
+			box-sizing:border-box;
+			margin-top:.25rem;
+			border:1px solid rgba(0,0,0,.2);
+			border-radius: .2rem;
+		}
+		label{
+			margin-top:1.5rem;
+			/*font-size: 1.5rem;*/
+			display: inline-block;
+			font-family: 'open sans';
+			font-size: 1rem;
+			text-transform: capitalize;
+			letter-spacing: .1rem; 
+			font-family: 'Open sans';
+			text-transform: uppercase;
+			letter-spacing: .15rem;
+			font-size:.75rem;
+			color: rgba(0,0,0,.5);
+			font-weight: 700;
+		}
+		input[type='submit']{
+			background: #8AB24F;
+			margin-top:2rem;
+			line-height: 3rem;
+			color:white;
+			font-size: 1rem;
+			border:0px;
+			text-transform: uppercase;
+			letter-spacing: .2rem;
+			font-weight: 100;
+			font-family: 'Open sans';
+		}
+		.white{
+			color:white;
+			text-shadow:1px 1px 1px solid black;
+		}
+		h1.white{
+			text-shadow:3px 3px 3px solid black;
+		}
+		aside{
+			margin-left:0%;
+			margin-right:10%;
+			margin-top: 1.5rem;
+		}
+		.avatar{
+			height: 8rem;
+			border-radius: 30rem;
+			float:left;
+			margin-right:1.5rem;
+		}
+
+		#hero ul{
+			list-style: none;
+			float: right;
+			margin-top:1rem;
+		}
+
+		#hero ul li {
+			display: inline;
+			color:white;
+			padding-left:1rem;
+			font-family: 'open sans';
+
+		}
+	</style>
+</head>
+<body>
+	
+
+	<section id="hero">
+		<div class="content">
+			<img src="logo.png" height="53" width="183" alt="">
+			<ul>
+				<li>faculty</li>
+				<li>parents</li>
+				<li>search</li>
+			</ul>
+			<br><br>
+			<!-- <hr> -->
+			<br><br><br><br><br>
+			<h1 class="white ">Live what you learn</h1>
+			
+			<!-- <p class="white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum pariatur, tempora, id repellendus nostrum ipsum distinctio veritatis beatae quaerat </p> -->
+			
+			<input type="text" placeholder="search">
+			<input type="submit" value="explore">
+		</div>
+	</section>
+	<section id="bar"></section>
+
+	<div class="content">
+		<ul id="breadcrumbs">
+		<li><span><img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-128.png" alt=""></span></li>
+		<li><span>country</span></li>
+		<li><span>program</span></li>
+		</ul>
+	</div>
+
+	<br>
+	<hr>
+	
+	<div class="content">
+		<h1>live what you learn</h1>
+		<h2>header</h2>
+		<h3>header</h3>
+		<h4>header</h4>
+		<h5>header</h5>
+		<br><br>
+		<h2 class="blackBack">header</h2>
+		<br> <br>
+		<h3 class="blackBack">header</h3>
+		<br><br><br>
+		<div class="half">
+			<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloribus unde nemo consectetur esse totam quam temporibus aspernatur quasi deserunt exercitationem ad illum veniam ipsam, provident est. Blanditiis, cum, enim!</p>
+			<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloribus unde nemo consectetur esse totam quam temporibus aspernatur quasi deserunt exercitationem ad illum veniam ipsam, provident est. Blanditiis, cum, enim!</p>
+			<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloribus unde nemo consectetur esse totam quam temporibus aspernatur quasi deserunt exercitationem ad illum veniam ipsam, provident est. Blanditiis, cum, enim!</p>
+		</div>
+		<div class="half">
+			<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloribus unde nemo consectetur esse totam quam temporibus aspernatur quasi deserunt exercitationem ad illum veniam ipsam, provident est. Blanditiis, cum, enim!</p>
+		</div>
+		<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+
+		
+	</div>
+	<div id="footer" style="background:rgba(0,0,0,.85)">
+		<br>
+		<h3 class="center" style="color:rgba(255,255,255,.25);">details</h3>
+	</div>
+	<div class="content">
+		<br>
+		<hr>
+		<br>
+	
+
+		<h3 class="center">search</h3>
+		<br>
+		<br><br>
+		<hr>
+		<br><br>
+		<br>
+		<aside class="half">
+			<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloribus unde nemo consectetur esse totam quam temporibus aspernatur quasi deserunt exercitationem ad illum veniam ipsam, provident est. Blanditiis, cum, enim!</p>
+			<p class="large">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, doloribus unde nemo consectetur esse totam quam temporibus aspernatur quasi deserunt exercitationem ad illum veniam ipsam, provident est. Blanditiis, cum, enim!</p>
+			<br><br>
+		<br><br>
+		
+		<img class="avatar" src="http://studyabroad.arcadia.edu/files/directory/square_shannon_peak.jpg" alt="">
+		<h5>Lorem hubbard</h5>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto natus numquam ab voluptate rem cum.</p>
+		</aside>
+		<form action="#">
+		<br>
+			<h5>test form</h5> <br>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			<label for="#">search field</label>
+			<input type="text">
+			<label for="#">search field</label>
+			<input type="text">
+			<input type="submit">
+		</form>
+		
+	</div>
+	
+	<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		<br><br><br><br><br><br>
+		
+		<br>
+
+		<br>
+		<br>
+		<br>
+		<br>
+	</div>
+	<br>
+		<br>
+		<br>
+		<br>
+		<br><br>
+		<br>
+		<br>
+		<br>
+		<br> <br>
+		<br>
+		<br>
+		<br>
+		<br>
+	
+
+	<section id="footer">
+		<section id="bar"></section>
+	</section>
+	
+	
+	
+
+
+</body>
+</html>
