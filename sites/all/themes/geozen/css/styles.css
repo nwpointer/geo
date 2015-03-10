@@ -111,7 +111,7 @@ audio:not([controls]) {
  */
 /* line 106, ../sass/_normalize.scss */
 html {
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+  font-family: "Helvetica";
   /* 1 */
   font-size: 100%;
   /* 3 */
@@ -1807,6 +1807,8 @@ tr.selected td {
   padding-left: 0;
   padding-right: 13.33333px;
   margin-right: 6.66667px;
+  float: left;
+  margin: 0px;
 }
 
 /* line 19, ../sass/primary-theme.scss */
@@ -1830,4 +1832,48 @@ tr.selected td {
 /* line 35, ../sass/primary-theme.scss */
 #logo, #site-name {
   display: none;
+}
+
+/* line 46, ../sass/primary-theme.scss */
+.node-type-program #content[role="main"] {
+  float: left;
+  width: 66.66667%;
+  margin-left: 25%;
+  margin-right: -91.66667%;
+  padding-bottom: 1rem;
+}
+/* line 52, ../sass/primary-theme.scss */
+.node-type-program .sidebar {
+  float: left;
+  width: 33.33333%;
+  margin-left: 0%;
+  margin-right: -33.33333%;
+}
+
+/* line 58, ../sass/primary-theme.scss */
+.page-node #content[role="main"] {
+  padding-bottom: 3rem;
+}
+
+/* line 63, ../sass/primary-theme.scss */
+footer {
+  padding: 3rem 0;
+  color: white;
+}
+/* line 66, ../sass/primary-theme.scss */
+footer h2, footer p {
+  font-weight: 100 !important;
+}
+/* line 69, ../sass/primary-theme.scss */
+footer a {
+  color: #ffff69;
+  font-weight: 100;
+}
+
+/* line 74, ../sass/primary-theme.scss */
+input[type="submit"] {
+  background: #05934b;
+  border: 0px;
+  color: white;
+  padding: 1rem 2rem;
 }

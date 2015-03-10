@@ -1,10 +1,10 @@
-
+@import "zen";
 #footer{
 	background:#004F27;
 	.block{
 		@include zen-grid-flow-item( 4 );
-		// float:left;
-		// margin:0px
+		float:left;
+		margin:0px
 	}
 }
 
@@ -41,4 +41,40 @@
 
 // // 	background:red;
 // // }
+
+.node-type-program{
+	#content[role="main"]{
+	@include zen-grid-item(8, 4);
+	padding-bottom:1rem; 
+	// border:1px solid black;
+	}
+
+	.sidebar{
+		@include zen-grid-item( 4,1 );
+	}
+}
+
+.page-node{
+	#content[role="main"]{
+		padding-bottom:3rem; 
+	}
+
+}
+footer{
+	padding:3rem 0;
+	color:white;
+	h2, p{
+		font-weight:100 !important;
+	}
+	a{
+		color:rgb(255, 255, 105);
+		font-weight: 100;
+	}
+}
+input[type="submit"]{
+	background: rgb(5, 147, 75);
+	border: 0px;
+	color: white;
+	padding: 1rem 2rem;
+}
 
