@@ -1,0 +1,52 @@
+body{
+	/*font-size: 200px;*/
+	font-size: 14px;
+	font-family: 'Nixie One', cursive;
+}
+
+h1,h2,h3,h4,h5,h6{
+			text-transform: capitalize;
+			margin-top: 1.5rem;
+		}
+		h1{
+			font-size:6.32875em;
+			font-family: 'open sans';
+			text-transform: capitalize;
+			margin-bottom: 1.5rem;
+			line-height: 1em;
+		}
+		h2{
+			font-size:5.063em;
+		}
+		h3{
+			font-size:3.375em;
+			letter-spacing: .1rem;
+		}
+		h4{
+			font-size:2.25em;
+			font-family: georgia;
+  			color: rgba(0,0,0,.8);
+		}
+		h5{
+			font-size:1.5em;
+			font-family: georgia;
+ 			color: rgba(0,0,0,.8);
+		}
+		p{
+			margin-top:1rem;
+			font-family: 'Open sans' !important;
+			line-height: 1.5rem;
+			max-width: 50rem;
+		}
+
+a{font-family:'open sans'}
+
+footer{
+	h2{font-size:1.5rem}
+}
+
+.region-sidebar-first{
+	h2{
+		font-size: 1.5rem;
+	}
+}

@@ -1,0 +1,69 @@
+/* line 1, ../sass/typography.scss */
+body {
+  /*font-size: 200px;*/
+  font-size: 14px;
+  font-family: 'Nixie One', cursive;
+}
+
+/* line 7, ../sass/typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+}
+
+/* line 11, ../sass/typography.scss */
+h1 {
+  font-size: 6.32875em;
+  font-family: 'open sans';
+  text-transform: capitalize;
+  margin-bottom: 1.5rem;
+  line-height: 1em;
+}
+
+/* line 18, ../sass/typography.scss */
+h2 {
+  font-size: 5.063em;
+}
+
+/* line 21, ../sass/typography.scss */
+h3 {
+  font-size: 3.375em;
+  letter-spacing: .1rem;
+}
+
+/* line 25, ../sass/typography.scss */
+h4 {
+  font-size: 2.25em;
+  font-family: georgia;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 30, ../sass/typography.scss */
+h5 {
+  font-size: 1.5em;
+  font-family: georgia;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 35, ../sass/typography.scss */
+p {
+  margin-top: 1rem;
+  font-family: 'Open sans' !important;
+  line-height: 1.5rem;
+  max-width: 50rem;
+}
+
+/* line 42, ../sass/typography.scss */
+a {
+  font-family: 'open sans';
+}
+
+/* line 45, ../sass/typography.scss */
+footer h2 {
+  font-size: 1.5rem;
+}
+
+/* line 49, ../sass/typography.scss */
+.region-sidebar-first h2 {
+  font-size: 1.5rem;
+}

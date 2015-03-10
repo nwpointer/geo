@@ -1,39 +1,84 @@
 @import "zen";
+$darkGreen: #004F27;
+$darkGrey: rgba(0,0,0,.9);
 #footer{
-	background:#004F27;
+	background:rgba(0,0,0,.875);
+
+	margin-top:1.5rem;
+
 	.block{
 		@include zen-grid-flow-item( 4 );
 		float:left;
 		margin:0px
 	}
 }
+.page-node{
+	#bar{
+			height: 4rem;
+			background: #FED201;
+			display: inline-block;
+			width: 100%;
+		}
+}
+.node-type-program #header{
+	min-height:10rem !important;
+}
 
-// .submitted{
-// 	display:none;
-// }
-
-// #footer{
-// 	
-// }
-
-#header{
-	background:url('../images/hero.jpg');
-	background-size:cover;
-	color:white;
-	padding:2rem 0rem 10rem;
-	text-shadow: 2px 2px rgba(0,0,0,.5);
+.page-node #header{
+	.links{
+		padding-top:2.5rem;
+		display: inline-block;
+	}
+	background: 
+			/*linear-gradient(
+		      rgba(0, 0, 0, 0.35), 
+		      rgba(50, 60, 20, 0.05)
+		    ),*/
+		    linear-gradient(
+		      rgba(0, 0, 0,.2), 
+		      rgba(0, 0, 0, .4)
+		    ),
+		    /*url("http://famouswonders.com/wp-content/uploads/2009/03/forum_romanum_rom.jpg"),*/
+		    url("https://photos-5.dropbox.com/t/2/AADDo7x3vI8MFIdCSZi153oYV4YkLXL4Fn3YZuZZG3NPLA/12/291310503/jpeg/32x32/3/_/1/2/forest-landscape-mountains-4019.jpeg/CKeX9IoBIAEgAiADKAEoAg/C3PrOKS9iCxL9n0RsQqh7_RBU0xgI3xWwzVDgJ2dk2E?size=1280x960"),
+		    url("http://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Trevi_Pano.jpg/1920px-Trevi_Pano.jpg"),
+			url("https://photos-3.dropbox.com/t/2/AACL0DK6LBdxrObOfOMEyB3b7w8ys3dHs9PdkLJ8Q_P7_w/12/291310503/jpeg/32x32/3/_/1/2/evening-forest-landscape-397.jpg/CKeX9IoBIAEgAiADKAEoAg/HWNUb16wkDlWf6yKu0uJI349kkGqwXNi4subOah9kqM?size=1280x960");
+			background-size:cover;
+			min-height: 45rem; 
 	a{
 		text-decoration:none;
 		color:white;
 	}
+
+	h1{
+			
+			margin-bottom:3rem;
+			margin-top:3rem;
+			max-width: 1000px;
+			text-shadow: 2px 2px 2px rgba(0,0,0,.2);
+			font-family: "nixie one";
+			text-transform: uppercase;
+			letter-spacing: .3rem;
+			/*text-align: center;
+			margin:auto;*/
+			color:white;
+			font-weight:100;
+		}
 
 	h1:not(.header__site-name){
 		font-size:3rem;
 
 	}
 }
-#logo, #site-name{
+.page-node #header h2{
 	display:none;
+}
+#site-name{
+	display:none;
+}
+
+#logo{
+	margin-bottom:3rem;
+	margin-top:3rem;
 }
 
 // // .region-sidebar-first{
@@ -44,13 +89,13 @@
 
 .node-type-program{
 	#content[role="main"]{
-	@include zen-grid-item(8, 4);
+	@include zen-grid-item(9, 5);
 	padding-bottom:1rem; 
 	// border:1px solid black;
 	}
 
 	.sidebar{
-		@include zen-grid-item( 4,1 );
+		@include zen-grid-item( 3,1 );
 	}
 }
 

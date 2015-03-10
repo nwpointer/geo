@@ -58,14 +58,37 @@
     <?php endif; ?>
 
     <?php print render($page['header']); ?>
+
+    <input type="text" placeholder="search">
+    <input type="submit" value="explore">
     </div>
   </header>
 
+  <div id="bar"></div>
+
+  
+
   <div id="main">
+
   <div id="page">
+    <ul id="breadcrumbs">
+        <?php 
+          $bc = drupal_get_breadcrumb();
+          foreach ($bc as $crumb) {
+            print("<li><span>". $crumb . "</span></li>");
+          }
+        ?>
+      </ul> 
+  </div>
+  <br>
+
+  <div id="page">
+     
     <div id="content" class="column" role="main">
       <?php print render($page['highlighted']); ?>
-      <?php print $breadcrumb; ?>
+
+      
+
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php if ($title): ?>
