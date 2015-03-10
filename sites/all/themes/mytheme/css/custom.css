@@ -154,3 +154,51 @@ input:focus {
 #programList{
   display: none;
 }
+
+#panel-first-wrapper .block-inner.clearfix{
+  /*border: 1px solid black;*/
+width: 25%;
+float: left;
+}
+
+#panel-first-wrapper h2.block-title, #panel-first-wrapper p{
+  font-size:1.5rem;
+}
+
+#panel-first-wrapper .grid-inner.clearfix{
+  border-top:1px solid rgba(51,51,51,.15);
+  margin-top:-6rem;
+  margin-bottom: -3rem;
+}
+
+.field-item{
+  background: none !important;
+  border: none !important;
+  display: block !important;
+  text-align: left !important;
+  margin: 0px 0px 0px 0px !important;
+}
+
+#block-fieldblock-node-program-default-field-dates-and-deadlines--2 h2, #block-fieldblock-node-program-default-body--2 h2{
+  background: #66895C;
+padding: .5rem;
+color: #FFF;
+font-weight: 500;
+margin-bottom: 1rem;
+max-width:600px;
+}
+.field-item li{
+ max-width:600px;
+}
+
+#mySideBar-first{
+  width:25%; float:right; position:relative; left:3rem; box-sizing:border-box;
+}
+#myPanelSecond{
+  width:75%; float:left;overflow:hidden;
+}
+@media (max-width: 850px) {
+  #mySideBar-first, #myPanelSecond{
+    width:100%;
+  }
+}

@@ -159,24 +159,9 @@
     <!-- /#SLIDESHOW -->
   <?php endif; ?>
 
-  <?php if($panel_first): ?>
-    <!-- PANEL FIRST -->
-    <div id="panel-first-wrapper" class="wrapper panel panel-first">
-      <div class="container <?php print $grid; ?> clearfix">
-
-        <?php print $panel_first; ?>
-      </div>
-    </div>
-    <!-- /#PANEL FIRST -->
-  <?php endif; ?>
   
-  <?php if (!empty($panel_second)): ?>
-  <!-- PANEL SECOND -->
-  <div id="panel-second-wrapper" class="wrapper panel panel-second">
-	<div class="container <?php print $panel_second_cols;?> <?php print $grid;?> clearfix"> <?php print $panel_second;?> </div>
-  </div>
-  <!-- //PANEL SECOND -->
-  <?php endif; ?>
+  
+  
 
   <!-- CUSTOMIZED -->
   <?php 
@@ -214,54 +199,84 @@
       <div class="<?php print nucleus_group_class("content, sidebar_first, sidebar_second"); ?>">
         <?php if ($content_width) :?>
         <!-- MAIN CONTENT -->
-          <div id="main-content" class="<?php print $content_width; ?> section">
+          <div id="main-content">
             <div class="grid-inner clearfix">
-			  <?php if ($title && $is_front): ?>
-				<?php print render($title_prefix); ?>
-				<h1 id="page-title"><?php print $title; ?></h1>
-				<?php print render($title_suffix); ?>
-			  <?php endif; ?> 	
-              <?php if ($tabs = render($tabs)): ?>
-                <div class="tabs"><?php print $tabs; ?></div>
+              
+              <?php if($panel_first): ?>
+                <!-- PANEL FIRST -->
+                <div id="panel-first-wrapper" class="wrapper panel panel-first">
+                  <div class="container <?php print $grid; ?> clearfix">
+
+                    <?php print $panel_first; ?>
+                  </div>
+                </div>
+                <!-- /#PANEL FIRST -->
               <?php endif; ?>
 
-              <?php if ($highlighted = render($page['highlighted'])):?>
-                <?php print $highlighted; ?>
+
+              
+
+
+      			  <!-- <div style="width:80%; float:left"> -->
+                <?php if ($title && $is_front): ?>
+                <?php print render($title_prefix); ?>
+                <h1 id="page-title"><?php print $title; ?></h1>
+                <?php print render($title_suffix); ?>
+                <?php endif; ?>   
+                <?php if ($tabs = render($tabs)): ?>
+                  <div class="tabs"><?php print $tabs; ?></div>
+                <?php endif; ?>
+
+                <?php if ($highlighted = render($page['highlighted'])):?>
+                  <?php print $highlighted; ?>
+                <?php endif; ?>
+
+                <?php print render($title_suffix); ?>
+
+                <?php if ($action_links = render($action_links)): ?>
+                  <ul class="action-links"><?php print $action_links; ?></ul>
+                <?php endif; ?>
+
+                <?php if ($content = render($page['content'])):?>
+                  <?php print $content; ?>
+                <?php endif; ?>
+
+                <?php print $feed_icons; ?>   
+             <!--  </div> -->
+
+             <div style="" id="myPanelSecond">
+              <?php if (!empty($panel_second)): ?>
+              <!-- PANEL SECOND -->
+              
+              <?php print $panel_second;?>
+              
+              <!-- //PANEL SECOND -->
+              <?php endif; ?>
+              </div>
+
+
+              <?php if (($sidebar_first = render($page['sidebar_first'])) && $sidebar_first_width) : ?>
+              <!-- SIDEBAR FIRST -->
+                <div style="" id="mySideBar-first">
+                  <?php print $sidebar_first; ?>
+                  <?php 
+                    if(isset($node->field_application_link['und'][0]['value'])){
+                      echo('
+                        <a href="' .  $node->field_application_link['und'][0]['value'] . '"class="sort">
+                          apply now
+                        </a>
+                      ');
+                    }
+                  ?>
+                </div>
+              <!-- /#SIDEBAR FIRST -->
               <?php endif; ?>
 
-              <?php print render($title_suffix); ?>
-
-              <?php if ($action_links = render($action_links)): ?>
-                <ul class="action-links"><?php print $action_links; ?></ul>
-              <?php endif; ?>
-
-              <?php if ($content = render($page['content'])):?>
-                <?php print $content; ?>
-              <?php endif; ?>
-
-              <?php print $feed_icons; ?>
             </div>
           </div>
         <!-- /#MAIN CONTENT -->
         <?php endif; ?>
-        <?php if (($sidebar_first = render($page['sidebar_first'])) && $sidebar_first_width) : ?>
-          <!-- SIDEBAR FIRST -->
-          <div id="sidebar-first-wrapper" class="sidebar tb-main-box <?php print $sidebar_first_width; ?> grid-last">
-            <div class="grid-inner clearfix">
-              <?php print $sidebar_first; ?>
-              <?php 
-                if(isset($node->field_application_link['und'][0]['value'])){
-                  echo('
-                    <a href="' .  $node->field_application_link['und'][0]['value'] . '"class="sort">
-                      apply now
-                    </a>
-                  ');
-                }
-              ?>
-            </div>
-          </div>
-          <!-- /#SIDEBAR FIRST -->
-        <?php endif; ?>
+        
         <?php if (($sidebar_second = render($page['sidebar_second'])) && $sidebar_second_width) : ?>
         <!-- SIDEBAR SECOND -->
         <div id="sidebar-second-wrapper" class="sidebar tb-main-box <?php print $sidebar_second_width; ?> grid-last">
