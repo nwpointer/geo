@@ -55,8 +55,8 @@ input[type='submit']{
 	left:.5rem;
 }
 
-body:not(.page-node), .node-type-program{
-	input{
+body:not(.page-node), .node-type-program, .not-front{
+	#p-Search input{
 		display: none !important;
 	}
 }

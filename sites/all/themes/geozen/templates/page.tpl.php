@@ -30,7 +30,7 @@
       </div>
     <?php endif; ?>
 
-    <?php if ($secondary_menu): ?>
+    
       <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
         <!-- <?php print theme('links__system_secondary_menu', array(
           'links' => $secondary_menu,
@@ -55,12 +55,13 @@
             ),
           )); ?>
       </nav>
-    <?php endif; ?>
-
+    
     <?php print render($page['header']); ?>
 
-    <input type="text" placeholder="search">
-    <input type="submit" value="explore">
+    <div id="p-Search">
+      <input type="text" placeholder="search">
+      <input type="submit" value="explore">
+    </div>
     </div>
   </header>
 
@@ -90,13 +91,20 @@
       </ul> 
       <?php if ($title): ?>
         <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+        <ul id="infoBar">
+          <li><b>Language Requirement:</b> None</li>
+          <li><b>Academic Standing</b>: Sophomore or above</li>
+          <li><b>GPA</b>: 2.75 or above</li>
+          <li><b>Term</b>: Fall, Spring</li>
+        </ul>
       <?php endif; ?>
-      <form onsubmit="alert('button'); return false">
-        <input style="display:inline-block !important;width:12rem"type="submit" value="save to favorites">
-      </form>
-      <form onsubmit="alert('button'); return false">
-        <input style="display:inline-block !important;width:12rem"type="submit" value="Apply">
-      </form>
+        <?php
+          // Render the sidebars to see if there's anything in them.
+          $sidebar_first  = render($page['sidebar_first']);
+          $sidebar_second = render($page['sidebar_second']);
+        ?>
+
+     <!--  <?php print $sidebar_second; ?> -->
   </div>
   <br>
 
@@ -147,16 +155,17 @@
 
     </div> -->
 
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_first  = render($page['sidebar_first']);
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
-
     <?php if ($sidebar_first || $sidebar_second): ?>
       <aside class="sidebars">
-        <?php print $sidebar_first; ?>
-        <?php print $sidebar_second; ?>
+        
+        <?php
+        $additon = '<input style="display:inline-block !important;" type="submit" value="save to favorites"><input style="display:inline-block !important;"type="submit" value="Apply">';
+          $sidebar_first = substr($sidebar_first, 0, -11) . $additon . "</section>";
+          print $sidebar_first 
+        ?>
+
+          
+        
       </aside>
     <?php endif; ?>
 

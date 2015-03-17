@@ -63,6 +63,6 @@ input[type='submit'] {
 }
 
 /* line 59, ../sass/form.scss */
-body:not(.page-node) input, .node-type-program input {
+body:not(.page-node) #p-Search input, .node-type-program #p-Search input, .not-front #p-Search input {
   display: none !important;
 }
