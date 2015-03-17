@@ -2,7 +2,7 @@
 body {
   /*font-size: 200px;*/
   font-size: 14px;
-  font-family: 'Nixie One', cursive;
+  font-family: "open sans";
 }
 
 /* line 7, ../sass/typography.scss */
@@ -12,40 +12,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 11, ../sass/typography.scss */
+h2, h3, .nixie {
+  font-family: 'Nixie One', cursive;
+}
+
+/* line 14, ../sass/typography.scss */
+h4, h5, .georgia {
+  font-family: "georgia";
+}
+
+/* line 17, ../sass/typography.scss */
 h1 {
-  font-size: 6.32875em;
+  font-size: 5.063em;
   font-family: 'open sans';
   text-transform: capitalize;
   margin-bottom: 1.5rem;
   line-height: 1em;
 }
 
-/* line 18, ../sass/typography.scss */
+/* line 24, ../sass/typography.scss */
 h2 {
   font-size: 5.063em;
 }
 
-/* line 21, ../sass/typography.scss */
+/* line 27, ../sass/typography.scss */
 h3 {
   font-size: 3.375em;
   letter-spacing: .1rem;
 }
 
-/* line 25, ../sass/typography.scss */
+/* line 31, ../sass/typography.scss */
 h4 {
   font-size: 2.25em;
   font-family: georgia;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 30, ../sass/typography.scss */
+/* line 36, ../sass/typography.scss */
 h5 {
   font-size: 1.5em;
   font-family: georgia;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 35, ../sass/typography.scss */
+/* line 41, ../sass/typography.scss */
 p {
   margin-top: 1rem;
   font-family: 'Open sans' !important;
@@ -53,17 +63,32 @@ p {
   max-width: 50rem;
 }
 
-/* line 42, ../sass/typography.scss */
+/* line 48, ../sass/typography.scss */
 a {
   font-family: 'open sans';
 }
 
-/* line 45, ../sass/typography.scss */
+/* line 51, ../sass/typography.scss */
 footer h2 {
   font-size: 1.5rem;
 }
 
-/* line 49, ../sass/typography.scss */
+/* line 54, ../sass/typography.scss */
+#content[role="main"] h2.block__title {
+  font-size: 2.25rem;
+}
+
+/* line 59, ../sass/typography.scss */
 .region-sidebar-first h2 {
   font-size: 1.5rem;
+}
+
+/* line 64, ../sass/typography.scss */
+.field-label {
+  font-family: 'open sans';
+}
+
+/* line 68, ../sass/typography.scss */
+#block-crumbs-breadcrumb {
+  display: none;
 }
