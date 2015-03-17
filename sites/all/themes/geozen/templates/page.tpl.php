@@ -75,10 +75,28 @@
         <?php 
           $bc = drupal_get_breadcrumb();
           foreach ($bc as $crumb) {
+            if ($crumb = '<a href="/">Home</a>'){
+              $crumb = '<a href="/"><img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-128.png" alt=""></a>';
+            }
             print("<li><span>". $crumb . "</span></li>");
           }
+          if(isset($node)){
+            print "<li><span><a href='/programs'>programs</a></span></li>";
+            $country = $node->field_country['und'][0]['taxonomy_term']->name ;
+            print "<li><span><a href='/programs/countries/". $country ."'>". $country . "</a></span></li>"; 
+          }
+          // print "<li><span><a>". $title . "</a></span></li>"
         ?>
       </ul> 
+      <?php if ($title): ?>
+        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
+      <?php endif; ?>
+      <form onsubmit="alert('button'); return false">
+        <input style="display:inline-block !important;width:12rem"type="submit" value="save to favorites">
+      </form>
+      <form onsubmit="alert('button'); return false">
+        <input style="display:inline-block !important;width:12rem"type="submit" value="Apply">
+      </form>
   </div>
   <br>
 
@@ -91,9 +109,6 @@
 
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
-        <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-      <?php endif; ?>
       <?php print render($title_suffix); ?>
       <?php print $messages; ?>
       <?php print render($tabs); ?>
