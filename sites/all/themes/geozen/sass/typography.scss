@@ -1,15 +1,21 @@
 body{
 	/*font-size: 200px;*/
 	font-size: 14px;
-	font-family: 'Nixie One', cursive;
+	font-family: "open sans";
 }
 
 h1,h2,h3,h4,h5,h6{
 			text-transform: capitalize;
 			margin-top: 1.5rem;
 		}
+h2,h3, .nixie{
+	font-family: 'Nixie One', cursive;
+}
+h4,h5, .georgia{
+	font-family: "georgia";
+}
 		h1{
-			font-size:6.32875em;
+			font-size:5.063em;
 			font-family: 'open sans';
 			text-transform: capitalize;
 			margin-bottom: 1.5rem;
@@ -45,8 +51,20 @@ footer{
 	h2{font-size:1.5rem}
 }
 
+#content[role="main"] h2.block__title{
+	font-size: 2.25rem;
+}
+
 .region-sidebar-first{
 	h2{
 		font-size: 1.5rem;
 	}
+}
+
+.field-label{
+	font-family:'open sans';
+}
+
+#block-crumbs-breadcrumb{
+	display:none;
 }

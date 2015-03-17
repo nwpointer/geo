@@ -88,8 +88,8 @@
 .node-type-program #content[role="main"] {
   float: left;
   width: 900%;
-  margin-left: 400%;
-  margin-right: -1300%;
+  margin-left: 0%;
+  margin-right: -900%;
   padding-left: 10px;
   padding-right: 10px;
   -moz-box-sizing: border-box;
@@ -103,8 +103,8 @@
 .node-type-program .sidebar {
   float: left;
   width: 300%;
-  margin-left: 0%;
-  margin-right: -300%;
+  margin-left: 1000%;
+  margin-right: -1300%;
   padding-left: 10px;
   padding-right: 10px;
   -moz-box-sizing: border-box;
@@ -140,4 +140,35 @@ input[type="submit"] {
   border: 0px;
   color: white;
   padding: 1rem 2rem;
+}
+
+/* line 128, ../sass/primary-theme.scss */
+#programList label {
+  margin-top: 0px;
+  letter-spacing: 0px;
+  display: inline-block;
+  width: 100%;
+}
+
+/* line 137, ../sass/primary-theme.scss */
+.list li p, .list li h3 {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+/* line 141, ../sass/primary-theme.scss */
+.list p {
+  margin-bottom: .25rem;
+  margin-top: .5rem;
+}
+
+/* line 146, ../sass/primary-theme.scss */
+.list li a {
+  text-decoration: none;
+}
+
+/* line 149, ../sass/primary-theme.scss */
+.list li h3 {
+  font-family: 'open sans' !important;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
 }

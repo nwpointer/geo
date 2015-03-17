@@ -80,7 +80,8 @@ window.Api = window.location.origin + '/rest';
   }
 
   function getCustomfield(field){
-      return field.und[0].value;
+    // foo = field.und ? field.und[0].value || "";
+      return "foo";
   }
 
   function getPricefield(field){
