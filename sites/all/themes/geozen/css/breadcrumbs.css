@@ -99,3 +99,22 @@
   border-top: 0rem solid #F0F0F0;
   border-bottom: 0rem solid #F0F0F0;
 }
+
+/* line 88, ../sass/breadcrumbs.scss */
+#bar #breadcrumbs {
+  margin-bottom: 0px;
+  margin-top: .5rem;
+}
+/* line 93, ../sass/breadcrumbs.scss */
+#bar #breadcrumbs li {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* line 96, ../sass/breadcrumbs.scss */
+#bar #breadcrumbs li:not(:first-child):before {
+  border-top: 1.5rem solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1.5rem solid rgba(255, 255, 255, 0.5);
+}
+/* line 100, ../sass/breadcrumbs.scss */
+#bar #breadcrumbs li:after {
+  border-left: 1rem solid rgba(255, 255, 255, 0.5);
+}

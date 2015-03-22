@@ -65,14 +65,9 @@
     </div>
   </header>
 
-  <div id="bar"></div>
-
-  
-
-  <div id="main">
-
-  <div id="page">
-    <ul id="breadcrumbs">
+  <div id="bar" class="containsbreadcrumbs">
+        <div id="page">
+          <ul id="breadcrumbs">
         <?php 
           $bc = drupal_get_breadcrumb();
           foreach ($bc as $crumb) {
@@ -89,6 +84,16 @@
           // print "<li><span><a>". $title . "</a></span></li>"
         ?>
       </ul> 
+      <!-- <input type="submit" value="my favorites"> -->
+        </div>
+  </div>
+
+  
+
+  <div id="main">
+
+  <div id="page">
+
       <?php if ($title): ?>
         <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
         <ul id="infoBar">

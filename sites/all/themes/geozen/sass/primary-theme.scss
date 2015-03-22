@@ -19,8 +19,34 @@ $yellow: rgb(255, 255, 105);
 			background: #FED201;
 			display: inline-block;
 			width: 100%;
+			overflow: scroll;
+  			white-space: nowrap;
+			input[type="submit"]{
+				margin-top: 0rem;
+				  width: 14rem;
+				  float: right;
+				  position: relative;
+ 				  top: -.75rem;
+				  background:rgba(255,255,255,.3);
+				  border: 1px solid rgba(255,255,255,.3);
+			}
+			input[type="submit"]:hover{
+				background:rgba(255,255,255,.2)
+			}
 		}
+	#bar.containsbreadcrumbs{
+		// height: 3.0rem;
+		margin-bottom: 3rem;
+	}
 }
+
+.front{
+	#bar input{
+		position: relative;
+		top: -5.5rem;
+	}
+}
+
 .node-type-program #header,  .page-programs #header, .page-taxonomy #header, .not-front #header{
 	min-height:10rem !important;
 }
@@ -60,8 +86,8 @@ $yellow: rgb(255, 255, 105);
 			font-family: "nixie one";
 			text-transform: uppercase;
 			letter-spacing: .3rem;
-			/*text-align: center;
-			margin:auto;*/
+			position: relative;
+			top:3rem;
 			color:white;
 			font-weight:100;
 		}
@@ -185,4 +211,8 @@ input[type="submit"]{
 		border-right: 1px solid rgba(0,0,0,.1);
 		padding: 0 1rem;
 	}
+}
+
+#logo img{
+	height: 4rem;
 }
