@@ -2021,35 +2021,35 @@ input[type="submit"] {
   height: 4rem;
 }
 
-/* line 17, ../sass/typography.scss */
+/* line 19, ../sass/typography.scss */
 body {
   font-size: 12px;
   font-family: "open sans";
 }
 @media (min-width: 768px) {
-  /* line 17, ../sass/typography.scss */
+  /* line 19, ../sass/typography.scss */
   body {
     font-size: 14px;
   }
 }
 
-/* line 25, ../sass/typography.scss */
+/* line 27, ../sass/typography.scss */
 h1, h2, h3, h4, h5, h6 {
   text-transform: capitalize;
   margin-top: 1.5rem;
 }
 
-/* line 29, ../sass/typography.scss */
+/* line 31, ../sass/typography.scss */
 h2, h3, .nixie {
   font-family: 'Nixie One', cursive;
 }
 
-/* line 32, ../sass/typography.scss */
+/* line 34, ../sass/typography.scss */
 h4, h5, .georgia {
   font-family: "georgia";
 }
 
-/* line 35, ../sass/typography.scss */
+/* line 37, ../sass/typography.scss */
 h1 {
   font-size: 3.375em;
   font-family: 'open sans';
@@ -2058,39 +2058,39 @@ h1 {
   line-height: 2.75rem !important;
 }
 @media (min-width: 768px) {
-  /* line 35, ../sass/typography.scss */
+  /* line 37, ../sass/typography.scss */
   h1 {
     font-size: 5.063em;
     line-height: 1em !important;
   }
 }
 
-/* line 48, ../sass/typography.scss */
+/* line 50, ../sass/typography.scss */
 h2 {
   font-size: 5.063em;
 }
 
-/* line 51, ../sass/typography.scss */
+/* line 53, ../sass/typography.scss */
 h3 {
   font-size: 3.375em;
   letter-spacing: .1rem;
 }
 
-/* line 55, ../sass/typography.scss */
+/* line 57, ../sass/typography.scss */
 h4 {
   font-size: 2.25em;
   font-family: georgia;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 60, ../sass/typography.scss */
+/* line 62, ../sass/typography.scss */
 h5 {
   font-size: 1.5em;
   font-family: georgia;
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 65, ../sass/typography.scss */
+/* line 67, ../sass/typography.scss */
 p {
   margin-top: 1rem;
   font-family: 'Open sans' !important;
@@ -2098,54 +2098,54 @@ p {
   max-width: 50rem;
 }
 
-/* line 72, ../sass/typography.scss */
+/* line 74, ../sass/typography.scss */
 a {
   font-family: 'open sans';
 }
 
-/* line 75, ../sass/typography.scss */
+/* line 77, ../sass/typography.scss */
 footer h2 {
   font-size: 1.5rem;
 }
 
-/* line 78, ../sass/typography.scss */
+/* line 80, ../sass/typography.scss */
 #content[role="main"] h2.block__title {
   font-size: 2.25rem;
 }
 
-/* line 83, ../sass/typography.scss */
+/* line 85, ../sass/typography.scss */
 .region-sidebar-first h2 {
   font-size: 1.5rem;
 }
 
-/* line 88, ../sass/typography.scss */
+/* line 90, ../sass/typography.scss */
 .field-label {
   font-family: 'open sans';
 }
 
-/* line 92, ../sass/typography.scss */
+/* line 94, ../sass/typography.scss */
 #block-crumbs-breadcrumb {
   display: none;
 }
 
-/* line 96, ../sass/typography.scss */
+/* line 98, ../sass/typography.scss */
 .node-type-program h1 {
   margin-top: -1rem !important;
   line-height: 5rem;
 }
 
-/* line 102, ../sass/typography.scss */
+/* line 104, ../sass/typography.scss */
 .page-taxonomy-term h2 {
   font-size: 2rem;
   line-height: 2.5rem;
   margin-top: 2.5rem;
 }
-/* line 106, ../sass/typography.scss */
+/* line 108, ../sass/typography.scss */
 .page-taxonomy-term h2 a {
   color: black;
   text-decoration: none;
 }
-/* line 109, ../sass/typography.scss */
+/* line 111, ../sass/typography.scss */
 .page-taxonomy-term h2 a:hover {
   color: rgba(0, 0, 0, 0.7);
 }
