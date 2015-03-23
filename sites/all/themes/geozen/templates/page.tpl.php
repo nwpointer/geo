@@ -30,6 +30,16 @@
       </div>
     <?php endif; ?>
 
+    <?php 
+      $hamburger = $base_path . drupal_get_path( 'theme', variable_get('theme_default', '0') ) . '/images/hamburger.png';
+      print '<img id="menu-toggle" src="'.$hamburger .'" height="23" width="27" alt="">';
+    ?>
+
+    <script>
+      jQuery("#menu-toggle").click(function(){
+jQuery("#secondary-menu").toggle();});
+    </script>
+
     
       <nav class="header__secondary-menu" id="secondary-menu" role="navigation">
         <!-- <?php print theme('links__system_secondary_menu', array(
@@ -86,6 +96,31 @@
       </ul> 
       <!-- <input type="submit" value="my favorites"> -->
         </div>
+  </div>
+
+  <div id="trio">
+      <div id="page">
+        <br><br>
+        <h5>information:</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate id sint excepturi dolores, explicabo culpa voluptates ex consectetur labore qui, facere aliquam consequatur at, voluptatum reprehenderit eos libero modi recusandae!</p>
+        <ul>
+          <li>
+            <div class="group">
+              students 
+            </div>
+          </li>
+          <li>
+            <div class="group">
+              parents
+            </div>
+          </li>
+          <li>
+            <div class="group">
+              advisors
+            </div>
+          </li>
+        </ul>
+      </div>
   </div>
 
   
@@ -164,7 +199,10 @@
       <aside class="sidebars">
         
         <?php
-        $additon = '<input style="display:inline-block !important;" type="submit" value="save to favorites"><input style="display:inline-block !important;"type="submit" value="Apply">';
+        $additon = '<div id="sidebar-extras"><input id="save" style="display:inline-block !important;" type="submit" value="save to favorites"><input id="apply"style="display:inline-block !important;"type="submit" value="Apply"><br><br><div>
+        <img class="avatar" src="http://studyabroad.arcadia.edu/files/directory/square_shannon_peak.jpg" alt="">
+    <h5>Lorem hubbard</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto natus numquam ab voluptate rem cum.</p></div></div>';
           $sidebar_first = substr($sidebar_first, 0, -11) . $additon . "</section>";
           print $sidebar_first 
         ?>
@@ -173,6 +211,8 @@
         
       </aside>
     <?php endif; ?>
+
+
 
   </div>
   </div>

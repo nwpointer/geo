@@ -1,0 +1,14 @@
+@import 'modular-scale/_modular-scale';
+@import 'breakpoints';
+
+$ms-base: 1em;
+$ms-ratio: 1.5;
+
+$tablet-width: 480px;
+$large-tablet: 600px;
+$desktop-width: 1024px;
+
+@import "zen";
+$darkGreen: #004F27;
+$darkGrey: rgba(0,0,0,.9);
+$yellow: rgb(255, 255, 105);

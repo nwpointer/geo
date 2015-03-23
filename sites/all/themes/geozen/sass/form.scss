@@ -1,4 +1,12 @@
 input{
+		@include only-phone {
+			width: 100% !important;
+			left:0px !important;
+			margin-top:1rem !important;
+		}
+	}
+
+input{
 	width:100%;
 	line-height: 2rem;
 	padding:0 .75rem;
@@ -35,16 +43,18 @@ input[type='submit']{
 	font-family: 'Open sans';
 }
 
-#header input[type="text"]{
-	background: none;
-	border:2px solid white;
-	background: rgba(0,0,0,.1);
-	color:white;
-	outline: none;
-	line-height: 2.5rem;
-	font-size: 1.25rem;
-	width:250px !important;
-	display: inline-block;
+@include tablet{
+	#header input[type="text"]{
+		background: none;
+		border:2px solid white;
+		background: rgba(0,0,0,.1);
+		color:white;
+		outline: none;
+		line-height: 2.5rem;
+		font-size: 1.25rem;
+		width:250px;
+		display: inline-block;
+		margin-bottom: 2.5rem;
 }
 
 #header input[type="submit"]{
@@ -53,6 +63,7 @@ input[type='submit']{
 	 top:-.08rem;
 	 outline:none;
 	left:.5rem;
+}
 }
 
 body:not(.page-node), .node-type-program, .not-front{

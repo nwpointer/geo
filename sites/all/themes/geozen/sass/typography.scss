@@ -1,20 +1,4 @@
-@import 'modular-scale/_modular-scale';
-
-$tablet-width: 768px;
-$desktop-width: 1024px;
-
-@mixin tablet {
-  @media (min-width: #{$tablet-width}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
+@import 'imports';
 
 body{
 	font-size: 12px;
@@ -34,56 +18,69 @@ h2,h3, .nixie{
 h4,h5, .georgia{
 	font-family: "georgia";
 }
-		h1{
-			
-			font-size:3.375em;
-			font-family: 'open sans';
-			text-transform: capitalize;
-			margin-bottom: 1.5rem;
-			line-height: 2.75rem !important;
-			@include tablet {
-				font-size:5.063em;
-				line-height: 1em !important;
-			}
-
-		}
-		h2{
-			font-size:5.063em;
-		}
-		h3{
-			font-size:3.375em;
-			letter-spacing: .1rem;
-		}
-		h4{
-			font-size:2.25em;
-			font-family: georgia;
-  			color: rgba(0,0,0,.8);
-		}
-		h5{
-			font-size:1.5em;
-			font-family: georgia;
- 			color: rgba(0,0,0,.8);
-		}
-		p{
-			margin-top:1rem;
-			font-family: 'Open sans' !important;
-			line-height: 1.5rem;
-			max-width: 50rem;
-		}
+h1{
+	font-size:ms(2);
+	font-family: 'open sans';
+	text-transform: capitalize;
+	margin-bottom: 1.5rem;
+	line-height: 2.25rem !important;
+	@include tablet {
+		font-size: ms(3);
+		line-height: 3.5rem !important;
+	}
+	@include desktop {
+		font-size: ms(4);
+		line-height: 1em !important;
+	}
+}
+h2{
+	font-size:5.063em;
+}
+h3{
+	font-size:3.375em;
+	letter-spacing: .1rem;
+}
+h4{
+	font-size:2.25em;
+	font-family: georgia;
+		color: rgba(0,0,0,.8);
+}
+h5{
+	font-size:1.5em;
+	font-family: georgia;
+		color: rgba(0,0,0,.8);
+}
+p{
+	margin-top:1rem;
+	font-family: 'Open sans' !important;
+	line-height: 1.5rem;
+	max-width: 50rem;
+}
 
 a{font-family:'open sans'}
+
+
+
+
+
+// spesific content region styles
 
 footer{
 	h2{font-size:1.5rem}
 }
 
 #content[role="main"] h2.block__title{
-	font-size: 2.25rem;
+	font-size:ms(1.75);
+	@include tablet{
+		font-size: ms(2.5);
+	}
 }
 
 .region-sidebar-first{
 	h2{
 		font-size: 1.5rem;
+		line-height: 1.75rem;
+		padding: .5rem 0;
 	}
 }
 

@@ -12,19 +12,22 @@
 /* HTML element (SMACSS base) rules */
 @import "normalize";
 
+
 /* Layout rules */
 @import "layouts/responsive";
+
 
 /* Component (SMACSS module) rules */
 @import "components/misc";
 // Optionally, add your own components here.
 @import "print";
 
+
 /* SMACSS theme rules */
 /* @import "theme-B"; */
 
 @import "primary-theme";
-
+@import 'grid';
 @import "typography";
 @import "form";
 @import "breadcrumbs";

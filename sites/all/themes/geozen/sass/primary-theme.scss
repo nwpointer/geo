@@ -1,16 +1,63 @@
-@import "zen";
-$darkGreen: #004F27;
-$darkGrey: rgba(0,0,0,.9);
-$yellow: rgb(255, 255, 105);
+@import 'imports';
+
+#menu-toggle{
+	@include not-phone {
+		display: none;
+	}
+	float:right;
+	position: relative;
+	top:3.5rem;
+	z-index: 1001;
+}
+
+#secondary-menu{
+	@include not-phone {
+		display: inline-block !important;
+	}
+	@include only-phone {
+		display: none;
+		width:100%;
+		position: absolute;
+		top:0px;
+		left:0px;
+		box-sizing: border-box;
+		padding:1rem;
+		background:rgba(254, 210, 1,.9);
+		background: rgba(138, 178, 79, .9);
+		height: 100%;
+		z-index: 1000;
+		text-align: center;
+
+		*{
+			box-sizing: border-box;
+		}
+		ul{
+			width:100%;
+		}
+		li{
+			display: block;
+			width:100%;
+			font-size: 1rem;
+		line-height: 2.5rem;
+		}
+	}
+
+}
+
 #footer{
-	background:rgba(0,0,0,.875);
+	background: #1F1F1F;
+	z-index: 1002;
+	position: relative;
 
 	margin-top:1.5rem;
 
 	.block{
-		@include zen-grid-flow-item( 4 );
-		float:left;
+		@include desktop {
+			@include zen-grid-flow-item( 4 );
+			float:left;
 		margin:0px
+		}
+		
 	}
 }
 .page-node, .page-programs, .page-taxonomy, .not-front{
@@ -21,6 +68,9 @@ $yellow: rgb(255, 255, 105);
 			width: 100%;
 			overflow: scroll;
   			white-space: nowrap;
+  			z-index: 1000;
+  			transition-property: top, bottom;
+        	transition-duration: 0.5s;
 			input[type="submit"]{
 				margin-top: 0rem;
 				  width: 14rem;
@@ -47,6 +97,56 @@ $yellow: rgb(255, 255, 105);
 	}
 }
 
+.front #bar{
+	display: none;
+}
+
+.not-front #trio{
+	display: none;
+}
+
+.front #trio{
+	#page{
+		padding:0rem;
+	}
+	ul{
+		list-style:none;
+		padding:0rem;
+		padding-top: 2rem !important;
+		overflow: auto;
+	}
+	li{
+		margin-bottom: 1.5rem;
+		@include desktop {
+			@include zen-grid-flow-item( 4 );
+			float:left;
+		margin:0px
+		}
+	}
+	.group{
+		width:100%;
+		height: 10rem;
+		line-height: 10rem;
+		display: inline-block;
+		text-align: center;
+		background:
+			linear-gradient(
+		      rgba(0, 0, 0,.3), 
+		      rgba(0, 0, 0, .6)
+		    ),
+			url("http://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Trevi_Pano.jpg/1920px-Trevi_Pano.jpg");
+		background-size:cover;
+		color:white;
+		font-size: 1rem;
+		font-family: Open Sans;
+		text-transform: uppercase;
+		letter-spacing: .5rem;
+		
+	}
+}
+
+
+
 .node-type-program #header,  .page-programs #header, .page-taxonomy #header, .not-front #header{
 	min-height:10rem !important;
 }
@@ -70,7 +170,7 @@ $yellow: rgb(255, 255, 105);
 		    url("http://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Trevi_Pano.jpg/1920px-Trevi_Pano.jpg"),
 			url("https://photos-3.dropbox.com/t/2/AACL0DK6LBdxrObOfOMEyB3b7w8ys3dHs9PdkLJ8Q_P7_w/12/291310503/jpeg/32x32/3/_/1/2/evening-forest-landscape-397.jpg/CKeX9IoBIAEgAiADKAEoAg/HWNUb16wkDlWf6yKu0uJI349kkGqwXNi4subOah9kqM?size=1280x960");
 			background-size:cover;
-			min-height: 45rem; 
+			min-height: 35rem; 
 	a{
 		text-decoration:none;
 		color:white;
@@ -79,23 +179,32 @@ $yellow: rgb(255, 255, 105);
 
 	h1{
 			
-			margin-bottom:3rem;
-			margin-top:3rem;
-			max-width: 1000px;
 			text-shadow: 2px 2px 2px rgba(0,0,0,.2);
 			font-family: "nixie one";
 			text-transform: uppercase;
 			letter-spacing: .3rem;
-			position: relative;
-			top:3rem;
 			color:white;
 			font-weight:100;
+			@include tablet {
+				margin-top:3rem;
+				max-width: 1000px;
+				position: relative;
+				top:3rem;
+				margin-bottom:3rem;
+				font-size: 3rem;
+			}
+			@include only-phone {
+				font-size:1.5rem !important;
+			}
+
 		}
 
 	h1:not(.header__site-name){
 		font-size:3rem;
 
 	}
+
+
 }
 .page-node #header h2{
 	display:none;
@@ -109,36 +218,25 @@ $yellow: rgb(255, 255, 105);
 	margin-top:3rem;
 }
 
-// // .region-sidebar-first{
-// // 	width:30% !important;
-
-// // 	background:red;
-// // }
-
-.node-type-program{
-	#content[role="main"]{
-		
-	@include zen-grid-item(9, 1);
-	padding-bottom:1rem; 
-	// border:1px solid black;
-	}
-
-	.region-sidebar-first{
-		@include zen-grid-item( 3,10 );
-	}
-
-	.region-sidebar-second{
-		
-		@include zen-grid-item(9, 1);
-		margin-bottom: 4rem;
-	}
-}
-
 .page-node{
 	#content[role="main"]{
 		padding-bottom:3rem; 
 	}
 
+}
+.visible-visor{
+	top:-60px !important;
+}
+
+.avatar{
+			height: 6rem;
+			border-radius: 30rem;
+			float:left;
+			margin-right:1.5rem;
+		}
+
+h1#page-title{
+	padding-top:3rem;
 }
 footer{
 	padding:3rem 0;
@@ -195,24 +293,50 @@ input[type="submit"]{
   margin-bottom:0.5rem;
 }
 
+// .field-name-field-continent:before{
+// 	content:'Location';
+// 	font-size: 1.5rem;
+//   line-height: 1.75rem;
+//   display: block;
+//   font-weight: 900;
+//   font-family: 'Nixie One', cursive;
+// }
+
+.field-name-field-discipline, .field-name-field-tags{
+	.field-item{
+		display: inline; 
+		padding-right: .5rem;
+	}
+}
 
 #infoBar{
 	display:none;
 }
 .node-type-program #infoBar{
+	box-sizing: border-box;
+	overflow: scroll;
+  	white-space: nowrap;
 	display:inline-block;
 	width:100%;
 	border-top:1px solid rgba(0,0,0,.1);
 	border-bottom:1px solid rgba(0,0,0,.1);
 	padding:0px;
 	li{
+		box-sizing: border-box;
 		display:inline;
 		line-height: 3rem;
 		border-right: 1px solid rgba(0,0,0,.1);
 		padding: 0 1rem;
+		@include only-phone {
+			width: 100%;
+	  		display: block;
+	  		// padding-left: 0px;
+	  		border-right: none;
+		}
 	}
+
 }
 
 #logo img{
-	height: 4rem;
+	height: 3.25rem;
 }

@@ -12,12 +12,36 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, Drupal, window, document, undefined) {
 
+	
+
+	jQuery(function(){
+		jQuery("#bar").sticky({topSpacing:-0, responsiveWidth:true});
+		// jQuery("#save").sticky({topSpacing:-0});
+		//jQuery("#sidebar-extras").sticky({topSpacing:60, getWidthFrom: ".region-sidebar-first"});
+	});
+
+	$(function(){
+	 var lastScrollTop = 0, delta = 5;
+	 $(window).scroll(function(){
+	 var nowScrollTop = $(this).scrollTop();
+	 if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
+	 if (nowScrollTop > lastScrollTop){
+		$("#bar").addClass("visible-visor");
+	 } else {
+		$("#bar").removeClass("visible-visor");
+	 }
+	 lastScrollTop = nowScrollTop;
+	 }
+	 });
+	 });
+
+
 
 // To understand behaviors, see https://drupal.org/node/756722#behaviors
 Drupal.behaviors.my_custom_behavior = {
   attach: function(context, settings) {
 
-    // Place your code here.
+    // 
 
   }
 };
