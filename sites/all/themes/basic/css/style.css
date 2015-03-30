@@ -199,18 +199,33 @@ div.status {
     content: "";
     display: table;
     clear: both; }
+  #footer .block-even {
+    margin-right: 0px !important; }
   #footer .block {
     font-size: 90%;
     float: left;
     display: block;
     margin-right: 2.12766%;
-    width: 31.91489%; }
+    width: 23.40426%; }
     #footer .block:last-child {
       margin-right: 0; }
     @media screen and (max-width: 768px) {
       #footer .block {
-        width: 100%;
-        margin-bottom: 3rem; } }
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 48.3871%;
+        margin-bottom: 3rem; }
+        #footer .block:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 480px) {
+      #footer .block {
+        float: left;
+        display: block;
+        margin-right: 6.66667%;
+        width: 100%; }
+        #footer .block:last-child {
+          margin-right: 0; } }
 
 #precontent .block-fieldblock {
   display: inline-block !important; }
@@ -471,20 +486,26 @@ nav a {
   overflow-x: scroll;
   overflow-y: hidden; }
 
-#bar {
+#barwrapper div {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  margin: auto;
-  margin-bottom: 2rem;
-  display: inline-block;
-  width: 100%;
-  white-space: nowrap;
-  z-index: 1000; }
-  #bar:after {
+  margin-right: auto; }
+  #barwrapper div:after {
     content: "";
     display: table;
     clear: both; }
+
+#bar {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1000; }
+  #bar:last-child {
+    margin-right: 0; }
   #bar input[type="submit"] {
     margin-top: 0rem;
     width: 14rem;
@@ -553,18 +574,33 @@ nav a {
     content: "";
     display: table;
     clear: both; }
+  #footer .block-even {
+    margin-right: 0px !important; }
   #footer .block {
     font-size: 90%;
     float: left;
     display: block;
     margin-right: 2.12766%;
-    width: 31.91489%; }
+    width: 23.40426%; }
     #footer .block:last-child {
       margin-right: 0; }
     @media screen and (max-width: 768px) {
       #footer .block {
-        width: 100%;
-        margin-bottom: 3rem; } }
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 48.3871%;
+        margin-bottom: 3rem; }
+        #footer .block:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 480px) {
+      #footer .block {
+        float: left;
+        display: block;
+        margin-right: 6.66667%;
+        width: 100%; }
+        #footer .block:last-child {
+          margin-right: 0; } }
 
 #precontent .block-fieldblock {
   display: inline-block !important; }
@@ -825,20 +861,26 @@ nav a {
   overflow-x: scroll;
   overflow-y: hidden; }
 
-#bar {
+#barwrapper div {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  margin: auto;
-  margin-bottom: 2rem;
-  display: inline-block;
-  width: 100%;
-  white-space: nowrap;
-  z-index: 1000; }
-  #bar:after {
+  margin-right: auto; }
+  #barwrapper div:after {
     content: "";
     display: table;
     clear: both; }
+
+#bar {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1000; }
+  #bar:last-child {
+    margin-right: 0; }
   #bar input[type="submit"] {
     margin-top: 0rem;
     width: 14rem;
