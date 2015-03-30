@@ -1,0 +1,30 @@
+/* line 3, ../sass/table.scss */
+.field-type-tablefield {
+  background: rgba(0, 0, 0, 0.025);
+}
+@media (min-width: 480px) {
+  /* line 3, ../sass/table.scss */
+  .field-type-tablefield {
+    padding: 2rem;
+  }
+}
+/* line 9, ../sass/table.scss */
+.field-type-tablefield .field-label {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  /* text-transform: uppercase; */
+  padding-top: 1.5rem;
+}
+/* line 18, ../sass/table.scss */
+.field-type-tablefield table {
+  width: 100%;
+}
+/* line 21, ../sass/table.scss */
+.field-type-tablefield .table-wrapper {
+  margin-bottom: 0px;
+}
+/* line 24, ../sass/table.scss */
+.field-type-tablefield tr:last-child {
+  border-bottom: 0px;
+}

@@ -14,10 +14,13 @@
 
 	
 
-	jQuery(function(){
-		jQuery("#bar").sticky({topSpacing:-0, responsiveWidth:true});
-		// jQuery("#save").sticky({topSpacing:-0});
-		//jQuery("#sidebar-extras").sticky({topSpacing:60, getWidthFrom: ".region-sidebar-first"});
+	$(function(){
+		$("#barwrapper").sticky({topSpacing:-0, responsiveWidth:true});
+		// $("#save").sticky({topSpacing:-0});
+		//$("#sidebar-extras").sticky({topSpacing:60, getWidthFrom: ".region-sidebar-first"});
+		jQuery("#togglesavedProgramDisplay").click(function(){
+			$("#savedProgramDisplay").slideToggle(100);
+		});
 	});
 
 	$(function(){
@@ -26,14 +29,23 @@
 	 var nowScrollTop = $(this).scrollTop();
 	 if(Math.abs(lastScrollTop - nowScrollTop) >= delta){
 	 if (nowScrollTop > lastScrollTop){
-		$("#bar").addClass("visible-visor");
+		$("#barwrapper").addClass("visible-visor");
+		$("#savedProgramDisplay:visible").toggle();
 	 } else {
-		$("#bar").removeClass("visible-visor");
+		$("#barwrapper").removeClass("visible-visor");
+		$("#savedProgramDisplay:visible").toggle();
 	 }
 	 lastScrollTop = nowScrollTop;
 	 }
 	 });
 	 });
+
+	// $("#togglesavedProgramDisplay").click(function(){
+
+	// 	$("#savedProgramDisplay").slideToggle();
+	// });
+	// 
+	
 
 
 

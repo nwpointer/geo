@@ -74,7 +74,8 @@ jQuery("#secondary-menu").toggle();});
     </div>
     </div>
   </header>
-
+  
+  <div id="barwrapper">
   <div id="bar" class="containsbreadcrumbs">
         <div id="page">
           <ul id="breadcrumbs">
@@ -87,17 +88,35 @@ jQuery("#secondary-menu").toggle();});
             print("<li><span>". $crumb . "</span></li>");
           }
           if(isset($node)){
-            print "<li><span><a href='/programs'>programs</a></span></li>";
-            $country = $node->field_country['und'][0]['taxonomy_term']->name ;
-            print "<li><span><a href='/programs/countries/". $country ."'>". $country . "</a></span></li>"; 
+            if(isset($node->field_country)){
+              print "<li><span><a href='/programs'>programs</a></span></li>";
+              $country = $node->field_country['und'][0]['taxonomy_term']->name ;
+              print "<li><span><a href='/programs/countries/". $country ."'>". $country . "</a></span></li>"; 
+            }
+            else{
+            print("<li><span><a>". drupal_get_title() . "</a></span></li>");
           }
-          // print "<li><span><a>". $title . "</a></span></li>"
+          }
+          else{
+            print("<li><span><a>". drupal_get_title() . "</a></span></li>");
+          }
         ?>
       </ul> 
-      <!-- <input type="submit" value="my favorites"> -->
-        </div>
+      <input type="submit" id="togglesavedProgramDisplay" value="my favorites">
+      </div>
+      <div id="savedProgramDisplay">
+      <div id="page">
+        <ul>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+          <li>test</li>
+        </ul>
+      </div>
+      </div>
   </div>
-
+  </div>
   <div id="trio">
       <div id="page">
         <br><br>
@@ -121,22 +140,24 @@ jQuery("#secondary-menu").toggle();});
           </li>
         </ul>
       </div>
-  </div>
-
-  
+  </div>  
 
   <div id="main">
 
-  <div id="page">
+  <div id="page" style="
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 5rem !important;
+">
 
       <?php if ($title): ?>
         <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
-        <ul id="infoBar">
+       <!--  <ul id="infoBar">
           <li><b>Language Requirement:</b> None</li>
           <li><b>Academic Standing</b>: Sophomore or above</li>
           <li><b>GPA</b>: 2.75 or above</li>
           <li><b>Term</b>: Fall, Spring</li>
-        </ul>
+        </ul> -->
       <?php endif; ?>
         <?php
           // Render the sidebars to see if there's anything in them.
@@ -144,7 +165,8 @@ jQuery("#secondary-menu").toggle();});
           $sidebar_second = render($page['sidebar_second']);
         ?>
 
-     <!--  <?php print $sidebar_second; ?> -->
+      <?php print $sidebar_second; ?>
+      <br>
   </div>
   <br>
 
@@ -154,7 +176,7 @@ jQuery("#secondary-menu").toggle();});
       <?php print render($page['highlighted']); ?>
 
       
-
+  
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
       <?php print render($title_suffix); ?>
@@ -199,7 +221,7 @@ jQuery("#secondary-menu").toggle();});
       <aside class="sidebars">
         
         <?php
-        $additon = '<div id="sidebar-extras"><input id="save" style="display:inline-block !important;" type="submit" value="save to favorites"><input id="apply"style="display:inline-block !important;"type="submit" value="Apply"><br><br><div>
+        $additon = '<div id="sidebar-extras"><a class="myButton" id="save" onclick="addProgram()"style="display:inline-block !important;">save to favorites <span id="issaved"> &#10004;</span></a><input id="apply"style="display:inline-block !important;"type="submit" value="Apply"><br><br><div>
         <img class="avatar" src="http://studyabroad.arcadia.edu/files/directory/square_shannon_peak.jpg" alt="">
     <h5>Lorem hubbard</h5>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto natus numquam ab voluptate rem cum.</p></div></div>';

@@ -1,5 +1,26 @@
 @import 'imports';
 
+#savedProgramDisplay{
+	position: absolute;
+	// z-index: 1003;
+	background: rgba(0,0,0,.8);
+	display: none;
+	width: 100%;
+	ul{
+		color:white;
+		list-style: none;
+		a{
+			color:white;
+		}
+	}
+}
+
+.delete{
+	color:red !important;
+	padding-left: 1rem;
+}
+
+
 #menu-toggle{
 	@include not-phone {
 		display: none;
@@ -69,14 +90,12 @@
 			overflow: scroll;
   			white-space: nowrap;
   			z-index: 1000;
-  			transition-property: top, bottom;
-        	transition-duration: 0.5s;
 			input[type="submit"]{
 				margin-top: 0rem;
 				  width: 14rem;
 				  float: right;
 				  position: relative;
- 				  top: -.75rem;
+ 				  top: -3.4rem;
 				  background:rgba(255,255,255,.3);
 				  border: 1px solid rgba(255,255,255,.3);
 			}
@@ -86,10 +105,21 @@
 		}
 	#bar.containsbreadcrumbs{
 		// height: 3.0rem;
-		margin-bottom: 3rem;
+		// margin-bottom: 3rem;
+		overflow-y: hidden;
 	}
 }
 
+.page-node, .page-programs, .page-taxonomy, .not-front{
+	#barwrapper{
+		transition-property: top, bottom;
+        transition-duration: 0.5s;
+        width: 100%;
+        z-index: 1003;
+       	// position: aut
+        
+       }
+}
 .front{
 	#bar input{
 		position: relative;
@@ -261,6 +291,7 @@ input[type="submit"]{
 	border: 0px;
 	color: white;
 	padding: 1rem 2rem;
+	outline: 0;
 }
 
 
@@ -309,6 +340,52 @@ input[type="submit"]{
 	}
 }
 
+.node-type-program .region-sidebar-second{
+	box-sizing: border-box;
+	overflow-x: scroll;
+	overflow-y: hidden;
+  	white-space: nowrap;
+	display:inline-block;
+	width:100%;
+	border-top:1px solid rgba(0,0,0,.1);
+	border-bottom:1px solid rgba(0,0,0,.1);
+	padding:0px;
+	margin-bottom: 3rem;
+	height: 3.25rem;
+	position: absolute;
+	bottom: -2rem;
+	width: 100% !important;
+	h2{
+		font-family: 'open sans';
+		font-size: 14px;
+		font-weight: bold;
+		height: auto;
+		padding-left:1rem;
+		&:after{
+			content: ":"
+		}
+		position: relative;top:-1.2rem;
+
+	}
+	.field-item{
+		display: inline-block;
+		max-width:10rem !important;
+		// height: 19px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		// margin:0px;
+		padding: 0 .5rem;
+		border-right: 1px solid rgba(0,0,0,.1);
+
+	}
+	*{
+		display: inline;
+		line-height: 3rem;
+		// float:left;
+	}
+}
+
 #infoBar{
 	display:none;
 }
@@ -335,6 +412,29 @@ input[type="submit"]{
 		}
 	}
 
+}
+
+.myButton{
+	background: #8AB24F;
+	margin-top:2rem;
+	line-height: .825rem;
+	color:white;
+	font-size: 1rem;
+	border:0px;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-weight: 100;
+	font-family: 'Open sans';
+	display: inline-block;
+	width:100%;
+	line-height: 3rem;
+	padding:0 .75rem;
+	box-sizing:border-box;
+	margin-top:.25rem;
+	border:1px solid rgba(0,0,0,.2);
+	border-radius: .2rem;
+	text-align: center;
+	cursor: pointer;
 }
 
 #logo img{

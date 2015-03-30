@@ -55,22 +55,25 @@ function program_search() {
   <div id="programList">
   <input class="search" placeholder="Search" /> <br><br>
   <div id="catagories">
-    <select class="discipline_s" multiple style="width:150px;" data-placeholder="Choose a disipline">
+    <select class="discipline_s" multiple data-placeholder="<span>Choose a</span> disipline">
     </select>
 
-    <select class="country_s" multiple style="width:150px;" data-placeholder="Choose a country">
+    <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">
     </select>
 
-    <select class="term_s" multiple style="width:150px;" data-placeholder="Choose a term">
+    <select class="term_s" multiple data-placeholder="<span>Choose a</span> term">
     </select>
 
-    <select class="price_s" multiple style="width:150px;" data-placeholder="Choose a price">
+    <select class="price_s" multiple data-placeholder="<span>Choose a</span> price">
     </select>
 
-    <select class="region_s" multiple style="width:150px;" data-placeholder="Choose a region">
+    <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
+    </select>
+
+    <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
     </select>
   </div>
-<br><br>
+  <hr>
   <ul class="list">
     <!-- list contents are loaded ansycronously -->
   </ul>

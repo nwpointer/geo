@@ -28,10 +28,10 @@
         if (this.$el.prop('disabled')) {
             this.$choice.addClass('disabled');
         }
-        this.$choice.css('width', elWidth + 'px');
-        this.$drop.css({
-            width: (options.width || elWidth) + 'px'
-        });
+        // this.$choice.css('width', elWidth + 'px');
+        // this.$drop.css({
+        //     width: (options.width || elWidth) + 'px'
+        // });
 
         if (!this.options.keepOpen) {
             $('body').click(function(e) {

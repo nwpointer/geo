@@ -68,6 +68,8 @@ stylesheets[all][] = css/styles.css
 
 scripts[] = js/script.js
 scripts[] = js/jquery.sticky.js
+scripts[] = js/cookies.js
+scripts[] = js/favorite.js
 
 
 

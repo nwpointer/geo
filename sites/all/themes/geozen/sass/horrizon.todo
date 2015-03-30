@@ -1,0 +1,53 @@
+BASE
+
+forms inline/stacked/aligned
+tables
+buttons, button groups
+navbar
+	-side
+	-multilayer
+	-mondo fullcard 
+grid
+typography
+pills
+
+
+
+content rearanging 
+
+
+EXTRA
+
+css image inliner
+
+sprites tools
+
+joyride
+
+utility classes
+
+light box / modal
+
+form validation
+
+sticky elements
+
+foundation switches?
+
+full hieght elements + remaining width elemetns
+
+content slider
+tabs
+
+responsive images, video image compression
+
+hero images
+
+advanced ui components - based on other js projects
+
+easy to make 
+	- dropdown alerts
+	- pagination
+	- breadcrumbs
+
+TREE SHAKING
