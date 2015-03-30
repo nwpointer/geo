@@ -1,0 +1,9 @@
+@import '../_config';
+#sidebar-second{
+  font-size: 85%;
+  padding-top: $gutter*3;
+  padding-left: $gutter*2;
+  @include media($tablet) {
+    padding-left: 0px;
+  }
+}

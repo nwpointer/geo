@@ -1,0 +1,23 @@
+// _regions.footer
+#footer {
+	width: 100%;
+	max-width: 100% !important;
+	overflow: hidden;
+	color:rgba(255,255,255,.6);
+	font-weight: 100;
+	padding: 3rem 0;
+
+	
+	background: $darkBackground;
+	@include outer-container;
+	.block{
+		font-size:90%;
+		@include span-columns(4);
+		@if $responsive {
+		    @include media($tablet) {
+		      width: 100%;
+		      margin-bottom: 3rem;
+		    }
+		}
+	}
+}

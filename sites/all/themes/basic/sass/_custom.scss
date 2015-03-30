@@ -1,0 +1,92 @@
+// Custom
+// ------
+// This file is used to define custom overrides and
+// style changes to be used for building your theme.
+// Documentation: http://sass-lang.com/docs/yardoc/_index.html
+
+// Import variables and mixins to be used.
+@import "_config";
+@import "_sprites";
+
+// Custom code here.
+
+// Import wildcard files and folders.
+@import "blocks/*";
+@import "elements/*";
+@import "pages/*";
+@import "nodes/*";
+@import "regions/*";
+@import "forms/*";
+
+@import "_program";
+@import "_breadcrumbs";
+
+.user-picture{
+	display: none;
+}
+
+ul{
+	list-style: none;
+}
+
+// Links
+a {
+  &:link, &:visited {
+    color:$secondaryHighlight;
+    text-decoration: none;
+  }
+}
+
+a {
+  &:hover, &:active {
+    color:lighten($secondaryHighlight, 10%);
+    text-decoration: underline;
+  }
+}
+
+hr{
+	position: relative;
+	top: 1.0rem;
+	margin-bottom: .5rem;
+	border: 1px solid rgb(244, 244, 238);
+}
+
+nav a {
+	text-transform: capitalize;
+}
+
+#main{
+	margin-bottom: 3rem;
+}
+
+#barwrapper{
+	background: #FED201;
+	height: 4rem;
+	overflow-x: scroll;
+	overflow-y:hidden;
+}
+#bar{
+	@include outer-container;
+	margin:auto;
+	margin-bottom: 2rem;
+	display: inline-block;
+	width: 100%;
+	white-space: nowrap;
+	z-index: 1000;
+	input[type="submit"]{
+		margin-top: 0rem;
+		  width: 14rem;
+		  float: right;
+		  position: relative;
+			  top: -3.4rem;
+		  background:rgba(255,255,255,.3);
+		  border: 1px solid rgba(255,255,255,.3);
+	}
+	input[type="submit"]:hover{
+		background:rgba(255,255,255,.2)
+	}
+}
+
+.container{
+	padding: 0 1rem !important;
+}

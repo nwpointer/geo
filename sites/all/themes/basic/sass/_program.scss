@@ -1,0 +1,107 @@
+
+#enrollment_notice{
+  position: relative;
+  text-align: right;
+  top:10px;
+  margin-bottom: -19px;
+  display: none;
+  z-index: -3;
+  @include media($tablet) {
+			text-align: left !important;
+			top: -20px !important;
+			margin-bottom: -9px !important;
+		}
+}
+#programList{
+	.search{
+		@include span-columns(4);
+		@if $responsive{
+			@include media($tablet) {
+				width: 100%;
+			}
+		}
+	}
+
+	.placeholder span{
+		display: none;
+		@include media($tablet) {
+			display: inline;
+		}
+	}
+	.ms-parent{
+		margin-top:.5rem;
+	}
+	#catagories{
+		@include outer-container;
+		width: 100% !important;
+	}
+	.ms-choice, .ms-drop.bottom{
+		width:100%;
+	}
+	#catagories select, .ms-parent {
+		// min-width: 160px !important;
+		@include span-columns(2);
+		@include media($tablet) {
+			@include span-columns(4);
+			&:nth-child(4n){
+				margin-right:0px;
+			}
+		}
+		@include media($mobile) {
+			@include span-columns(2);
+			&:nth-child(4n){
+				margin-right:0px;
+			}
+		}
+	}
+	li label{
+		font-size: 85% !important;
+	}
+
+	ul{
+		@include outer-container;
+		.card{
+			background: white;
+			margin-top: 1.5rem;
+			height: 307px;
+			box-shadow: inset 0 0 1px rgba(0,0,0,.4);
+			transition: box-shadow 1s;
+			&:hover{
+				// box-shadow: inset 0 0 1px rgba(0,0,0,.9);
+				box-shadow: 0 1px 5px rgba(0,0,0,.5);
+				// background: red;
+			}
+			img{
+				width:100%;
+				max-height: 150px;
+			}
+			.content{
+				padding: 0 .5rem;
+			}
+			a:hover{
+				text-decoration: none;
+			}
+
+
+			@if $responsive {
+				@include media($desktop) {
+					@include span-columns(4);
+					&:nth-child(3n){
+						margin-right:0px;
+					}
+				}
+				@include media($tablet) {
+					@include span-columns(4);
+					&:nth-child(2n){
+						margin-right:0px;
+					}
+				}
+				@include media($mobile) {
+			    	@include span-columns(4);
+			    	margin-right: 0px;
+
+				}
+	  		}
+		}
+	}
+}

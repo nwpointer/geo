@@ -1,0 +1,23 @@
+// _regions.sidebar
+#precontent {
+	.block-fieldblock{
+		display: inline-block !important;
+	}
+	h2.block-title, .field-item p, .field-item{
+		font-size: 1rem !important;
+	}
+	h2.block-title{
+		font-weight: 900;
+		&:after{
+			content: ":";
+		}
+	}
+	*:not(.contextual-links-wrapper){
+		display: inline-block;
+	}
+
+	.contextual-links-wrapper{
+		display: none !important;
+	}
+}
+
