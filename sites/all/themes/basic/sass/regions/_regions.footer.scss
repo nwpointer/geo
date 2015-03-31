@@ -10,13 +10,20 @@
 	
 	background: $darkBackground;
 	@include outer-container;
+	.block-even{
+		margin-right:0px !important;
+	}
 	.block{
 		font-size:90%;
-		@include span-columns(4);
+		@include span-columns(3);
 		@if $responsive {
 		    @include media($tablet) {
-		      width: 100%;
+		      @include span-columns(4);
 		      margin-bottom: 3rem;
+
+		    }
+		    @include media($mobile){
+				@include span-columns(4);
 		    }
 		}
 	}

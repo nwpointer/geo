@@ -59,18 +59,32 @@ nav a {
 	margin-bottom: 3rem;
 }
 
+.front{
+	#breadcrumbs {
+		display: none;
+	}
+}
+#savedProgramDisplay{
+	display: none;
+}
 #barwrapper{
 	background: #FED201;
 	height: 4rem;
 	overflow-x: scroll;
 	overflow-y:hidden;
+	margin-bottom: 3rem;
+
+}
+#barwrapper div{
+	
+	@include outer-container;
 }
 #bar{
-	@include outer-container;
+	@include span-columns(12);
 	margin:auto;
-	margin-bottom: 2rem;
+	// margin-bottom: 2rem;
 	display: inline-block;
-	width: 100%;
+	// width: 100%;
 	white-space: nowrap;
 	z-index: 1000;
 	input[type="submit"]{

@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Open sans"; }
 
 h1 {
-  font-size: 2.61803em;
+  font-size: 3.583em;
   font-weight: 600;
   padding: 0 0 0.5em;
   margin: 0; }
@@ -183,6 +183,10 @@ div.status {
   @media screen and (max-width: 768px) {
     #sidebar-second {
       padding-left: 0px; } }
+  #sidebar-second h2 {
+    margin-bottom: .5rem; }
+  #sidebar-second .block-fieldblock:not(:first-child) h2 {
+    margin-top: 1rem; }
 
 #footer {
   width: 100%;
@@ -199,44 +203,69 @@ div.status {
     content: "";
     display: table;
     clear: both; }
+  #footer .block-even {
+    margin-right: 0px !important; }
   #footer .block {
     font-size: 90%;
     float: left;
     display: block;
     margin-right: 2.12766%;
-    width: 31.91489%; }
+    width: 23.40426%; }
     #footer .block:last-child {
       margin-right: 0; }
     @media screen and (max-width: 768px) {
       #footer .block {
-        width: 100%;
-        margin-bottom: 3rem; } }
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 48.3871%;
+        margin-bottom: 3rem; }
+        #footer .block:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 480px) {
+      #footer .block {
+        float: left;
+        display: block;
+        margin-right: 6.66667%;
+        width: 100%; }
+        #footer .block:last-child {
+          margin-right: 0; } }
 
 #precontent {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2.5rem; }
   @media screen and (min-width: 769px) {
     #precontent {
-      height: 3rem; } }
+      height: 3rem;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      line-height: 3rem; } }
   @media screen and (max-width: 768px) {
     #precontent {
       overflow-y: hidden;
       overflow-x: scroll;
-      white-space: nowrap; }
+      white-space: nowrap;
+      line-height: 3rem;
+      height: 3rem; }
       #precontent .block-fieldblock:not(:first-child) h2:before {
+        padding-left: 2rem;
         content: "| "; } }
   @media screen and (max-width: 480px) {
     #precontent {
+      margin-bottom: 1rem;
+      padding-top: .75rem;
+      line-height: 1.5rem;
       white-space: normal;
       overflow-y: visible;
       height: auto; }
       #precontent .block-fieldblock:not(:first-child) h2:before {
         content: " "; } }
+  #precontent .field-items p {
+    display: inline-block;
+    max-width: 800px; }
   #precontent .block-fieldblock {
     display: inline-block !important;
-    height: 3rem;
-    line-height: 3rem;
     overflow: hidden; }
   #precontent h2.block-title, #precontent .field-item p, #precontent .field-item {
     font-size: 1rem !important;
@@ -373,6 +402,9 @@ div.status {
         #programList ul .card:last-child {
           margin-right: 0; } }
 
+input[type="submit"] {
+  line-height: 1.75rem; }
+
 #breadcrumbs {
   padding-left: 0px !important; }
 
@@ -490,26 +522,39 @@ nav a {
 #main {
   margin-bottom: 3rem; }
 
+.front #breadcrumbs {
+  display: none; }
+
+#savedProgramDisplay {
+  display: none; }
+
 #barwrapper {
   background: #FED201;
   height: 4rem;
   overflow-x: scroll;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  margin-bottom: 3rem; }
 
-#bar {
+#barwrapper div {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  margin: auto;
-  margin-bottom: 2rem;
-  display: inline-block;
-  width: 100%;
-  white-space: nowrap;
-  z-index: 1000; }
-  #bar:after {
+  margin-right: auto; }
+  #barwrapper div:after {
     content: "";
     display: table;
     clear: both; }
+
+#bar {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1000; }
+  #bar:last-child {
+    margin-right: 0; }
   #bar input[type="submit"] {
     margin-top: 0rem;
     width: 14rem;
@@ -562,6 +607,10 @@ nav a {
   @media screen and (max-width: 768px) {
     #sidebar-second {
       padding-left: 0px; } }
+  #sidebar-second h2 {
+    margin-bottom: .5rem; }
+  #sidebar-second .block-fieldblock:not(:first-child) h2 {
+    margin-top: 1rem; }
 
 #footer {
   width: 100%;
@@ -578,44 +627,69 @@ nav a {
     content: "";
     display: table;
     clear: both; }
+  #footer .block-even {
+    margin-right: 0px !important; }
   #footer .block {
     font-size: 90%;
     float: left;
     display: block;
     margin-right: 2.12766%;
-    width: 31.91489%; }
+    width: 23.40426%; }
     #footer .block:last-child {
       margin-right: 0; }
     @media screen and (max-width: 768px) {
       #footer .block {
-        width: 100%;
-        margin-bottom: 3rem; } }
+        float: left;
+        display: block;
+        margin-right: 3.22581%;
+        width: 48.3871%;
+        margin-bottom: 3rem; }
+        #footer .block:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 480px) {
+      #footer .block {
+        float: left;
+        display: block;
+        margin-right: 6.66667%;
+        width: 100%; }
+        #footer .block:last-child {
+          margin-right: 0; } }
 
 #precontent {
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  margin-bottom: 1.5rem; }
+  margin-bottom: 2.5rem; }
   @media screen and (min-width: 769px) {
     #precontent {
-      height: 3rem; } }
+      height: 3rem;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      line-height: 3rem; } }
   @media screen and (max-width: 768px) {
     #precontent {
       overflow-y: hidden;
       overflow-x: scroll;
-      white-space: nowrap; }
+      white-space: nowrap;
+      line-height: 3rem;
+      height: 3rem; }
       #precontent .block-fieldblock:not(:first-child) h2:before {
+        padding-left: 2rem;
         content: "| "; } }
   @media screen and (max-width: 480px) {
     #precontent {
+      margin-bottom: 1rem;
+      padding-top: .75rem;
+      line-height: 1.5rem;
       white-space: normal;
       overflow-y: visible;
       height: auto; }
       #precontent .block-fieldblock:not(:first-child) h2:before {
         content: " "; } }
+  #precontent .field-items p {
+    display: inline-block;
+    max-width: 800px; }
   #precontent .block-fieldblock {
     display: inline-block !important;
-    height: 3rem;
-    line-height: 3rem;
     overflow: hidden; }
   #precontent h2.block-title, #precontent .field-item p, #precontent .field-item {
     font-size: 1rem !important;
@@ -752,6 +826,9 @@ nav a {
         #programList ul .card:last-child {
           margin-right: 0; } }
 
+input[type="submit"] {
+  line-height: 1.75rem; }
+
 #breadcrumbs {
   padding-left: 0px !important; }
 
@@ -869,26 +946,39 @@ nav a {
 #main {
   margin-bottom: 3rem; }
 
+.front #breadcrumbs {
+  display: none; }
+
+#savedProgramDisplay {
+  display: none; }
+
 #barwrapper {
   background: #FED201;
   height: 4rem;
   overflow-x: scroll;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  margin-bottom: 3rem; }
 
-#bar {
+#barwrapper div {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  margin: auto;
-  margin-bottom: 2rem;
-  display: inline-block;
-  width: 100%;
-  white-space: nowrap;
-  z-index: 1000; }
-  #bar:after {
+  margin-right: auto; }
+  #barwrapper div:after {
     content: "";
     display: table;
     clear: both; }
+
+#bar {
+  float: left;
+  display: block;
+  margin-right: 2.12766%;
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1000; }
+  #bar:last-child {
+    margin-right: 0; }
   #bar input[type="submit"] {
     margin-top: 0rem;
     width: 14rem;

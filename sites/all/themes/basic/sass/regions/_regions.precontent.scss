@@ -2,35 +2,59 @@
 #precontent {
 	border-top:1px solid rgba(0,0,0,.2);
 	border-bottom:1px solid rgba(0,0,0,.2);
-	margin-bottom: 1.5rem;
+	margin-bottom: 2.5rem;
 	
 	@if $responsive {
 		@include media($desktop) {
 			height: 3rem;
+			overflow-y:hidden;
+			overflow-x:scroll; 
+			line-height: 3rem;
 		}
 	    @include media($tablet) {
 	        overflow-y:hidden;
 			overflow-x:scroll; 
 			white-space: nowrap;
+			line-height: 3rem;	
+			height: 3rem;
 			.block-fieldblock:not(:first-child) h2:before{
+				padding-left: 2rem;
 				content: "| ";
 			}
 	    }
 	    @include media($mobile) {
+	    	margin-bottom: 1rem;
+	    	padding-top: .75rem;
+	    	line-height: 1.5rem;
 			white-space: normal;
 			overflow-y:visible;
 			height: auto;
 			.block-fieldblock:not(:first-child) h2:before{
 				content: " ";
 			}
+	    } 
+	    .field-items p {
+	    	display: inline-block;
+	    	max-width: 800px;
 	    }
+	    // .content {
+	    // 	top:0px;
+	    // position: absolute;
+	    // }
+	    // p{
+	    // 	width: 16rem;
+	    // 	text-overflow: ellipsis;
+	    // 	white-space: nowrap;
+	    // 	word-break: break-all;
+	    // 	overflow: hidden;
+	    // 	height: 3rem;
+	    // }
 	}
 	
 
 	.block-fieldblock{
 		display: inline-block !important;
-		height: 3rem;
-		line-height: 3rem;
+		
 		overflow: hidden;
 	}
 	h2.block-title, .field-item p, .field-item{
