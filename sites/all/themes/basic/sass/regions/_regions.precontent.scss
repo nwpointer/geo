@@ -1,13 +1,44 @@
 // _regions.sidebar
 #precontent {
+	border-top:1px solid rgba(0,0,0,.2);
+	border-bottom:1px solid rgba(0,0,0,.2);
+	margin-bottom: 1.5rem;
+	
+	@if $responsive {
+		@include media($desktop) {
+			height: 3rem;
+		}
+	    @include media($tablet) {
+	        overflow-y:hidden;
+			overflow-x:scroll; 
+			white-space: nowrap;
+			.block-fieldblock:not(:first-child) h2:before{
+				content: "| ";
+			}
+	    }
+	    @include media($mobile) {
+			white-space: normal;
+			overflow-y:visible;
+			height: auto;
+			.block-fieldblock:not(:first-child) h2:before{
+				content: " ";
+			}
+	    }
+	}
+	
+
 	.block-fieldblock{
 		display: inline-block !important;
+		height: 3rem;
+		line-height: 3rem;
+		overflow: hidden;
 	}
 	h2.block-title, .field-item p, .field-item{
 		font-size: 1rem !important;
+		margin-bottom: 0rem;
 	}
 	h2.block-title{
-		font-weight: 900;
+		font-weight: 600;
 		&:after{
 			content: ":";
 		}

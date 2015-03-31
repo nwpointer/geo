@@ -57,46 +57,46 @@
 
   <div id="main">
       <div id="barwrapper">
-  <div id="bar" class="containsbreadcrumbs">
-        <div id="page">
-          <ul id="breadcrumbs">
-        <?php 
-          $bc = drupal_get_breadcrumb();
-          foreach ($bc as $crumb) {
-            if ($crumb = '<a href="/">Home</a>'){
-              $crumb = '<a href="/"><img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-128.png" alt=""></a>';
-            }
-            print("<li><span>". $crumb . "</span></li>");
-          }
-          if(isset($node)){
-            if(isset($node->field_country)){
-              print "<li><span><a href='/programs'>programs</a></span></li>";
-              $country = $node->field_country['und'][0]['taxonomy_term']->name ;
-              print "<li><span><a href='/programs/countries/". $country ."'>". $country . "</a></span></li>"; 
-            }
-            else{
-            print("<li><span><a>". drupal_get_title() . "</a></span></li>");
-          }
-          }
-          else{
-            print("<li><span><a>". drupal_get_title() . "</a></span></li>");
-          }
-        ?>
-      </ul> 
-      <input type="submit" id="togglesavedProgramDisplay" value="my favorites">
+      <div id="bar" class="containsbreadcrumbs">
+            <div id="page">
+              <ul id="breadcrumbs">
+            <?php 
+              $bc = drupal_get_breadcrumb();
+              foreach ($bc as $crumb) {
+                if ($crumb = '<a href="/">Home</a>'){
+                  $crumb = '<a href="/"><img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-128.png" alt=""></a>';
+                }
+                print("<li><span>". $crumb . "</span></li>");
+              }
+              if(isset($node)){
+                if(isset($node->field_country)){
+                  print "<li><span><a href='/programs'>programs</a></span></li>";
+                  $country = $node->field_country['und'][0]['taxonomy_term']->name ;
+                  print "<li><span><a href='/programs/countries/". $country ."'>". $country . "</a></span></li>"; 
+                }
+                else{
+                print("<li><span><a>". drupal_get_title() . "</a></span></li>");
+              }
+              }
+              else{
+                print("<li><span><a>". drupal_get_title() . "</a></span></li>");
+              }
+            ?>
+          </ul> 
+          <input type="submit" id="togglesavedProgramDisplay" value="my favorites">
+          </div>
+          <div id="savedProgramDisplay">
+          <div id="page">
+            <ul>
+              <li>test</li>
+              <li>test</li>
+              <li>test</li>
+              <li>test</li>
+              <li>test</li>
+            </ul>
+          </div>
+          </div>
       </div>
-      <div id="savedProgramDisplay">
-      <div id="page">
-        <ul>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-          <li>test</li>
-        </ul>
-      </div>
-      </div>
-  </div>
   </div>
     <div class="container">
       

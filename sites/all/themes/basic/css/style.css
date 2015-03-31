@@ -212,18 +212,43 @@ div.status {
         width: 100%;
         margin-bottom: 3rem; } }
 
-#precontent .block-fieldblock {
-  display: inline-block !important; }
-#precontent h2.block-title, #precontent .field-item p, #precontent .field-item {
-  font-size: 1rem !important; }
-#precontent h2.block-title {
-  font-weight: 900; }
-  #precontent h2.block-title:after {
-    content: ":"; }
-#precontent *:not(.contextual-links-wrapper) {
-  display: inline-block; }
-#precontent .contextual-links-wrapper {
-  display: none !important; }
+#precontent {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem; }
+  @media screen and (min-width: 769px) {
+    #precontent {
+      height: 3rem; } }
+  @media screen and (max-width: 768px) {
+    #precontent {
+      overflow-y: hidden;
+      overflow-x: scroll;
+      white-space: nowrap; }
+      #precontent .block-fieldblock:not(:first-child) h2:before {
+        content: "| "; } }
+  @media screen and (max-width: 480px) {
+    #precontent {
+      white-space: normal;
+      overflow-y: visible;
+      height: auto; }
+      #precontent .block-fieldblock:not(:first-child) h2:before {
+        content: " "; } }
+  #precontent .block-fieldblock {
+    display: inline-block !important;
+    height: 3rem;
+    line-height: 3rem;
+    overflow: hidden; }
+  #precontent h2.block-title, #precontent .field-item p, #precontent .field-item {
+    font-size: 1rem !important;
+    margin-bottom: 0rem; }
+  #precontent h2.block-title {
+    font-weight: 600; }
+    #precontent h2.block-title:after {
+      content: ":"; }
+  #precontent *:not(.contextual-links-wrapper) {
+    display: inline-block; }
+  #precontent .contextual-links-wrapper {
+    display: none !important; }
 
 #enrollment_notice {
   position: relative;
@@ -566,18 +591,43 @@ nav a {
         width: 100%;
         margin-bottom: 3rem; } }
 
-#precontent .block-fieldblock {
-  display: inline-block !important; }
-#precontent h2.block-title, #precontent .field-item p, #precontent .field-item {
-  font-size: 1rem !important; }
-#precontent h2.block-title {
-  font-weight: 900; }
-  #precontent h2.block-title:after {
-    content: ":"; }
-#precontent *:not(.contextual-links-wrapper) {
-  display: inline-block; }
-#precontent .contextual-links-wrapper {
-  display: none !important; }
+#precontent {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem; }
+  @media screen and (min-width: 769px) {
+    #precontent {
+      height: 3rem; } }
+  @media screen and (max-width: 768px) {
+    #precontent {
+      overflow-y: hidden;
+      overflow-x: scroll;
+      white-space: nowrap; }
+      #precontent .block-fieldblock:not(:first-child) h2:before {
+        content: "| "; } }
+  @media screen and (max-width: 480px) {
+    #precontent {
+      white-space: normal;
+      overflow-y: visible;
+      height: auto; }
+      #precontent .block-fieldblock:not(:first-child) h2:before {
+        content: " "; } }
+  #precontent .block-fieldblock {
+    display: inline-block !important;
+    height: 3rem;
+    line-height: 3rem;
+    overflow: hidden; }
+  #precontent h2.block-title, #precontent .field-item p, #precontent .field-item {
+    font-size: 1rem !important;
+    margin-bottom: 0rem; }
+  #precontent h2.block-title {
+    font-weight: 600; }
+    #precontent h2.block-title:after {
+      content: ":"; }
+  #precontent *:not(.contextual-links-wrapper) {
+    display: inline-block; }
+  #precontent .contextual-links-wrapper {
+    display: none !important; }
 
 #enrollment_notice {
   position: relative;
