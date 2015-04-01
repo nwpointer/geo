@@ -53,31 +53,34 @@ function program_search() {
 
 
   <div id="programList">
-  <input class="search" placeholder="Search" /> <br><br>
-  <div id="catagories">
-    <select class="discipline_s" multiple data-placeholder="<span>Choose a</span> disipline">
-    </select>
+  <div id="controls">
+    <input class="search" placeholder="Search" />
+    <span class="weak">found:</span> <span id="found">15</span>
+    <br><br>
+    
+    <div id="catagories">
+      <select class="discipline_s" multiple data-placeholder="<span>Choose a</span> disipline">
+      </select>
 
-    <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">
-    </select>
+      <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">
+      </select>
 
-    <select class="term_s" multiple data-placeholder="<span>Choose a</span> term">
-    </select>
+      <select class="term_s" multiple data-placeholder="<span>Choose a</span> term">
+      </select>
 
-    <select class="price_s" multiple data-placeholder="<span>Choose a</span> price">
-    </select>
+      <select class="price_s" multiple data-placeholder="<span>Choose a</span> price">
+      </select>
 
-    <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
-    </select>
+      <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
+      </select>
 
-    <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
-    </select>
-  </div>
-  <hr>
-  <ul class="list">
-    <!-- list contents are loaded ansycronously -->
-  </ul>
-
+      <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
+      </select>
+    </div>
+    </div>
+    <ul class="list">
+      <!-- list contents are loaded ansycronously -->
+    </ul>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>

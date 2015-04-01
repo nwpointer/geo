@@ -41,11 +41,26 @@
         </nav> <!-- /navigation -->
       <?php endif; ?>
 
+       <?php 
+      $hamburger = $base_path . drupal_get_path( 'theme', variable_get('theme_default', '0') ) . '/images/hamburger.png';
+      print '<img id="menu-toggle" src="'.$hamburger .'" height="23" width="27" alt="">';
+    ?>
+
+    <script>
+      jQuery("#menu-toggle").click(function(){
+jQuery("#secondary-menu").toggle();});
+    </script>
+
       <?php if ($page['header']): ?>
         <div id="header-region">
           <?php print render($page['header']); ?>
         </div>
       <?php endif; ?>
+
+      <div class="explore">
+        <input type="text" placeholder="search">
+        <input type="submit">
+      </div>
       
     </div>
 
@@ -99,7 +114,6 @@
         </div>
   </div>
     <div class="container">
-      
       <?php if ($title): ?>
         <h1 class="title"><?php print $title; ?></h1>
       <?php endif; ?>

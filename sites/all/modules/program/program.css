@@ -207,7 +207,7 @@ input:focus {
 .list {
   font-family:sans-serif;
   margin:0;
-  padding:20px 0 0;
+  /*padding:20px 0 0;*/
 }
 .list > li {
   display:block;

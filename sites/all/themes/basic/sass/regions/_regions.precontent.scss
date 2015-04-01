@@ -17,10 +17,6 @@
 			white-space: nowrap;
 			line-height: 3rem;	
 			height: 3rem;
-			.block-fieldblock:not(:first-child) h2:before{
-				padding-left: 2rem;
-				content: "| ";
-			}
 	    }
 	    @include media($mobile) {
 	    	margin-bottom: 1rem;
@@ -30,13 +26,18 @@
 			overflow-y:visible;
 			height: auto;
 			.block-fieldblock:not(:first-child) h2:before{
-				content: " ";
+				display: none !important;
 			}
 	    } 
 	    .field-items p {
 	    	display: inline-block;
 	    	max-width: 800px;
 	    }
+	    .block-fieldblock:not(:first-child) h2:before{
+			padding-left: .5rem;
+			padding-right: .5rem;
+			content: "|";
+		}
 	    // .content {
 	    // 	top:0px;
 	    // position: absolute;
@@ -75,4 +76,6 @@
 		display: none !important;
 	}
 }
+
+
 

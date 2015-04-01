@@ -1,3 +1,5 @@
+@import "_config";
+
 $headerHeight : 9rem;
 
 #header{
@@ -34,4 +36,45 @@ $headerHeight : 9rem;
 	#header-region{
 			padding-top: $headerHeight;
 	}
+
+	h1{
+		color: rgb(255, 255, 255);
+		display: block;
+		font-family: 'nixie one';
+		font-size: 48px;
+		font-weight: 100;
+		height: 96px;
+		letter-spacing: 4.80000019073486px;
+		line-height: 48px;
+		margin-bottom: 4rem;
+		max-width: 1000px;
+		position: relative;
+		text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+		text-transform: uppercase;
+		top: 48px;
+		width: 1000px;
+		word-wrap: break-word;
+	}
+}
+
+.front #header{
+	.explore{
+		display: inline-block;
+	}
+}
+
+#menu-toggle{
+	float:right;
+	position: relative;
+	top:3.5rem;
+	z-index: 1001;
+	@if $responsive {
+    @include media($desktop) {
+      display: none;
+    }
+  }
+}
+
+.explore{
+	display: none;
 }

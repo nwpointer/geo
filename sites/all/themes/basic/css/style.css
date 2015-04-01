@@ -60,6 +60,10 @@ h6 {
 p {
   margin: 0 0 1em 0; }
 
+.weak {
+  font-size: 90%;
+  color: rgba(0, 0, 0, 0.5); }
+
 ul, ol {
   margin-left: 0;
   padding-left: 0; }
@@ -153,6 +157,11 @@ div.status {
 .breadcrumb a {
   color: red; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 #header {
   min-height: 9rem;
   color: white;
@@ -170,6 +179,38 @@ div.status {
       padding-right: .5rem; }
   #header #header-region {
     padding-top: 9rem; }
+  #header h1 {
+    color: white;
+    display: block;
+    font-family: 'nixie one';
+    font-size: 48px;
+    font-weight: 100;
+    height: 96px;
+    letter-spacing: 4.80000019073486px;
+    line-height: 48px;
+    margin-bottom: 4rem;
+    max-width: 1000px;
+    position: relative;
+    text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+    text-transform: uppercase;
+    top: 48px;
+    width: 1000px;
+    word-wrap: break-word; }
+
+.front #header .explore {
+  display: inline-block; }
+
+#menu-toggle {
+  float: right;
+  position: relative;
+  top: 3.5rem;
+  z-index: 1001; }
+  @media screen and (min-width: 769px) {
+    #menu-toggle {
+      display: none; } }
+
+.explore {
+  display: none; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -247,10 +288,7 @@ div.status {
       overflow-x: scroll;
       white-space: nowrap;
       line-height: 3rem;
-      height: 3rem; }
-      #precontent .block-fieldblock:not(:first-child) h2:before {
-        padding-left: 2rem;
-        content: "| "; } }
+      height: 3rem; } }
   @media screen and (max-width: 480px) {
     #precontent {
       margin-bottom: 1rem;
@@ -260,10 +298,14 @@ div.status {
       overflow-y: visible;
       height: auto; }
       #precontent .block-fieldblock:not(:first-child) h2:before {
-        content: " "; } }
+        display: none !important; } }
   #precontent .field-items p {
     display: inline-block;
     max-width: 800px; }
+  #precontent .block-fieldblock:not(:first-child) h2:before {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    content: "|"; }
   #precontent .block-fieldblock {
     display: inline-block !important;
     overflow: hidden; }
@@ -568,6 +610,44 @@ nav a {
 
 .container {
   padding: 0 1rem !important; }
+
+html, body .front {
+  min-height: 100vh; }
+
+.front {
+  background: #1F1F1F; }
+  .front #main {
+    margin-bottom: 0px; }
+  .front #main .container {
+    display: none !important; }
+
+#enrollment_notice {
+  z-index: 1 !important; }
+
+#programList #controls {
+  background: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1005;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  overflow: auto; }
+
+#programList .is-sticky #controls {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.3); }
+
+#programList #found {
+  color: white;
+  border-radius: 15px;
+  font-size: 80%;
+  padding: .15rem .55rem 0;
+  display: inline-block;
+  background: #fed201;
+  height: 1.75rem;
+  width: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  padding-right: 1.5rem; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -577,6 +657,11 @@ nav a {
 .breadcrumb a {
   color: red; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 #header {
   min-height: 9rem;
   color: white;
@@ -594,6 +679,38 @@ nav a {
       padding-right: .5rem; }
   #header #header-region {
     padding-top: 9rem; }
+  #header h1 {
+    color: white;
+    display: block;
+    font-family: 'nixie one';
+    font-size: 48px;
+    font-weight: 100;
+    height: 96px;
+    letter-spacing: 4.80000019073486px;
+    line-height: 48px;
+    margin-bottom: 4rem;
+    max-width: 1000px;
+    position: relative;
+    text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
+    text-transform: uppercase;
+    top: 48px;
+    width: 1000px;
+    word-wrap: break-word; }
+
+.front #header .explore {
+  display: inline-block; }
+
+#menu-toggle {
+  float: right;
+  position: relative;
+  top: 3.5rem;
+  z-index: 1001; }
+  @media screen and (min-width: 769px) {
+    #menu-toggle {
+      display: none; } }
+
+.explore {
+  display: none; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -671,10 +788,7 @@ nav a {
       overflow-x: scroll;
       white-space: nowrap;
       line-height: 3rem;
-      height: 3rem; }
-      #precontent .block-fieldblock:not(:first-child) h2:before {
-        padding-left: 2rem;
-        content: "| "; } }
+      height: 3rem; } }
   @media screen and (max-width: 480px) {
     #precontent {
       margin-bottom: 1rem;
@@ -684,10 +798,14 @@ nav a {
       overflow-y: visible;
       height: auto; }
       #precontent .block-fieldblock:not(:first-child) h2:before {
-        content: " "; } }
+        display: none !important; } }
   #precontent .field-items p {
     display: inline-block;
     max-width: 800px; }
+  #precontent .block-fieldblock:not(:first-child) h2:before {
+    padding-left: .5rem;
+    padding-right: .5rem;
+    content: "|"; }
   #precontent .block-fieldblock {
     display: inline-block !important;
     overflow: hidden; }
@@ -992,5 +1110,43 @@ nav a {
 
 .container {
   padding: 0 1rem !important; }
+
+html, body .front {
+  min-height: 100vh; }
+
+.front {
+  background: #1F1F1F; }
+  .front #main {
+    margin-bottom: 0px; }
+  .front #main .container {
+    display: none !important; }
+
+#enrollment_notice {
+  z-index: 1 !important; }
+
+#programList #controls {
+  background: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1005;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  overflow: auto; }
+
+#programList .is-sticky #controls {
+  border-bottom: 0px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.3); }
+
+#programList #found {
+  color: white;
+  border-radius: 15px;
+  font-size: 80%;
+  padding: .15rem .55rem 0;
+  display: inline-block;
+  background: #fed201;
+  height: 1.75rem;
+  width: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  padding-right: 1.5rem; }
 
 /*# sourceMappingURL=style.css.map */
