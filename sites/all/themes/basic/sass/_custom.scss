@@ -69,8 +69,8 @@ nav a {
 }
 #barwrapper{
 	background: #FED201;
-	height: 4rem;
-	overflow-x: scroll;
+	height: 5rem;
+	overflow-x: auto;
 	overflow-y:hidden;
 	margin-bottom: 3rem;
 
@@ -120,35 +120,5 @@ html, body .front{
 	}
 
 }
-#enrollment_notice{
-	z-index: 1 !important;
-}
 
-#programList #controls{
-	background: white;
-	padding-top:1rem;
-	padding-bottom:1rem;
-	z-index: 1005;
-	border-bottom:2px solid rgba(0,0,0,.1);
-	overflow: auto;
-}
-
-#programList .is-sticky #controls{
-	border-bottom:0px solid rgba(0,0,0,.1);
-	box-shadow: 0px 3px 3px -3px rgba(0,0,0,.3);
-}
-
-#programList #found{
-	color:white;
-	border-radius: 15px;
-	font-size: 80%;
-	padding: .15rem .55rem 0;
-	display: inline-block;
- 	background: #fed201;
-	height: 1.75rem;
-	width: 1.75rem;
-	line-height: 1.75rem;
-	text-align: center;
-	padding-right: 1.5rem;
-}
 
