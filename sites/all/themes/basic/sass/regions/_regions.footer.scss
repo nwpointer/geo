@@ -11,7 +11,14 @@
 	background: $darkBackground;
 	@include outer-container;
 	.block-even{
-		margin-right:0px !important;
+		@if $responsive {
+			@include media($tablet) {
+				margin-right:0px !important;
+			}
+		}
+	}
+	.block-title{
+		text-transform:capitalize;
 	}
 	.block{
 		font-size:90%;
