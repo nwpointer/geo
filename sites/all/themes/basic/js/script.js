@@ -18,6 +18,7 @@
 
 		$("#menu-toggle").click(function(){
 			$('nav #primary').toggle();
+			$("#menu-toggle").toggleClass('active');
 		});
 
 		explore = function(){

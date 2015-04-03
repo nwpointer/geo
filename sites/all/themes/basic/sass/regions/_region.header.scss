@@ -74,8 +74,9 @@ $headerHeight : 9rem;
 
 #menu-toggle{
 	right: $padding;
-	position: fixed;
+	position: absolute;
 	z-index: 2007;
+
 	@if $responsive {
     @include media($desktop) {
       display: none;
@@ -87,6 +88,9 @@ $headerHeight : 9rem;
     	top:1.5rem;
     }
   }
+}
+#menu-toggle.active{
+	position: fixed;
 }
 
 .explore{

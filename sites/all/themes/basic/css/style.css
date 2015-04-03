@@ -313,7 +313,7 @@ div.status {
 /* line 75, ../sass/regions/_region.header.scss */
 #menu-toggle {
   right: 20px;
-  position: fixed;
+  position: absolute;
   z-index: 2007;
 }
 @media screen and (min-width: 769px) {
@@ -336,6 +336,11 @@ div.status {
 }
 
 /* line 92, ../sass/regions/_region.header.scss */
+#menu-toggle.active {
+  position: fixed;
+}
+
+/* line 96, ../sass/regions/_region.header.scss */
 .explore {
   display: none;
 }
