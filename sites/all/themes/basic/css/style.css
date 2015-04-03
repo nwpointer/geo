@@ -553,15 +553,20 @@ div.status {
   #programList #controls .search {
     margin-top: 0rem !important;
   }
+  /* line 39, ../sass/_program.scss */
+  #programList #controls .ms-drop.bottom input {
+    width: auto !important;
+    margin-top: 0px !important;
+  }
 }
 
-/* line 44, ../sass/_program.scss */
+/* line 49, ../sass/_program.scss */
 #programList .is-sticky #controls {
   border-bottom: 0px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.5);
 }
 
-/* line 49, ../sass/_program.scss */
+/* line 54, ../sass/_program.scss */
 #programList #found {
   color: white;
   border-radius: 15px;
@@ -576,7 +581,7 @@ div.status {
   padding-right: 1.5rem;
 }
 
-/* line 65, ../sass/_program.scss */
+/* line 70, ../sass/_program.scss */
 #programList .search {
   z-index: 1010;
   position: absolute;
@@ -590,26 +595,26 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 65, ../sass/_program.scss */
+  /* line 70, ../sass/_program.scss */
   #programList .search {
     width: 100%;
   }
 }
-/* line 76, ../sass/_program.scss */
+/* line 81, ../sass/_program.scss */
 #programList .placeholder span {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 76, ../sass/_program.scss */
+  /* line 81, ../sass/_program.scss */
   #programList .placeholder span {
     display: inline;
   }
 }
-/* line 82, ../sass/_program.scss */
+/* line 87, ../sass/_program.scss */
 #programList .ms-parent {
   margin-top: .5rem;
 }
-/* line 85, ../sass/_program.scss */
+/* line 90, ../sass/_program.scss */
 #programList #catagories {
   max-width: 68em;
   margin-left: auto;
@@ -622,11 +627,11 @@ div.status {
   display: table;
   clear: both;
 }
-/* line 89, ../sass/_program.scss */
+/* line 94, ../sass/_program.scss */
 #programList .ms-choice, #programList .ms-drop.bottom {
   width: 100%;
 }
-/* line 92, ../sass/_program.scss */
+/* line 97, ../sass/_program.scss */
 #programList #catagories select, #programList .ms-parent {
   float: left;
   display: block;
@@ -638,7 +643,7 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 92, ../sass/_program.scss */
+  /* line 97, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -649,13 +654,13 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 97, ../sass/_program.scss */
+  /* line 102, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 92, ../sass/_program.scss */
+  /* line 97, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -666,16 +671,16 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 103, ../sass/_program.scss */
+  /* line 108, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
-/* line 108, ../sass/_program.scss */
+/* line 113, ../sass/_program.scss */
 #programList li label {
   font-size: 85% !important;
 }
-/* line 112, ../sass/_program.scss */
+/* line 117, ../sass/_program.scss */
 #programList ul {
   max-width: 68em;
   margin-left: auto;
@@ -687,7 +692,7 @@ div.status {
   display: table;
   clear: both;
 }
-/* line 114, ../sass/_program.scss */
+/* line 119, ../sass/_program.scss */
 #programList ul .card {
   background: white;
   margin-top: 1.5rem;
@@ -695,25 +700,25 @@ div.status {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
   transition: box-shadow 1s;
 }
-/* line 120, ../sass/_program.scss */
+/* line 125, ../sass/_program.scss */
 #programList ul .card:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
-/* line 125, ../sass/_program.scss */
+/* line 130, ../sass/_program.scss */
 #programList ul .card img {
   width: 100%;
   max-height: 150px;
 }
-/* line 129, ../sass/_program.scss */
+/* line 134, ../sass/_program.scss */
 #programList ul .card .content {
   padding: 0 .5rem;
 }
-/* line 132, ../sass/_program.scss */
+/* line 137, ../sass/_program.scss */
 #programList ul .card a:hover {
   text-decoration: none;
 }
 @media screen and (min-width: 769px) {
-  /* line 114, ../sass/_program.scss */
+  /* line 119, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -724,13 +729,13 @@ div.status {
   #programList ul .card:last-child {
     margin-right: 0;
   }
-  /* line 140, ../sass/_program.scss */
+  /* line 145, ../sass/_program.scss */
   #programList ul .card:nth-child(3n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 114, ../sass/_program.scss */
+  /* line 119, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -741,13 +746,13 @@ div.status {
   #programList ul .card:last-child {
     margin-right: 0;
   }
-  /* line 146, ../sass/_program.scss */
+  /* line 151, ../sass/_program.scss */
   #programList ul .card:nth-child(2n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 114, ../sass/_program.scss */
+  /* line 119, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
