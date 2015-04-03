@@ -21,17 +21,31 @@
 }
 
 #programList #controls{
+
 	background: white;
 	padding-top:1rem;
 	padding-bottom:1rem;
 	z-index: 1005;
 	border-bottom:2px solid rgba(0,0,0,.1);
-	overflow: visible;
 	min-height:7.75rem;
 	position: relative;
 	z-index: 1005;
-	overflow: auto;
+	overflow: visible;
+
+	@if $responsive {
+		@include media($mobile) {
+			border-bottom: none;
+
+			.search{
+				margin-top:0rem !important;
+			}
+		}
+
+	}
+
+
 }
+
 
 #programList .is-sticky #controls{
 	border-bottom:0px solid rgba(0,0,0,.1);

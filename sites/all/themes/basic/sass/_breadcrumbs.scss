@@ -88,11 +88,11 @@
 	input[type="submit"]{
 		line-height: 2.75rem;
 		height: 2.75rem;
-		@extend .not-mobile;
+		@extend .not-tablet;
 	}
 }
 
-#bar #breadcrumbs{
+#bar #breadcrumbs {
 	// position: relative;
 	// top:-.75rem;
 	margin-bottom: 0px;
