@@ -58,8 +58,16 @@ jQuery("#secondary-menu").toggle();});
       <?php endif; ?>
 
       <div class="explore">
-        <input type="text" placeholder="search">
-        <input type="submit">
+        <form onsubmit="return explore()">
+          <input type="text" placeholder="search">
+          <input  type="submit">
+        </form>
+        <script>
+          jQuery(function(){
+            var $ = jQuery;
+            
+          });
+        </script>
       </div>
       
     </div>

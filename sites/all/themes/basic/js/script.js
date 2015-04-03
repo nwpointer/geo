@@ -15,6 +15,17 @@
 	
 
 	$(function(){
+
+		$("#menu-toggle").click(function(){
+			$('nav #primary').toggle();
+		});
+
+		explore = function(){
+             var search = $('.explore input[type="text"]').val();
+             window.location.href += 'programs/' + search;
+             return false;
+            }
+
 		// $("#barwrapper").sticky({topSpacing:-0, responsiveWidth:true});
 		$("#programList #controls").sticky({topSpacing:-0, responsiveWidth:true});
 		// $("#save").sticky({topSpacing:-0});

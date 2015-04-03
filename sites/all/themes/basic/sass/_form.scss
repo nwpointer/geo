@@ -9,9 +9,7 @@ input{
       }
     }
 }
-
 input{
-	width:100%;
 	line-height: 2rem;
 	padding:0 .75rem;
 	box-sizing:border-box;
@@ -20,26 +18,23 @@ input{
 	border-radius: .2rem;
 	display: inline-block;
 	height: 2rem;
+	outline: 0;
 }
 label{
-	margin-top:1.5rem;
+	// margin-top:1.5rem;
 	/*font-size: 1.5rem;*/
 	display: inline-block;
-	font-family: 'open sans';
 	font-size: 1rem;
 	text-transform: capitalize;
-	letter-spacing: .1rem; 
-	font-family: 'Open sans';
-	text-transform: uppercase;
 	letter-spacing: .15rem;
 	font-size:.75rem;
-	color: rgba(0,0,0,.5);
-	font-weight: 700;
+	// color: rgba(0,0,0,.5);
+	font-weight: 100;
 }
 input[type='submit']{
 	background: #8AB24F;
-	margin-top:2rem;
 	line-height: .825rem;
+	padding:0 2.75rem;
 	color:white;
 	font-size: 1rem;
 	border:0px;
@@ -47,31 +42,36 @@ input[type='submit']{
 	letter-spacing: .2rem;
 	font-weight: 100;
 	font-family: 'Open sans';
+	font-size: 80%;
 }
-@if $responsive {
-	@include media($tablet) {
-		#header input[type="text"]{
-		background: none;
-		border:2px solid white;
-		background: rgba(0,0,0,.1);
-		color:white;
-		outline: none;
-		line-height: 2.5rem;
-		font-size: 1.25rem;
-		width:250px;
-		display: inline-block;
-		margin-bottom: 2.5rem;
-	}
+label{
+	font-weight: 400 !important;
+  	letter-spacing: 0 !important;
+}
+// @if $responsive {
+// 	@include media($tablet) {
+// 		#header input[type="text"]{
+// 		background: none;
+// 		border:2px solid white;
+// 		background: rgba(0,0,0,.1);
+// 		color:white;
+// 		outline: none;
+// 		line-height: 2.5rem;
+// 		font-size: 1.25rem;
+// 		width:250px;
+// 		display: inline-block;
+// 		margin-bottom: 2.5rem;
+// 	}
 
-	#header input[type="submit"]{
-		width:200px;
-		position: relative;
-		top:-.08rem;
-		outline:none;
-		left:.5rem;
-	}
-}
-}
+// 	#header input[type="submit"]{
+// 		width:200px;
+// 		position: relative;
+// 		top:-.08rem;
+// 		outline:none;
+// 		left:.5rem;
+// 	}
+// }
+// }
 // @include tablet {
 // 	#header input[type="text"]{
 // 		background: none;

@@ -46,6 +46,8 @@ $tablet: new-breakpoint(max-width 768px 8);
 $mobile: new-breakpoint(max-width 480px 4);
 $desktop: new-breakpoint(min-width 769px 12);
 
+
+
 // Import grid to be used (Bourbon Neat).
 // We load this after we provide our overrides: https://github.com/thoughtbot/neat#changing-the-defaults
 @import "components/neat/neat";
@@ -53,3 +55,21 @@ $desktop: new-breakpoint(min-width 769px 12);
 // Import local files
 @import "_variables";
 @import "_mixins";
+
+.not-mobile{
+	@if $responsive{
+			@include media($mobile) {
+				display: none;
+			}
+
+		}
+}
+
+.not-tablet{
+	@if $responsive{
+			@include media($tablet) {
+				display: none;
+			}
+
+		}
+}

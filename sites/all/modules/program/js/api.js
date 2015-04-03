@@ -3,7 +3,17 @@ App.terms = [];
 App.programView = {};
 window.Api = window.location.origin + '/rest';
 
+
+
 (function ($) {
+  // if search term added input into search box
+  $(function(){
+    var searchTerm = window.location.href.split("/").slice(-1)[0];
+    searchTerm = searchTerm =='programs' ? "" : searchTerm;
+    $("#controls .search").val(searchTerm);
+  });
+  
+
   function request(url, callback){
     $.ajax(url, {
       success: function(data){

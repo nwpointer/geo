@@ -54,7 +54,7 @@ function program_search() {
 
   <div id="programList">
   <div id="controls">
-    <input class="search" placeholder="Search" />
+    <input class="search" placeholder="Search" value=""/>
     <span class="weak">found:</span> <span id="found">15</span>
     <br><br>
     

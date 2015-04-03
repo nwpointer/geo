@@ -2,6 +2,12 @@
 
 $headerHeight : 9rem;
 
+@if $responsive{
+	@include media($mobile) {
+		// $headerHeight : 5rem;
+	}
+}
+
 #header{
 	min-height: $headerHeight;
 	color:white;
@@ -39,36 +45,39 @@ $headerHeight : 9rem;
 
 	h1{
 		color: rgb(255, 255, 255);
-		display: block;
+		display: inline-block;
 		font-family: 'nixie one';
-		font-size: 48px;
 		font-weight: 100;
-		height: 96px;
-		letter-spacing: 4.80000019073486px;
-		line-height: 48px;
-		margin-bottom: 4rem;
-		max-width: 1000px;
 		position: relative;
 		text-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;
 		text-transform: uppercase;
 		top: 48px;
-		width: 1000px;
 		word-wrap: break-word;
+
+		@if $responsive{
+			@include media($desktop) {
+				font-size: 48px;
+				letter-spacing: 4.80000019073486px;
+				line-height: 48px;
+				margin-bottom: 4rem;
+			}
+		}
 	}
 }
 
 .front #header{
-	height: 60vh;
+	min-height: 60vh;
+	// min-height: 30rem;
 	.explore{
 		display: inline-block;
 	}
 }
 
 #menu-toggle{
-	float:right;
-	position: relative;
+	right: $padding;
+	position: fixed;
 	top:3.5rem;
-	z-index: 1001;
+	z-index: 2007;
 	@if $responsive {
     @include media($desktop) {
       display: none;

@@ -21,6 +21,8 @@
 @import "_program";
 @import "_breadcrumbs";
 @import "_form";
+@import "_taxonomyPage";
+@import "_nav";
 
 .user-picture{
 	display: none;
@@ -70,7 +72,7 @@ nav a {
 }
 #barwrapper{
 	background: #FED201;
-	height: 5rem;
+	height: 4rem;
 	overflow-x: auto;
 	overflow-y:hidden;
 	margin-bottom: 3rem;
@@ -121,5 +123,8 @@ html, body .front{
 	}
 
 }
-
+.explore{
+	width:100%;
+	margin-bottom: 3rem;
+}
 

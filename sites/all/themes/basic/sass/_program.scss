@@ -2,7 +2,7 @@
 #enrollment_notice{
   position: relative;
   text-align: right;
-  top:10px;
+  top:1.5rem;
   margin-bottom: -19px;
   display: none;
   z-index: -3;
@@ -13,7 +13,11 @@
 		}
 }
 #enrollment_notice{
-	z-index: 1 !important;
+	z-index: 1006 !important;
+}
+
+#controls-sticky-wrapper{
+	height: auto !important;
 }
 
 #programList #controls{
@@ -24,6 +28,9 @@
 	border-bottom:2px solid rgba(0,0,0,.1);
 	overflow: visible;
 	min-height:7.75rem;
+	position: relative;
+	z-index: 1005;
+	overflow: auto;
 }
 
 #programList .is-sticky #controls{
@@ -44,6 +51,8 @@
 	text-align: center;
 	padding-right: 1.5rem;
 }
+
+
 #programList{
 	.search{
 		@include span-columns(4);
@@ -136,4 +145,8 @@
 	  		}
 		}
 	}
+}
+
+#programList span#found, #programList .weak{
+	@extend .not-tablet;
 }

@@ -34,15 +34,15 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 3.583em;
+  font-size: ms(2);
   font-weight: 600;
   padding: 0 0 0.5em;
   margin: 0;
   @if $responsive {
-    @include media($mobile){
+    @include media($mobile) {
       font-size: ms(1);
     }
-  }
-  
+  } 
 }
 
 h2 {
