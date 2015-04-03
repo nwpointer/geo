@@ -57,6 +57,7 @@ window.Api = window.location.origin + '/rest';
       program = {
         country: getTermName(data.field_country),
         term: getTermName(data.field_term),
+        type: getTermName(data.field_program_type) || "uncatagorized",
         title: data.title,
         discipline: getTermName(data.field_discipline),
         url: data.path,
@@ -66,7 +67,7 @@ window.Api = window.location.origin + '/rest';
         price: getPricefield(data.field_program_fee),
         region: getTermName(data.field_continent)
       };
-      console.log(program);
+      console.log(data);
       if(App.enrolled || program.enrollment_required == '0'){
         this.callback();
       }
@@ -90,7 +91,8 @@ window.Api = window.location.origin + '/rest';
   }
 
   function getCustomfield(field){
-    // foo = field.und ? field.und[0].value || "";
+    // conso
+    foo = field && field.und ? field.und[0].value : "";
       return "foo";
   }
 
@@ -107,10 +109,10 @@ window.Api = window.location.origin + '/rest';
 
   function getTermName(field){
     term = getTerm(field);
-    return term.name;
+    return term ? term.name : null;
   }
   function getTerm(field){
-    tid=field.und[0].tid;
+    tid= field && field.und ? field.und[0].tid : null;
     url = Api + '/term/' + tid;
     if(typeof App.terms[tid] === "undefined"){
       synchronousRequest(url, function(data){

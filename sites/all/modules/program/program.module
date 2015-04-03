@@ -74,7 +74,7 @@ function program_search() {
       <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
       </select>
 
-      <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
+      <select class="type_s" multiple data-placeholder="<span>Choose a</span> program type">
       </select>
     </div>
     </div>

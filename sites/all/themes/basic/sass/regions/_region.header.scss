@@ -2,8 +2,6 @@
 
 $headerHeight : 9rem;
 
-
-
 #header{
 	min-height: $headerHeight;
 	@if $responsive{
@@ -81,6 +79,9 @@ $headerHeight : 9rem;
 	@if $responsive {
     @include media($desktop) {
       display: none;
+    }
+    @include media($tablet) {
+    	top:3.5rem;
     }
     @include media($mobile){
     	top:1.5rem;
