@@ -2,14 +2,15 @@
 
 $headerHeight : 9rem;
 
-@if $responsive{
-	@include media($mobile) {
-		// $headerHeight : 5rem;
-	}
-}
+
 
 #header{
 	min-height: $headerHeight;
+	@if $responsive{
+	@include media($mobile) {
+		min-height: $headerHeight/2;
+		}
+	}
 	color:white;
 	background: 
 		/*linear-gradient(
@@ -76,11 +77,13 @@ $headerHeight : 9rem;
 #menu-toggle{
 	right: $padding;
 	position: fixed;
-	top:3.5rem;
 	z-index: 2007;
 	@if $responsive {
     @include media($desktop) {
       display: none;
+    }
+    @include media($mobile){
+    	top:1.5rem;
     }
   }
 }
