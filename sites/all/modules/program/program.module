@@ -40,6 +40,82 @@ function program_search() {
     '/multiple-select.css'
   ));
 
+ 
+  function getTerm($node, $f){
+    $term =($node->{$f});
+    if(!empty($term)){
+      $term =($node->{$f}['und'][0]['tid']);
+      settype($term, "integer");
+      $term = taxonomy_term_load($term)->name;
+    }else{
+      $term = null;
+    }
+    return $term;
+  }
+
+  function getCustomField($node, $f){
+    $term =($node->{$f});
+    if(!empty($term)){
+      return $term['und'][0];
+    }else{
+      if($f == "field_header_background"){
+        return "'http://abhijit67.blog.com/files/2012/02/mount-everast.jpg'";
+      }
+      if($f == "field_term"){
+        return "na";
+      }
+      return null;
+    }
+  }
+
+  $nids = db_select('node', 'n')
+    ->fields('n', array('nid'))
+    ->fields('n', array('type'))
+    ->condition('n.type', 'program')
+    ->execute()
+    ->fetchCol(); // returns an indexed array
+
+
+
+  $programCards = "";
+  foreach ($nids as $value) {
+    $node = node_load($value, false);
+
+    $title = $node->title;
+    $country = getTerm($node, "field_country");
+    $term = getTerm($node, "field_term");
+    $program_type = getTerm($node, "field_program_type");
+    $priority = getTerm($node, "field_3d_party_provider_program");
+    $discipline = getTerm($node, "field_discipline");
+    $continent = getTerm($node, "field_continent");
+    $academic_standing = getCustomField($node, "field_academic_standing");
+    $header_background = getCustomField($node, "field_header_background");
+    $enrollment_required = getCustomField($node, "field_enrollment_required");
+    $program_fee = getCustomField($node, "field_program_fee");
+
+    print_r($header_background);
+
+
+    $linkableTitle = str_replace(" ", "-", $title);
+    $link = "'". "/programs/$country/$linkableTitle". "'";
+    
+    $card = "<li class='card'><a class='url' href={$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p></div></a>";
+
+    $programCards .= $card;  
+    // break;
+  }
+
+  // $programscontent = node_load_multiple(array(), array('type' => 'program'));
+
+ 
+
+  // $testCard = '<li class="card"><a class="url" href="http://geo.dd:8083/Nanjing/Summer_Chinese"><div class="img-wrap"><img class="image" src="http://abhijit67.blog.com/files/2012/02/mount-everast.jpg"></div><div class="content"><h5 class="title">CIEE: Summer Chinese Studies in Nanjing, China</h5><p class="term">Summer</p><p class="discipline">Language Learning</p></div></a>';
+
+
+  // for ($i=0; $i < count($programscontent) ; $i++) { 
+  //   $programCards .= $testCard;
+  // }
+
   return array('#markup' => '
   <div id="enrollment_notice" class="weak">
     Showing results for: <span></span> <a id="change" href="#">change</a>
@@ -53,7 +129,7 @@ function program_search() {
   <div id="programList">
   <div id="controls">
     <input class="search" placeholder="Search" value=""/>
-    <span class="weak">found:</span> <span id="found">15</span>
+    <span class="weak">found:</span> <span id="found">0</span>
     <br><br>
     
     <div id="catagories">
@@ -77,7 +153,8 @@ function program_search() {
     </div>
     </div>
     <ul class="list">
-      <!-- list contents are loaded ansycronously -->
+      '. $programCards .'
+      </li>
     </ul>
 </div>
 

@@ -3,6 +3,7 @@ App.terms = [];
 App.programView = {};
 window.Api = window.location.origin + '/rest';
 
+App.pCount = 0;
 
 
 (function ($) {
@@ -43,10 +44,11 @@ window.Api = window.location.origin + '/rest';
   App.requestPrograms = function(callback){
     url = Api + '/node';
     request(url, function(data){
-      data = _.select(data, function(node){ return node.type == "program";});
-      App.programUrls = _.pluck(data, "uri");
-      // _.each(App.programUrls, App.requestProgram);
-      App.programUrls.forEach(App.requestProgram.bind({callback:callback}));
+      // console.log(data);
+      // data = _.select(data, function(node){ return node.type == "program";});
+      // App.programUrls = _.pluck(data, "uri");
+      // // _.each(App.programUrls, App.requestProgram);
+      // App.programUrls.forEach(App.requestProgram.bind({callback:callback}));
     });
   }
 
@@ -58,7 +60,7 @@ window.Api = window.location.origin + '/rest';
         country: getTermName(data.field_country),
         term: getTermName(data.field_term),
         type: getTermName(data.field_program_type) || "uncatagorized",
-        priority: getPriority(data.field_3d_party_provider),
+        priority: getPriority(data.field_3d_party_provider_program),
         title: data.title,
         discipline: getTermName(data.field_discipline),
         url: data.path,
@@ -68,6 +70,8 @@ window.Api = window.location.origin + '/rest';
         price: getPricefield(data.field_program_fee),
         region: getTermName(data.field_continent)
       };
+
+      App.pCount +=1;
 
       App.programs.list.setAttribute("class", App.programs.list.className + " loaded");
       
