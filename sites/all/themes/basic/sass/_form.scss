@@ -1,6 +1,6 @@
 @import '_config';
 
-input{
+input, button.lg{
 	@if $responsive {
       @include media($mobile) {
 			width: 100% !important;
@@ -9,7 +9,7 @@ input{
       }
     }
 }
-input{
+input, button.lg{
 	line-height: 2rem;
 	padding:0 .75rem;
 	box-sizing:border-box;
@@ -31,7 +31,7 @@ label{
 	// color: rgba(0,0,0,.5);
 	font-weight: 100;
 }
-input[type='submit']{
+input[type='submit'], button.lg{
 	background: #8AB24F;
 	line-height: .825rem;
 	padding:0 2.75rem;
@@ -47,6 +47,13 @@ input[type='submit']{
 label{
 	font-weight: 400 !important;
   	letter-spacing: 0 !important;
+}
+
+button.lg{
+	line-height: 2.75rem;
+	height: 2.75rem;
+	width: 100%;
+	text-transform: uppercase !important;
 }
 // @if $responsive {
 // 	@include media($tablet) {

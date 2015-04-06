@@ -27,6 +27,7 @@ App.programs.populate = function(){
   App.requestPrograms(function(){
     App.programs.add(program);
     App.programs.search($("input.search").val());
+    App.programs.sort('priority', { order: "asc" });
     // App.programs.update();
     // updateList();
 
@@ -53,7 +54,7 @@ App.programs.populate = function(){
   });
 }
 
-//3 helper functions 
+// helper functions 
 var updateList = function(){
   App.programs.filter(function(item) {
     filter = true;
@@ -74,4 +75,14 @@ function foreachCatagory(f){
 function dropdownof(option){
   return $("." + option + "_s");
 }
+
+App.programs.sort('priority', { order: "desc" });
+
+var msdrops = $(".ms-parent ul");
+$.each(msdrops, function(i){
+  console.log(i);
+})
+
+console.log('offff');
+
 })(jQuery);

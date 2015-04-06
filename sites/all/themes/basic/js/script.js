@@ -20,20 +20,24 @@
 			$('nav #primary').toggle();
 			$("#menu-toggle").toggleClass('active');
 		});
+		
+		// $("h2.block-title").stick_in_parent();
+
+		$("#savedProgramDisplay").click(function(){
+			$("#savedProgramDisplay").slideToggle(100);
+		});
 
 		explore = function(){
              var search = $('.explore input[type="text"]').val();
              window.location.href += 'programs/' + search;
              return false;
-            }
+        };
 
 		// $("#barwrapper").sticky({topSpacing:-0, responsiveWidth:true});
 		$("#programList #controls").sticky({topSpacing:-0, responsiveWidth:true});
 		// $("#save").sticky({topSpacing:-0});
 		//$("#sidebar-extras").sticky({topSpacing:60, getWidthFrom: ".region-sidebar-first"});
-		jQuery("#togglesavedProgramDisplay").click(function(){
-			$("#savedProgramDisplay").slideToggle(100);
-		});
+		
 	});
 
 	$(function(){

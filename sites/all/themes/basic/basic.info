@@ -36,10 +36,13 @@ stylesheets[print][] = css/print.css
 ; Scripts
 scripts[] = js/build/scripts.js
 scripts[] = js/build/modernizr.js
-scripts[] = js/script.js
 scripts[] = js/jquery.sticky.js
-scripts[] = js/cookies.js
-scripts[] = js/favorite.js
+scripts[] = js/jquery.sticky-kit.min.js
+scripts[] = js/script.js
+scripts[] = js/ractive.js
+scripts[] = js/underscore.js
+
+
 
 settings[basic_tabs] = 1
 settings[basic_breadcrumb] = 1

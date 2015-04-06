@@ -1,3 +1,4 @@
+@import url(font-awesome-4.3.0/css/font-awesome.min.css);
 /* line 2, ../sass/components/neat/grid/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -524,6 +525,7 @@ div.status {
   top: 1.5rem;
   margin-bottom: -19px;
   display: none;
+  z-index: 1 !important;
 }
 @media screen and (max-width: 768px) {
   /* line 2, ../sass/_program.scss */
@@ -534,12 +536,12 @@ div.status {
   }
 }
 
-/* line 15, ../sass/_program.scss */
+/* line 16, ../sass/_program.scss */
 #controls-sticky-wrapper {
   height: auto !important;
 }
 
-/* line 19, ../sass/_program.scss */
+/* line 20, ../sass/_program.scss */
 #programList #controls {
   background: white;
   padding-top: 1rem;
@@ -550,46 +552,41 @@ div.status {
   overflow: visible;
 }
 @media screen and (max-width: 480px) {
-  /* line 19, ../sass/_program.scss */
+  /* line 20, ../sass/_program.scss */
   #programList #controls {
     border-bottom: none;
   }
-  /* line 35, ../sass/_program.scss */
+  /* line 36, ../sass/_program.scss */
   #programList #controls .search {
     margin-top: 0rem !important;
   }
-  /* line 39, ../sass/_program.scss */
+  /* line 40, ../sass/_program.scss */
   #programList #controls .ms-drop.bottom input {
     width: auto !important;
     margin-top: 0px !important;
   }
 }
 
-/* line 49, ../sass/_program.scss */
+/* line 50, ../sass/_program.scss */
 #programList .is-sticky #controls {
   border-bottom: 0px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.5);
 }
 
-/* line 54, ../sass/_program.scss */
+/* line 55, ../sass/_program.scss */
 #programList #found {
   color: white;
   border-radius: 15px;
   font-size: 80%;
-  padding: .15rem .55rem 0;
+  padding: .15rem .55rem 0 .55rem;
   display: inline-block;
   background: #fed201;
-  height: 1.75rem;
-  width: 1.75rem;
-  line-height: 1.75rem;
-  text-align: center;
-  padding-right: 1.5rem;
 }
 
-/* line 70, ../sass/_program.scss */
+/* line 66, ../sass/_program.scss */
 #programList .search {
   z-index: 1010;
-  position: absolute;
+  position: relative;
   float: left;
   display: block;
   margin-right: 2.12766%;
@@ -600,26 +597,26 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 70, ../sass/_program.scss */
+  /* line 66, ../sass/_program.scss */
   #programList .search {
     width: 100%;
   }
 }
-/* line 81, ../sass/_program.scss */
+/* line 77, ../sass/_program.scss */
 #programList .placeholder span {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 81, ../sass/_program.scss */
+  /* line 77, ../sass/_program.scss */
   #programList .placeholder span {
     display: inline;
   }
 }
-/* line 87, ../sass/_program.scss */
+/* line 83, ../sass/_program.scss */
 #programList .ms-parent {
   margin-top: .5rem;
 }
-/* line 90, ../sass/_program.scss */
+/* line 86, ../sass/_program.scss */
 #programList #catagories {
   max-width: 68em;
   margin-left: auto;
@@ -632,11 +629,11 @@ div.status {
   display: table;
   clear: both;
 }
-/* line 94, ../sass/_program.scss */
+/* line 90, ../sass/_program.scss */
 #programList .ms-choice, #programList .ms-drop.bottom {
   width: 100%;
 }
-/* line 97, ../sass/_program.scss */
+/* line 93, ../sass/_program.scss */
 #programList #catagories select, #programList .ms-parent {
   float: left;
   display: block;
@@ -648,7 +645,7 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 97, ../sass/_program.scss */
+  /* line 93, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -659,13 +656,13 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 102, ../sass/_program.scss */
+  /* line 98, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 97, ../sass/_program.scss */
+  /* line 93, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -676,16 +673,16 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 108, ../sass/_program.scss */
+  /* line 104, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
-/* line 113, ../sass/_program.scss */
+/* line 109, ../sass/_program.scss */
 #programList li label {
   font-size: 85% !important;
 }
-/* line 117, ../sass/_program.scss */
+/* line 113, ../sass/_program.scss */
 #programList ul {
   max-width: 68em;
   margin-left: auto;
@@ -697,7 +694,7 @@ div.status {
   display: table;
   clear: both;
 }
-/* line 119, ../sass/_program.scss */
+/* line 115, ../sass/_program.scss */
 #programList ul .card {
   background: white;
   margin-top: 1.5rem;
@@ -705,25 +702,25 @@ div.status {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
   transition: box-shadow 1s;
 }
-/* line 125, ../sass/_program.scss */
+/* line 121, ../sass/_program.scss */
 #programList ul .card:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
-/* line 130, ../sass/_program.scss */
+/* line 126, ../sass/_program.scss */
 #programList ul .card img {
   width: 100%;
   max-height: 150px;
 }
-/* line 134, ../sass/_program.scss */
+/* line 130, ../sass/_program.scss */
 #programList ul .card .content {
   padding: 0 .5rem;
 }
-/* line 137, ../sass/_program.scss */
+/* line 133, ../sass/_program.scss */
 #programList ul .card a:hover {
   text-decoration: none;
 }
 @media screen and (min-width: 769px) {
-  /* line 119, ../sass/_program.scss */
+  /* line 115, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -734,13 +731,13 @@ div.status {
   #programList ul .card:last-child {
     margin-right: 0;
   }
-  /* line 145, ../sass/_program.scss */
+  /* line 141, ../sass/_program.scss */
   #programList ul .card:nth-child(3n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 119, ../sass/_program.scss */
+  /* line 115, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -751,13 +748,13 @@ div.status {
   #programList ul .card:last-child {
     margin-right: 0;
   }
-  /* line 151, ../sass/_program.scss */
+  /* line 147, ../sass/_program.scss */
   #programList ul .card:nth-child(2n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 119, ../sass/_program.scss */
+  /* line 115, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -769,6 +766,32 @@ div.status {
   #programList ul .card:last-child {
     margin-right: 0;
   }
+}
+
+/* line 165, ../sass/_program.scss */
+#savedProgramDisplay {
+  overflow: hidden !important;
+  position: relative;
+  top: -3rem;
+  width: 100%;
+  line-height: 2.5rem;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 2rem 0rem;
+}
+/* line 174, ../sass/_program.scss */
+#savedProgramDisplay #page {
+  max-width: 1088px !important;
+  margin: auto;
+}
+/* line 178, ../sass/_program.scss */
+#savedProgramDisplay #favorites-list a, #savedProgramDisplay #favorites-list h4 {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 100;
+}
+/* line 182, ../sass/_program.scss */
+#savedProgramDisplay #favorites-list .remove {
+  color: red !important;
+  padding-left: .5rem;
 }
 
 /* line 1, ../sass/_breadcrumbs.scss */
@@ -900,7 +923,7 @@ div.status {
 
 @media screen and (max-width: 480px) {
   /* line 3, ../sass/_form.scss */
-  input {
+  input, button.lg {
     width: 100% !important;
     left: 0px !important;
     margin-top: 1rem !important;
@@ -908,7 +931,7 @@ div.status {
 }
 
 /* line 12, ../sass/_form.scss */
-input {
+input, button.lg {
   line-height: 2rem;
   padding: 0 .75rem;
   box-sizing: border-box;
@@ -932,7 +955,7 @@ label {
 }
 
 /* line 34, ../sass/_form.scss */
-input[type='submit'] {
+input[type='submit'], button.lg {
   background: #8AB24F;
   line-height: .825rem;
   padding: 0 2.75rem;
@@ -952,7 +975,15 @@ label {
   letter-spacing: 0 !important;
 }
 
-/* line 99, ../sass/_form.scss */
+/* line 52, ../sass/_form.scss */
+button.lg {
+  line-height: 2.75rem;
+  height: 2.75rem;
+  width: 100%;
+  text-transform: uppercase !important;
+}
+
+/* line 106, ../sass/_form.scss */
 body:not(.page-node) #p-Search input, .node-type-program #p-Search input, .not-front #p-Search input {
   display: none !important;
 }
@@ -994,29 +1025,29 @@ body:not(.page-node) #p-Search input, .node-type-program #p-Search input, .not-f
   }
 }
 
-/* line 27, ../sass/_custom.scss */
+/* line 28, ../sass/_custom.scss */
 .user-picture {
   display: none;
 }
 
-/* line 31, ../sass/_custom.scss */
+/* line 32, ../sass/_custom.scss */
 ul {
   list-style: none;
 }
 
-/* line 37, ../sass/_custom.scss */
+/* line 38, ../sass/_custom.scss */
 a:link, a:visited {
   color: #004F27;
   text-decoration: none;
 }
 
-/* line 44, ../sass/_custom.scss */
+/* line 45, ../sass/_custom.scss */
 a:hover, a:active {
   color: #008240;
   text-decoration: underline;
 }
 
-/* line 50, ../sass/_custom.scss */
+/* line 51, ../sass/_custom.scss */
 hr {
   position: relative;
   top: 1.0rem;
@@ -1024,27 +1055,27 @@ hr {
   border: 1px solid #f4f4ee;
 }
 
-/* line 57, ../sass/_custom.scss */
+/* line 58, ../sass/_custom.scss */
 nav a {
   text-transform: capitalize;
 }
 
-/* line 61, ../sass/_custom.scss */
+/* line 62, ../sass/_custom.scss */
 #main {
   margin-bottom: 3rem;
 }
 
-/* line 66, ../sass/_custom.scss */
+/* line 67, ../sass/_custom.scss */
 .front #breadcrumbs {
   display: none;
 }
 
-/* line 70, ../sass/_custom.scss */
+/* line 71, ../sass/_custom.scss */
 #savedProgramDisplay {
   display: none;
 }
 
-/* line 73, ../sass/_custom.scss */
+/* line 74, ../sass/_custom.scss */
 #barwrapper {
   background: #FED201;
   height: 4rem;
@@ -1053,7 +1084,7 @@ nav a {
   margin-bottom: 3rem;
 }
 
-/* line 81, ../sass/_custom.scss */
+/* line 82, ../sass/_custom.scss */
 #barwrapper div {
   max-width: 68em;
   margin-left: auto;
@@ -1066,7 +1097,7 @@ nav a {
   clear: both;
 }
 
-/* line 85, ../sass/_custom.scss */
+/* line 86, ../sass/_custom.scss */
 #bar {
   float: left;
   display: block;
@@ -1081,7 +1112,7 @@ nav a {
 #bar:last-child {
   margin-right: 0;
 }
-/* line 93, ../sass/_custom.scss */
+/* line 94, ../sass/_custom.scss */
 #bar input[type="submit"] {
   margin-top: 0rem;
   width: 14rem;
@@ -1091,35 +1122,35 @@ nav a {
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
-/* line 102, ../sass/_custom.scss */
+/* line 103, ../sass/_custom.scss */
 #bar input[type="submit"]:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* line 107, ../sass/_custom.scss */
+/* line 108, ../sass/_custom.scss */
 .container {
   padding: 0 1rem !important;
 }
 
-/* line 111, ../sass/_custom.scss */
+/* line 112, ../sass/_custom.scss */
 html, body .front {
   min-height: 100vh;
 }
 
-/* line 115, ../sass/_custom.scss */
+/* line 116, ../sass/_custom.scss */
 .front {
   background: #1F1F1F;
 }
-/* line 118, ../sass/_custom.scss */
+/* line 119, ../sass/_custom.scss */
 .front #main {
   margin-bottom: 0px;
 }
-/* line 121, ../sass/_custom.scss */
+/* line 122, ../sass/_custom.scss */
 .front #main .container {
   display: none !important;
 }
 
-/* line 126, ../sass/_custom.scss */
+/* line 127, ../sass/_custom.scss */
 .explore {
   width: 100%;
   margin-bottom: 3rem;

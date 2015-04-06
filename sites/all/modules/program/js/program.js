@@ -41,6 +41,7 @@ function getParameterByName(name) {
   // show filtered results
   function showSearchResult(enrolled){
     App.enrolled = enrolled;
+    
     App.programs.populate();
     $('#question').hide();
     $('#programList').show();
@@ -52,6 +53,10 @@ function getParameterByName(name) {
 
   // search
   $("input.search").val(getParameterByName('searchterm'));
+
+  App.programs.on('updated', function(){
+    $('#found').html(App.programs.visibleItems.length);
+  });
 
   // var options = {
   //   valueNames: [ "title", "country" ],

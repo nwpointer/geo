@@ -41,7 +41,7 @@ function program_search() {
   ));
 
   return array('#markup' => '
-  <div id="enrollment_notice">
+  <div id="enrollment_notice" class="weak">
     Showing results for: <span></span> <a id="change" href="#">change</a>
   </div>
   <div id="question">

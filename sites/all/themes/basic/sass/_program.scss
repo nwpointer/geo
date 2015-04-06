@@ -5,6 +5,7 @@
   top:1.5rem;
   margin-bottom: -19px;
   display: none;
+  z-index: 1 !important;
   @include media($tablet) {
 			text-align: left !important;
 			top: -20px !important;
@@ -52,24 +53,19 @@
 }
 
 #programList #found{
-	color:white;
+	color: white;
 	border-radius: 15px;
 	font-size: 80%;
-	padding: .15rem .55rem 0;
+	padding: .15rem .55rem 0 .55rem;
 	display: inline-block;
- 	background: #fed201;
-	height: 1.75rem;
-	width: 1.75rem;
-	line-height: 1.75rem;
-	text-align: center;
-	padding-right: 1.5rem;
+	background: #fed201;
 }
 
 
 #programList{
 	.search{
 		z-index: 1010;
-		position: absolute;
+		position: relative;
 		@include span-columns(4);
 		@if $responsive{
 			@include media($tablet) {
@@ -164,4 +160,27 @@
 
 #programList span#found, #programList .weak{
 	@extend .not-tablet;
+}
+
+#savedProgramDisplay{
+	overflow: hidden !important;
+	position: relative;
+	top: -3rem;
+	width: 100%;
+	line-height: 2.5rem;
+	background: rgba(0,0,0,.9);	
+	padding: 2rem 0rem;
+	// margin-top: -3rem;
+	#page{
+		max-width: $max-width-px+px !important;
+		margin:auto;
+	}
+	#favorites-list a, #favorites-list h4{
+		color:rgba(255,255,255,.9);
+		font-weight: 100;
+	}
+	#favorites-list .remove{
+		color:red !important;
+		padding-left: .5rem;
+	}
 }

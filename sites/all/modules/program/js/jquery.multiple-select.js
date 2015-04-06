@@ -150,6 +150,17 @@
             var that = this;
             this.$choice.off('click').on('click', function(e) {
                 e.preventDefault();
+
+                // custom sort script
+                var mylist = $(this).parent().find('.ms-drop ul');
+                var listitems = mylist.children('li').get();
+                console.log(listitems);
+                listitems.sort(function(a, b) {
+                    return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
+                });
+                $.each(listitems, function(idx, itm) { mylist.append(itm); });
+                // end custom sort script
+
                 that[that.options.isOpen ? 'close' : 'open']();
             })
                 .off('focus').on('focus', this.options.onFocus)

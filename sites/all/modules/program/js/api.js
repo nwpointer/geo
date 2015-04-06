@@ -58,6 +58,7 @@ window.Api = window.location.origin + '/rest';
         country: getTermName(data.field_country),
         term: getTermName(data.field_term),
         type: getTermName(data.field_program_type) || "uncatagorized",
+        priority: getPriority(data.field_3d_party_provider),
         title: data.title,
         discipline: getTermName(data.field_discipline),
         url: data.path,
@@ -67,7 +68,7 @@ window.Api = window.location.origin + '/rest';
         price: getPricefield(data.field_program_fee),
         region: getTermName(data.field_continent)
       };
-      console.log(data);
+      
       if(App.enrolled || program.enrollment_required == '0'){
         this.callback();
       }
@@ -90,10 +91,14 @@ window.Api = window.location.origin + '/rest';
     return $(item.elm);
   }
 
+  function getPriority(field){
+    return field && field.und ? parseInt(field.und[0].value) : 0;
+  }
+
   function getCustomfield(field){
     // conso
     foo = field && field.und ? field.und[0].value : "";
-      return "foo";
+      return foo;
   }
 
   function getPricefield(field){
