@@ -49,8 +49,6 @@ function program_search() {
     <button id="yes">yes</button>
     <button id="no">no</button>
   </div>
-  
-
 
   <div id="programList">
   <div id="controls">

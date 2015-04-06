@@ -30,8 +30,11 @@
 	overflow: visible;
 
 	@if $responsive {
-		@include media($mobile) {
+		@include media($tablet) {
 			border-bottom: none;
+		}
+		@include media($mobile) {
+			
 
 			.search{
 				margin-top:0rem !important;
@@ -109,9 +112,20 @@
 	li label{
 		font-size: 85% !important;
 	}
-
+	ul.loaded{
+		background: none !important;
+	}
+	ul.list{
+		background: url("../images/loading1.gif");
+ 		background-repeat: no-repeat;
+ 		background-position: center 3rem;
+ 		display: inline-block;
+ 		min-height: 500px;
+ 		width: 100%;
+	}
 	ul{
 		@include outer-container;
+		
 		.card{
 			background: white;
 			margin-top: 1.5rem;

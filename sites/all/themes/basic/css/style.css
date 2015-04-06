@@ -251,7 +251,7 @@ div.status {
 #header {
   min-height: 9rem;
   color: white;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("https://photos-5.dropbox.com/t/2/AADDo7x3vI8MFIdCSZi153oYV4YkLXL4Fn3YZuZZG3NPLA/12/291310503/jpeg/32x32/3/_/1/2/forest-landscape-mountains-4019.jpeg/CKeX9IoBIAEgAiADKAEoAg/C3PrOKS9iCxL9n0RsQqh7_RBU0xgI3xWwzVDgJ2dk2E?size=1280x960"), url("http://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Trevi_Pano.jpg/1920px-Trevi_Pano.jpg"), url("https://photos-3.dropbox.com/t/2/AACL0DK6LBdxrObOfOMEyB3b7w8ys3dHs9PdkLJ8Q_P7_w/12/291310503/jpeg/32x32/3/_/1/2/evening-forest-landscape-397.jpg/CKeX9IoBIAEgAiADKAEoAg/HWNUb16wkDlWf6yKu0uJI349kkGqwXNi4subOah9kqM?size=1280x960");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url("http://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Trevi_Pano.jpg/1920px-Trevi_Pano.jpg"), url("https://photos-3.dropbox.com/t/2/AACL0DK6LBdxrObOfOMEyB3b7w8ys3dHs9PdkLJ8Q_P7_w/12/291310503/jpeg/32x32/3/_/1/2/evening-forest-landscape-397.jpg/CKeX9IoBIAEgAiADKAEoAg/HWNUb16wkDlWf6yKu0uJI349kkGqwXNi4subOah9kqM?size=1280x960");
   background-size: cover;
 }
 @media screen and (max-width: 480px) {
@@ -551,29 +551,31 @@ div.status {
   position: relative;
   overflow: visible;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   /* line 20, ../sass/_program.scss */
   #programList #controls {
     border-bottom: none;
   }
-  /* line 36, ../sass/_program.scss */
+}
+@media screen and (max-width: 480px) {
+  /* line 39, ../sass/_program.scss */
   #programList #controls .search {
     margin-top: 0rem !important;
   }
-  /* line 40, ../sass/_program.scss */
+  /* line 43, ../sass/_program.scss */
   #programList #controls .ms-drop.bottom input {
     width: auto !important;
     margin-top: 0px !important;
   }
 }
 
-/* line 50, ../sass/_program.scss */
+/* line 53, ../sass/_program.scss */
 #programList .is-sticky #controls {
   border-bottom: 0px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.5);
 }
 
-/* line 55, ../sass/_program.scss */
+/* line 58, ../sass/_program.scss */
 #programList #found {
   color: white;
   border-radius: 15px;
@@ -583,7 +585,7 @@ div.status {
   background: #fed201;
 }
 
-/* line 66, ../sass/_program.scss */
+/* line 69, ../sass/_program.scss */
 #programList .search {
   z-index: 1010;
   position: relative;
@@ -597,26 +599,26 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 66, ../sass/_program.scss */
+  /* line 69, ../sass/_program.scss */
   #programList .search {
     width: 100%;
   }
 }
-/* line 77, ../sass/_program.scss */
+/* line 80, ../sass/_program.scss */
 #programList .placeholder span {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 77, ../sass/_program.scss */
+  /* line 80, ../sass/_program.scss */
   #programList .placeholder span {
     display: inline;
   }
 }
-/* line 83, ../sass/_program.scss */
+/* line 86, ../sass/_program.scss */
 #programList .ms-parent {
   margin-top: .5rem;
 }
-/* line 86, ../sass/_program.scss */
+/* line 89, ../sass/_program.scss */
 #programList #catagories {
   max-width: 68em;
   margin-left: auto;
@@ -629,11 +631,11 @@ div.status {
   display: table;
   clear: both;
 }
-/* line 90, ../sass/_program.scss */
+/* line 93, ../sass/_program.scss */
 #programList .ms-choice, #programList .ms-drop.bottom {
   width: 100%;
 }
-/* line 93, ../sass/_program.scss */
+/* line 96, ../sass/_program.scss */
 #programList #catagories select, #programList .ms-parent {
   float: left;
   display: block;
@@ -645,7 +647,7 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 93, ../sass/_program.scss */
+  /* line 96, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -656,13 +658,13 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 98, ../sass/_program.scss */
+  /* line 101, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 93, ../sass/_program.scss */
+  /* line 96, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -673,16 +675,29 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 104, ../sass/_program.scss */
+  /* line 107, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
-/* line 109, ../sass/_program.scss */
+/* line 112, ../sass/_program.scss */
 #programList li label {
   font-size: 85% !important;
 }
-/* line 113, ../sass/_program.scss */
+/* line 115, ../sass/_program.scss */
+#programList ul.loaded {
+  background: none !important;
+}
+/* line 118, ../sass/_program.scss */
+#programList ul.list {
+  background: url("../images/loading1.gif");
+  background-repeat: no-repeat;
+  background-position: center 3rem;
+  display: inline-block;
+  min-height: 500px;
+  width: 100%;
+}
+/* line 126, ../sass/_program.scss */
 #programList ul {
   max-width: 68em;
   margin-left: auto;
@@ -694,7 +709,7 @@ div.status {
   display: table;
   clear: both;
 }
-/* line 115, ../sass/_program.scss */
+/* line 129, ../sass/_program.scss */
 #programList ul .card {
   background: white;
   margin-top: 1.5rem;
@@ -702,25 +717,25 @@ div.status {
   box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.4);
   transition: box-shadow 1s;
 }
-/* line 121, ../sass/_program.scss */
+/* line 135, ../sass/_program.scss */
 #programList ul .card:hover {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
 }
-/* line 126, ../sass/_program.scss */
+/* line 140, ../sass/_program.scss */
 #programList ul .card img {
   width: 100%;
   max-height: 150px;
 }
-/* line 130, ../sass/_program.scss */
+/* line 144, ../sass/_program.scss */
 #programList ul .card .content {
   padding: 0 .5rem;
 }
-/* line 133, ../sass/_program.scss */
+/* line 147, ../sass/_program.scss */
 #programList ul .card a:hover {
   text-decoration: none;
 }
 @media screen and (min-width: 769px) {
-  /* line 115, ../sass/_program.scss */
+  /* line 129, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -731,13 +746,13 @@ div.status {
   #programList ul .card:last-child {
     margin-right: 0;
   }
-  /* line 141, ../sass/_program.scss */
+  /* line 155, ../sass/_program.scss */
   #programList ul .card:nth-child(3n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 115, ../sass/_program.scss */
+  /* line 129, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -748,13 +763,13 @@ div.status {
   #programList ul .card:last-child {
     margin-right: 0;
   }
-  /* line 147, ../sass/_program.scss */
+  /* line 161, ../sass/_program.scss */
   #programList ul .card:nth-child(2n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 115, ../sass/_program.scss */
+  /* line 129, ../sass/_program.scss */
   #programList ul .card {
     float: left;
     display: block;
@@ -768,7 +783,7 @@ div.status {
   }
 }
 
-/* line 165, ../sass/_program.scss */
+/* line 179, ../sass/_program.scss */
 #savedProgramDisplay {
   overflow: hidden !important;
   position: relative;
@@ -778,17 +793,17 @@ div.status {
   background: rgba(0, 0, 0, 0.9);
   padding: 2rem 0rem;
 }
-/* line 174, ../sass/_program.scss */
+/* line 188, ../sass/_program.scss */
 #savedProgramDisplay #page {
   max-width: 1088px !important;
   margin: auto;
 }
-/* line 178, ../sass/_program.scss */
+/* line 192, ../sass/_program.scss */
 #savedProgramDisplay #favorites-list a, #savedProgramDisplay #favorites-list h4 {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 100;
 }
-/* line 182, ../sass/_program.scss */
+/* line 196, ../sass/_program.scss */
 #savedProgramDisplay #favorites-list .remove {
   color: red !important;
   padding-left: .5rem;

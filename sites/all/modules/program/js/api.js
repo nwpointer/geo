@@ -68,6 +68,8 @@ window.Api = window.location.origin + '/rest';
         price: getPricefield(data.field_program_fee),
         region: getTermName(data.field_continent)
       };
+
+      App.programs.list.setAttribute("class", App.programs.list.className + " loaded");
       
       if(App.enrolled || program.enrollment_required == '0'){
         this.callback();
