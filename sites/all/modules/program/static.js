@@ -90,49 +90,49 @@ App.programs.sort('priority', { order: "desc" });
 $(function(){
   App.staticUpdate = function(){
     var catagories = {}; // the catagories user can use from
-  var validSelections = {}; // selectable options in select dropdown
-  // initialize validSelections
-  foreachCatagory(function(catagories){
-    validSelections[catagories] = [];
-  });
-
-  App.updateList();
-
-  foreachCatagory(function(catagories){
-    validSelections[catagories] = [];
-    dropdownof(catagories).empty();
-  });
-
-  App.programs.get().forEach(function(program){
-    program = program.values();
-    // console.log(program);
-
-    App.programs.search($("input.search").val());
-    App.programs.sort('priority', { order: "asc" });
-
-    for (var property in program) {
-      if(validSelections[property] && validSelections[property].indexOf(program[property]) == -1){
-        console.log();
-        validSelections[property].push(program[property]);
-
-        item = program[property];
-        $("." + property + "_s").append('<option class="'+ item +'"value="'+item+'">'+ item +'</option>');
-
-      }
-    };
-
-    $('select').each(function(){
-      $(this).multipleSelect({
-        onClick: updateList,
-        selectAll: false,
-        placeholder: $(this).data('placeholder')
-      });
+    var validSelections = {}; // selectable options in select dropdown
+    // initialize validSelections
+    foreachCatagory(function(catagories){
+      validSelections[catagories] = [];
     });
 
-  });
-  App.programs.sort('priority', { order: "asc" });
+    App.updateList();
+
+    foreachCatagory(function(catagories){
+      validSelections[catagories] = [];
+      dropdownof(catagories).empty();
+    });
+
+    App.programs.get().forEach(function(program){
+      program = program.values();
+      // console.log(program);
+
+      App.programs.search($("input.search").val());
+      App.programs.sort('priority', { order: "asc" });
+
+      for (var property in program) {
+        if(validSelections[property] && validSelections[property].indexOf(program[property]) == -1){
+          console.log();
+          validSelections[property].push(program[property]);
+
+          item = program[property];
+          $("." + property + "_s").append('<option class="'+ item +'"value="'+item+'">'+ item +'</option>');
+
+        }
+      };
+
+      $('select').each(function(){
+        $(this).multipleSelect({
+          onClick: updateList,
+          selectAll: false,
+          placeholder: $(this).data('placeholder')
+        });
+      });
+
+    });
+    App.programs.sort('priority', { order: "asc" });
   }
-  
+  // App.staticUpdate();
 
 });
 

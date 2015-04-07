@@ -31,7 +31,6 @@ function program_search() {
       '/js/jquery.multiple-select.js',
       '/js/api.js',
       '/js/cookies.js',
-      '/index.js',
       '/js/program.js',
   ));
 
@@ -71,7 +70,7 @@ function program_search() {
       return $term['und'][0];
     }else{
       if($f == "field_3d_party_provider_program"){
-        return 1;
+        return 0;
       }
       if($f == "field_header_background"){
         return "'http://abhijit67.blog.com/files/2012/02/mount-everast.jpg'";
@@ -129,18 +128,18 @@ function program_search() {
 
   return array('#markup' => '
   <div id="enrollment_notice" class="weak">
-    Showing results for: <span></span> <a id="change" href="#">change</a>
+    Showing results for: <span></span> <a id="change" href="">change</a>
   </div>
-  <div id="question">
+  <div id="question" style="display:none;">
     Are you currently enrolled as a student of the University of Oregon? <br>
     <button id="yes">yes</button>
     <button id="no">no</button>
   </div>
 
-  <div id="programList">
+  <div id="programList" style="display:none;">
   <div id="controls">
     <input class="search" placeholder="Search" value=""/>
-    <span class="weak">found:</span> <span id="found">0</span>
+    <span class="weak" style="display:none;">found:</span> <span id="found" style="display:none;">0</span>
     <br><br>
     
     <div id="catagories">
@@ -181,9 +180,9 @@ function program_search() {
 
   return array('#markup' => '
     <div id="enrollment_notice">
-      Showing results for: <span></span> <a id="change" href="#">change</a>
+      Showing results for: <span></span> <a id="change" href="">change</a>
     </div>
-    <div id="question">
+    <div id="question" style="display:none;">
       Are you currently enrolled as a student of the University of Oregon? <br>
       <button id="yes">yes</button>
       <button id="no">no</button>

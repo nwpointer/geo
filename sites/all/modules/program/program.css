@@ -94,6 +94,11 @@
   
   /* 480*/
 }
+/*
+  #programList .weak, #programList #found{
+    display: none !important;
+  }
+*/
 
 .list > li .content{
   padding:10px;
@@ -191,7 +196,7 @@ input:focus {
 }
 #question{
   text-align: center;  
-  margin-bottom: 400px;
+  min-height: 50vh;
 }
 
 #programs{
