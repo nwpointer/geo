@@ -3,6 +3,8 @@ App.terms = [];
 App.programView = {};
 window.Api = window.location.origin + '/rest';
 
+App.dynamic = false;
+
 App.pCount = 0;
 
 
@@ -44,11 +46,13 @@ App.pCount = 0;
   App.requestPrograms = function(callback){
     url = Api + '/node';
     request(url, function(data){
-      // console.log(data);
-      // data = _.select(data, function(node){ return node.type == "program";});
-      // App.programUrls = _.pluck(data, "uri");
-      // // _.each(App.programUrls, App.requestProgram);
-      // App.programUrls.forEach(App.requestProgram.bind({callback:callback}));
+      if(App.dynamic){
+        // console.log(data);
+        data = _.select(data, function(node){ return node.type == "program";});
+        App.programUrls = _.pluck(data, "uri");
+        // _.each(App.programUrls, App.requestProgram);
+        App.programUrls.forEach(App.requestProgram.bind({callback:callback}));
+      }
     });
   }
 

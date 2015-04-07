@@ -44,9 +44,11 @@ function program_search() {
   function getTerm($node, $f){
     $term =($node->{$f});
     if(!empty($term)){
-      $term =($node->{$f}['und'][0]['tid']);
-      settype($term, "integer");
-      $term = taxonomy_term_load($term)->name;
+      if(!empty($node->{$f}['und'][0]['tid'])){
+        $term =($node->{$f}['und'][0]['tid']);
+        settype($term, "integer");
+        $term = taxonomy_term_load($term)->name;
+      }
     }else{
       $term = null;
     }
@@ -56,8 +58,21 @@ function program_search() {
   function getCustomField($node, $f){
     $term =($node->{$f});
     if(!empty($term)){
+      if($f == "field_3d_party_provider_program"){
+        return $term['und'][0]['value'];
+      }
+      if($f == "field_header_background"){
+        // print_r("'" . $term['und'][0]['filename'] ."'");
+        return "'" . $term['und'][0]['filename'] ."'";
+      }
+      if($f == "field_program_fee"){
+        return($term['und'][0]['value']);
+      }
       return $term['und'][0];
     }else{
+      if($f == "field_3d_party_provider_program"){
+        return 1;
+      }
       if($f == "field_header_background"){
         return "'http://abhijit67.blog.com/files/2012/02/mount-everast.jpg'";
       }
@@ -75,8 +90,6 @@ function program_search() {
     ->execute()
     ->fetchCol(); // returns an indexed array
 
-
-
   $programCards = "";
   foreach ($nids as $value) {
     $node = node_load($value, false);
@@ -84,22 +97,20 @@ function program_search() {
     $title = $node->title;
     $country = getTerm($node, "field_country");
     $term = getTerm($node, "field_term");
-    $program_type = getTerm($node, "field_program_type");
-    $priority = getTerm($node, "field_3d_party_provider_program");
+    // $program_type = getTerm($node, "field_program_type");
+    $priority = getCustomField($node, "field_3d_party_provider_program");
     $discipline = getTerm($node, "field_discipline");
-    $continent = getTerm($node, "field_continent");
+    $region = getTerm($node, "field_continent");
     $academic_standing = getCustomField($node, "field_academic_standing");
     $header_background = getCustomField($node, "field_header_background");
     $enrollment_required = getCustomField($node, "field_enrollment_required");
-    $program_fee = getCustomField($node, "field_program_fee");
+    $price = getCustomField($node, "field_program_fee");
 
-    print_r($header_background);
-
-
-    $linkableTitle = str_replace(" ", "-", $title);
-    $link = "'". "/programs/$country/$linkableTitle". "'";
+    $link = drupal_get_path_alias("node/{$value}");;
     
-    $card = "<li class='card'><a class='url' href={$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p></div></a>";
+    $card = "<li class='card'><a class='url' href={$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p>
+    <p class='country'>$country</p><p class='price'>$price</p><p class='region'>$region</p><p class='priority'>$priority</p>
+    </div></a>";
 
     $programCards .= $card;  
     // break;

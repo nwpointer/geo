@@ -2,7 +2,7 @@
 
 //list.js initializations
 var options = { 
-  valueNames: [ 'discipline', 'country', 'term', 'price', 'region', 'type'],
+  valueNames: [ 'discipline', 'country', 'term', 'price', 'region', 'type', 'priority'],
   // item: '<li><a class="discipline"></a> <br /><span class="url"></span><p class="country"></p></li>'//,
   item: '<li class="card"><a class="url"><div class="img-wrap"><img class="image"></div><div class="content"><h5 class="title"></h5><p class="term"></p><p class="discipline"></p></div></a></li>'
 };
@@ -46,7 +46,7 @@ App.programs.populate = function(){
     $('select').each(function(){
       $(this).multipleSelect({
         onClick: updateList,
-        selectAll: false,
+        selectAll: true,
         placeholder: $(this).data('placeholder')
       });
     });
@@ -64,7 +64,9 @@ var updateList = function(){
     });
     return filter;
   });
-}
+};
+App.updateList = updateList;
+
 
 function foreachCatagory(f){
   options.valueNames.forEach(function(option){
@@ -78,11 +80,56 @@ function dropdownof(option){
 
 App.programs.sort('priority', { order: "desc" });
 
-var msdrops = $(".ms-parent ul");
-$.each(msdrops, function(i){
-  console.log(i);
-})
+// var msdrops = $(".ms-parent ul");
+// $.each(msdrops, function(i){
+//   console.log(i);
+// })
 
-console.log('offff');
+// console.log('offff');
+
+$(function(){
+  var catagories = {}; // the catagories user can use from
+  var validSelections = {}; // selectable options in select dropdown
+  // initialize validSelections
+  foreachCatagory(function(catagories){
+    validSelections[catagories] = [];
+  });
+
+  App.updateList();
+
+  foreachCatagory(function(catagories){
+    validSelections[catagories] = [];
+    dropdownof(catagories).empty();
+  });
+
+  App.programs.get().forEach(function(program){
+    program = program.values();
+    // console.log(program);
+
+    App.programs.search($("input.search").val());
+    App.programs.sort('priority', { order: "asc" });
+
+    for (var property in program) {
+      if(validSelections[property] && validSelections[property].indexOf(program[property]) == -1){
+        console.log();
+        validSelections[property].push(program[property]);
+
+        item = program[property];
+        $("." + property + "_s").append('<option class="'+ item +'"value="'+item+'">'+ item +'</option>');
+
+      }
+    };
+
+    $('select').each(function(){
+      $(this).multipleSelect({
+        onClick: updateList,
+        selectAll: false,
+        placeholder: $(this).data('placeholder')
+      });
+    });
+
+  });
+  App.programs.sort('priority', { order: "asc" });
+});
 
 })(jQuery);

@@ -125,6 +125,9 @@ h3 {
 p {
   margin:0;
 }
+.country, .price, .region{
+  display: none;
+}
 
 input {
   border:solid 1px #ccc;
