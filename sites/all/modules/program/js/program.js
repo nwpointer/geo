@@ -36,7 +36,9 @@ var updateList = function(){
     function dropdownof(option){
       return $("." + option + "_s");
     }
-
+App.staticMsActivate = function(){
+  alert("ms");
+}
 
 App.staticUpdate = function(){
     // helper functions 
@@ -139,6 +141,7 @@ function getParameterByName(name) {
 
     setTimeout(function () {
       // App.staticUpdate();
+      App.staticMsActivate();
     }, 10);
     
     // $('#programList').show(0, function(){

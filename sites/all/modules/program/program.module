@@ -29,9 +29,8 @@ function program_search() {
   loadjs(array(
       '/js/libs/listjs/dist/list.js',
       '/js/jquery.multiple-select.js',
-      '/js/api.js',
       '/js/cookies.js',
-      '/js/program.js',
+      '/js/newProgram.js'
   ));
 
   loadcss(array(
@@ -111,6 +110,8 @@ function program_search() {
     <p class='country'>$country</p><p class='price'>$price</p><p class='region'>$region</p><p class='priority'>$priority</p>
     </div></a>";
 
+    
+
     $programCards .= $card;  
     // break;
   }
@@ -136,7 +137,7 @@ function program_search() {
     <button id="no">no</button>
   </div>
 
-  <div id="programList" style="display:none;">
+  <div id="programList">
   <div id="controls">
     <input class="search" placeholder="Search" value=""/>
     <span class="weak" style="display:none;">found:</span> <span id="found" style="display:none;">0</span>
@@ -144,6 +145,7 @@ function program_search() {
     
     <div id="catagories">
       <select class="discipline_s" multiple data-placeholder="<span>Choose a</span> disipline">
+      <option value="Anthropology">Anthropology</option>
       </select>
 
       <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">
@@ -161,7 +163,7 @@ function program_search() {
       <select class="type_s" multiple data-placeholder="<span>Choose a</span> program type">
       </select>
     </div>
-    </div>
+  </div>
     <ul class="list">
       '. $programCards .'
       </li>
