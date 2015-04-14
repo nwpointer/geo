@@ -138,7 +138,7 @@ function getParameterByName(name) {
     $('#programList').show();
 
     setTimeout(function () {
-      App.staticUpdate();
+      // App.staticUpdate();
     }, 10);
     
     // $('#programList').show(0, function(){
