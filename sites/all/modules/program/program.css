@@ -307,4 +307,7 @@ input:focus {
 .search{
   margin-right:2rem;
 }
-*/
+
+.priority{
+  display: none;
+}

@@ -29,9 +29,8 @@ function program_search() {
   loadjs(array(
       '/js/libs/listjs/dist/list.js',
       '/js/jquery.multiple-select.js',
-      '/js/api.js',
       '/js/cookies.js',
-      '/js/program.js',
+      '/js/newProgram.js'
   ));
 
   loadcss(array(
@@ -89,30 +88,57 @@ function program_search() {
     ->execute()
     ->fetchCol(); // returns an indexed array
 
+  $disciplines = array();
+  $countries = array();
+  $terms = array();
+  $prices = array();
+  $regions = array();
+  $types = array();
+
   $programCards = "";
   foreach ($nids as $value) {
     $node = node_load($value, false);
 
     $title = $node->title;
-    $country = getTerm($node, "field_country");
-    $term = getTerm($node, "field_term");
-    // $program_type = getTerm($node, "field_program_type");
     $priority = getCustomField($node, "field_3d_party_provider_program");
-    $discipline = getTerm($node, "field_discipline");
-    $region = getTerm($node, "field_continent");
     $academic_standing = getCustomField($node, "field_academic_standing");
     $header_background = getCustomField($node, "field_header_background");
     $enrollment_required = getCustomField($node, "field_enrollment_required");
-    $price = getCustomField($node, "field_program_fee");
+    
 
-    $link = drupal_get_path_alias("node/{$value}");;
+    $link = drupal_get_path_alias("node/{$value}");
+
+    $discipline = getTerm($node, "field_discipline");
+    array_push($disciplines, $discipline);
+    $country = getTerm($node, "field_country");
+    array_push($countries, $country);
+    $term = getTerm($node, "field_term");
+    array_push($terms, $term);
+    $price = getCustomField($node, "field_program_fee");
+    array_push($prices, $price);
+    $region = getTerm($node, "field_continent");
+    array_push($regions, $region);
+    $program_type = getTerm($node, "field_program_type");
+    array_push($types, $program_type);
     
     $card = "<li class='card'><a class='url' href={$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p>
     <p class='country'>$country</p><p class='price'>$price</p><p class='region'>$region</p><p class='priority'>$priority</p>
     </div></a>";
 
+    
+
     $programCards .= $card;  
     // break;
+  }
+
+  function generateOptionHTML($group){
+    $optionHTML="";
+    foreach (array_unique($group) as $d) {
+      if($d != ""){
+        $optionHTML .= "<option value='" . $d ."'>$d</option>";
+      }
+    }
+    return $optionHTML;
   }
 
   // $programscontent = node_load_multiple(array(), array('type' => 'program'));
@@ -136,32 +162,32 @@ function program_search() {
     <button id="no">no</button>
   </div>
 
-  <div id="programList" style="display:none;">
+  <div id="programList">
   <div id="controls">
     <input class="search" placeholder="Search" value=""/>
     <span class="weak" style="display:none;">found:</span> <span id="found" style="display:none;">0</span>
     <br><br>
     
     <div id="catagories">
-      <select class="discipline_s" multiple data-placeholder="<span>Choose a</span> disipline">
+      <select class="discipline_s" multiple data-placeholder="<span>Choose a </span> disipline">'. generateOptionHTML($disciplines) . '
       </select>
 
-      <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">
+      <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">'. generateOptionHTML($disciplines) . '
       </select>
 
-      <select class="term_s" multiple data-placeholder="<span>Choose a</span> term">
+      <select class="term_s" multiple data-placeholder="<span>Choose a</span> term">'. generateOptionHTML($terms) . '
       </select>
 
-      <select class="price_s" multiple data-placeholder="<span>Choose a</span> price">
+      <select class="price_s" multiple data-placeholder="<span>Choose a</span> price">'. generateOptionHTML($prices) . '
       </select>
 
-      <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">
+      <select class="region_s" multiple data-placeholder="<span>Choose a</span> region">'. generateOptionHTML($regions) . '
       </select>
 
-      <select class="type_s" multiple data-placeholder="<span>Choose a</span> program type">
+      <select class="type_s" multiple data-placeholder="<span>Choose a</span> program type">'. generateOptionHTML($types) . '
       </select>
     </div>
-    </div>
+  </div>
     <ul class="list">
       '. $programCards .'
       </li>
@@ -171,12 +197,6 @@ function program_search() {
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
   ');
-
-
-
-
-
-
 
   return array('#markup' => '
     <div id="enrollment_notice">
