@@ -1170,3 +1170,9 @@ html, body .front {
   width: 100%;
   margin-bottom: 3rem;
 }
+
+/* line 133, ../sass/_custom.scss */
+#logo img {
+  height: 4rem;
+  margin-top: 2rem;
+}

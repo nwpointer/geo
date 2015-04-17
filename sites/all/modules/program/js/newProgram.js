@@ -1,15 +1,14 @@
 (function($){
 	// alert("foo");
 
-	var options = { valueNames: [ 'discipline' ] };
-	var programList = new List('users', options);
+	var options = { valueNames: [ 'discipline', 'country', 'term', 'price', 'region', 'type', 'priority'] };
+	programList = new List('programList', options);
 
 	function updateList(){
 		var values_date = $(".discipline_s").val();
-		// userList.filter(function(item) {
-		//     return (_(values_date).contains(item.values().born) || !values_date) 
-		//            && (_(values_name).contains(item.values().name) || !values_name)
-		//   });
+		programList.filter(function(item) {
+		    return (_(values_date).contains(item.values().discipline) || !values_date);
+		  });
 	}
 
 	$(function(){
@@ -22,3 +21,5 @@
 	  });
 	});
 })(jQuery);
+
+// jQuery(".discipline_s").val()
