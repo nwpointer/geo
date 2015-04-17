@@ -130,7 +130,7 @@ h3 {
 p {
   margin:0;
 }
-.country, .price, .region{
+.country, .price, .region, .priority{
   display: none;
 }
 
