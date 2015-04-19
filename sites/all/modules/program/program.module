@@ -87,6 +87,9 @@ function program_search() {
     ->condition('n.type', 'program')
     ->execute()
     ->fetchCol(); // returns an indexed array
+  $numberofPrograms = count($nids);
+
+    // print_r(count($nids));
 
   $disciplines = array();
   $countries = array();
@@ -104,10 +107,10 @@ function program_search() {
     $academic_standing = getCustomField($node, "field_academic_standing");
     $header_background = getCustomField($node, "field_header_background");
     $enrollment_required = getCustomField($node, "field_enrollment_required");
-    
 
     $link = drupal_get_path_alias("node/{$value}");
 
+    // searchable programs
     $discipline = getTerm($node, "field_discipline");
     array_push($disciplines, $discipline);
     $country = getTerm($node, "field_country");
@@ -118,11 +121,10 @@ function program_search() {
     array_push($prices, $price);
     $region = getTerm($node, "field_continent");
     array_push($regions, $region);
-    $program_type = getTerm($node, "field_program_type");
-    array_push($types, $program_type);
+    // $program_type = getTerm($node, "field_program_type");
+    // array_push($types, $program_type);
     
-    $card = "<li class='card'><a class='url' href={$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p>
-    <p class='country'>$country</p><p class='price'>$price</p><p class='region'>$region</p><p class='priority'>$priority</p>
+    $card = "<li class='card'><a class='url' href=/{$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p><p class='country'>$country</p><p class='price'>$price</p><p class='region'>$region</p><p class='priority'>$priority</p><p class='enrollment_required'>$enrollment_required[value]</p>
     </div></a>";
 
     
@@ -165,14 +167,14 @@ function program_search() {
   <div id="programList">
   <div id="controls">
     <input class="search" placeholder="Search" value=""/>
-    <span class="weak" style="display:none;">found:</span> <span id="found" style="display:none;">0</span>
+    <span class="weak">found:</span> <span id="found">'."$numberofPrograms".'</span>
     <br><br>
     
     <div id="catagories">
       <select class="discipline_s" multiple data-placeholder="<span>Choose a </span> disipline">'. generateOptionHTML($disciplines) . '
       </select>
 
-      <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">'. generateOptionHTML($disciplines) . '
+      <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">'. generateOptionHTML($countries) . '
       </select>
 
       <select class="term_s" multiple data-placeholder="<span>Choose a</span> term">'. generateOptionHTML($terms) . '

@@ -1,5 +1,31 @@
+@import '_config';
+
 #breadcrumbs{
 	padding-left:0px !important;
+	overflow: scroll;
+	@if $responsive {
+      @include media($desktop) {
+		width: 72.5%;
+      }
+      @include media($tablet) {
+      	li:not(:first-child){
+      		display: none !important
+      	}
+      }
+    }
+}
+#togglesavedProgramDisplay{
+	width: 25% !important;
+	padding: 0px 0px !important;
+	@include media($tablet) {
+		position: relative !important;
+			top:-3.4rem !important;
+			display: inline-block !important;
+			width: 12rem !important;
+	}
+	@include media($mobile){
+		margin-top: 0px !important;
+	}
 }
 
 #breadcrumbs li{
@@ -7,7 +33,7 @@
 	background-color: #F0F0F0;
 	font-family: 'Open sans';
 	text-transform: uppercase;
-	letter-spacing: .4rem;
+	letter-spacing: .3rem;
 	font-size:.7rem;
 	/*line-height: 1.5rem;*/
 	height: 3rem;
@@ -108,3 +134,6 @@
 		border-left: 1rem solid rgba(255,255,255,.5);
 	}
 }
+
+	// width: 75%;
+	// overflow: scroll;

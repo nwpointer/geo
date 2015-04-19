@@ -518,7 +518,12 @@ div.status {
   display: none !important;
 }
 
-/* line 2, ../sass/_program.scss */
+/* line 1, ../sass/_program.scss */
+.country, .price, .region, .priority, .enrollment_required {
+  display: none;
+}
+
+/* line 5, ../sass/_program.scss */
 #enrollment_notice {
   position: relative;
   text-align: right;
@@ -528,7 +533,7 @@ div.status {
   z-index: 1 !important;
 }
 @media screen and (max-width: 768px) {
-  /* line 2, ../sass/_program.scss */
+  /* line 5, ../sass/_program.scss */
   #enrollment_notice {
     text-align: left !important;
     top: -20px !important;
@@ -536,12 +541,12 @@ div.status {
   }
 }
 
-/* line 16, ../sass/_program.scss */
+/* line 19, ../sass/_program.scss */
 #controls-sticky-wrapper {
   height: auto !important;
 }
 
-/* line 20, ../sass/_program.scss */
+/* line 23, ../sass/_program.scss */
 #programList #controls {
   background: white;
   padding-top: 1rem;
@@ -552,30 +557,30 @@ div.status {
   overflow: visible;
 }
 @media screen and (max-width: 768px) {
-  /* line 20, ../sass/_program.scss */
+  /* line 23, ../sass/_program.scss */
   #programList #controls {
     border-bottom: none;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 39, ../sass/_program.scss */
+  /* line 42, ../sass/_program.scss */
   #programList #controls .search {
     margin-top: 0rem !important;
   }
-  /* line 43, ../sass/_program.scss */
+  /* line 46, ../sass/_program.scss */
   #programList #controls .ms-drop.bottom input {
     width: auto !important;
     margin-top: 0px !important;
   }
 }
 
-/* line 53, ../sass/_program.scss */
+/* line 56, ../sass/_program.scss */
 #programList .is-sticky #controls {
   border-bottom: 0px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 3px 3px -3px rgba(0, 0, 0, 0.5);
 }
 
-/* line 58, ../sass/_program.scss */
+/* line 61, ../sass/_program.scss */
 #programList #found {
   color: white;
   border-radius: 15px;
@@ -585,7 +590,7 @@ div.status {
   background: #fed201;
 }
 
-/* line 69, ../sass/_program.scss */
+/* line 72, ../sass/_program.scss */
 #programList .search {
   z-index: 1010;
   position: relative;
@@ -599,26 +604,26 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 69, ../sass/_program.scss */
+  /* line 72, ../sass/_program.scss */
   #programList .search {
     width: 100%;
   }
 }
-/* line 80, ../sass/_program.scss */
+/* line 83, ../sass/_program.scss */
 #programList .placeholder span {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  /* line 80, ../sass/_program.scss */
+  /* line 83, ../sass/_program.scss */
   #programList .placeholder span {
     display: inline;
   }
 }
-/* line 86, ../sass/_program.scss */
+/* line 89, ../sass/_program.scss */
 #programList .ms-parent {
   margin-top: .5rem;
 }
-/* line 89, ../sass/_program.scss */
+/* line 92, ../sass/_program.scss */
 #programList #catagories {
   max-width: 68em;
   margin-left: auto;
@@ -631,11 +636,11 @@ div.status {
   display: table;
   clear: both;
 }
-/* line 93, ../sass/_program.scss */
+/* line 96, ../sass/_program.scss */
 #programList .ms-choice, #programList .ms-drop.bottom {
   width: 100%;
 }
-/* line 96, ../sass/_program.scss */
+/* line 99, ../sass/_program.scss */
 #programList #catagories select, #programList .ms-parent {
   float: left;
   display: block;
@@ -647,7 +652,7 @@ div.status {
   margin-right: 0;
 }
 @media screen and (max-width: 768px) {
-  /* line 96, ../sass/_program.scss */
+  /* line 99, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -658,13 +663,13 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 101, ../sass/_program.scss */
+  /* line 104, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
 @media screen and (max-width: 480px) {
-  /* line 96, ../sass/_program.scss */
+  /* line 99, ../sass/_program.scss */
   #programList #catagories select, #programList .ms-parent {
     float: left;
     display: block;
@@ -675,24 +680,21 @@ div.status {
   #programList #catagories select:last-child, #programList .ms-parent:last-child {
     margin-right: 0;
   }
-  /* line 107, ../sass/_program.scss */
+  /* line 110, ../sass/_program.scss */
   #programList #catagories select:nth-child(4n), #programList .ms-parent:nth-child(4n) {
     margin-right: 0px;
   }
 }
-/* line 112, ../sass/_program.scss */
+/* line 115, ../sass/_program.scss */
 #programList li label {
   font-size: 85% !important;
 }
-/* line 115, ../sass/_program.scss */
+/* line 118, ../sass/_program.scss */
 #programList ul.loaded {
   background: none !important;
 }
-/* line 118, ../sass/_program.scss */
+/* line 121, ../sass/_program.scss */
 #programList ul.list {
-  background: url("../images/loading1.gif");
-  background-repeat: no-repeat;
-  background-position: center 3rem;
   display: inline-block;
   min-height: 500px;
   width: 100%;
@@ -809,18 +811,52 @@ div.status {
   padding-left: .5rem;
 }
 
-/* line 1, ../sass/_breadcrumbs.scss */
+/* line 3, ../sass/_breadcrumbs.scss */
 #breadcrumbs {
   padding-left: 0px !important;
+  overflow: scroll;
+}
+@media screen and (min-width: 769px) {
+  /* line 3, ../sass/_breadcrumbs.scss */
+  #breadcrumbs {
+    width: 72.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 11, ../sass/_breadcrumbs.scss */
+  #breadcrumbs li:not(:first-child) {
+    display: none !important;
+  }
 }
 
-/* line 5, ../sass/_breadcrumbs.scss */
+/* line 17, ../sass/_breadcrumbs.scss */
+#togglesavedProgramDisplay {
+  width: 25% !important;
+  padding: 0px 0px !important;
+}
+@media screen and (max-width: 768px) {
+  /* line 17, ../sass/_breadcrumbs.scss */
+  #togglesavedProgramDisplay {
+    position: relative !important;
+    top: -3.4rem !important;
+    display: inline-block !important;
+    width: 12rem !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 17, ../sass/_breadcrumbs.scss */
+  #togglesavedProgramDisplay {
+    margin-top: 0px !important;
+  }
+}
+
+/* line 31, ../sass/_breadcrumbs.scss */
 #breadcrumbs li {
   display: inline;
   background-color: #F0F0F0;
   font-family: 'Open sans';
   text-transform: uppercase;
-  letter-spacing: .4rem;
+  letter-spacing: .3rem;
   font-size: .7rem;
   /*line-height: 1.5rem;*/
   height: 3rem;
@@ -834,30 +870,30 @@ div.status {
   transition: color .25s;
 }
 
-/* line 24, ../sass/_breadcrumbs.scss */
+/* line 50, ../sass/_breadcrumbs.scss */
 #breadcrumbs a {
   color: rgba(0, 0, 0, 0.4);
   text-decoration: none;
 }
 
-/* line 29, ../sass/_breadcrumbs.scss */
+/* line 55, ../sass/_breadcrumbs.scss */
 #breadcrumbs li:hover a {
   color: rgba(0, 0, 0, 0.7);
 }
 
-/* line 32, ../sass/_breadcrumbs.scss */
+/* line 58, ../sass/_breadcrumbs.scss */
 #breadcrumbs li:hover img {
   opacity: 0.8;
   filter: alpha(opacity=80);
 }
 
-/* line 37, ../sass/_breadcrumbs.scss */
+/* line 63, ../sass/_breadcrumbs.scss */
 #breadcrumbs li span {
   position: relative;
   top: -1.25rem;
 }
 
-/* line 42, ../sass/_breadcrumbs.scss */
+/* line 68, ../sass/_breadcrumbs.scss */
 #breadcrumbs img {
   height: 1.5rem;
   position: relative;
@@ -869,7 +905,7 @@ div.status {
   transition: opacity .25s;
 }
 
-/* line 52, ../sass/_breadcrumbs.scss */
+/* line 78, ../sass/_breadcrumbs.scss */
 #breadcrumbs li:after {
   content: '';
   width: 0;
@@ -884,7 +920,7 @@ div.status {
   /*float: left;*/
 }
 
-/* line 65, ../sass/_breadcrumbs.scss */
+/* line 91, ../sass/_breadcrumbs.scss */
 #breadcrumbs li:before {
   content: '';
   width: 0;
@@ -899,39 +935,39 @@ div.status {
   /*float: left;*/
 }
 
-/* line 78, ../sass/_breadcrumbs.scss */
+/* line 104, ../sass/_breadcrumbs.scss */
 #breadcrumbs li:first-child {
   margin-left: 0px !important;
 }
 
-/* line 81, ../sass/_breadcrumbs.scss */
+/* line 107, ../sass/_breadcrumbs.scss */
 #breadcrumbs li:first-child:before {
   border-left: 1.25rem solid #F0F0F0;
   border-top: 0rem solid #F0F0F0;
   border-bottom: 0rem solid #F0F0F0;
 }
 
-/* line 88, ../sass/_breadcrumbs.scss */
+/* line 114, ../sass/_breadcrumbs.scss */
 #bar input[type="submit"] {
   line-height: 2.75rem;
   height: 2.75rem;
 }
 
-/* line 95, ../sass/_breadcrumbs.scss */
+/* line 121, ../sass/_breadcrumbs.scss */
 #bar #breadcrumbs {
   margin-bottom: 0px;
   margin-top: .5rem;
 }
-/* line 100, ../sass/_breadcrumbs.scss */
+/* line 126, ../sass/_breadcrumbs.scss */
 #bar #breadcrumbs li {
   background-color: rgba(255, 255, 255, 0.5);
 }
-/* line 103, ../sass/_breadcrumbs.scss */
+/* line 129, ../sass/_breadcrumbs.scss */
 #bar #breadcrumbs li:not(:first-child):before {
   border-top: 1.5rem solid rgba(255, 255, 255, 0.5);
   border-bottom: 1.5rem solid rgba(255, 255, 255, 0.5);
 }
-/* line 107, ../sass/_breadcrumbs.scss */
+/* line 133, ../sass/_breadcrumbs.scss */
 #bar #breadcrumbs li:after {
   border-left: 1rem solid rgba(255, 255, 255, 0.5);
 }

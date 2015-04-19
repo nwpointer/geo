@@ -154,7 +154,6 @@
                 // custom sort script
                 var mylist = $(this).parent().find('.ms-drop ul');
                 var listitems = mylist.children('li').get();
-                console.log(listitems);
                 listitems.sort(function(a, b) {
                     return $(a).text().toUpperCase().localeCompare($(b).text().toUpperCase());
                 });

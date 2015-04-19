@@ -29,7 +29,7 @@
 
 		explore = function(){
              var search = $('.explore input[type="text"]').val();
-             window.location.href += 'programs/' + search;
+             window.location.href += 'programs/search/' + search;
              return false;
         };
 

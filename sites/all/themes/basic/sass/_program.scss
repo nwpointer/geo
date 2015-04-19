@@ -1,3 +1,6 @@
+.country, .price, .region, .priority, .enrollment_required{
+  display: none;
+}
 
 #enrollment_notice{
   position: relative;
@@ -116,9 +119,6 @@
 		background: none !important;
 	}
 	ul.list{
-		background: url("../images/loading1.gif");
- 		background-repeat: no-repeat;
- 		background-position: center 3rem;
  		display: inline-block;
  		min-height: 500px;
  		width: 100%;
