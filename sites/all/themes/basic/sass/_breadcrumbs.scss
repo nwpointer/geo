@@ -2,7 +2,7 @@
 
 #breadcrumbs{
 	padding-left:0px !important;
-	overflow: scroll;
+	overflow-x: scroll;
 	@if $responsive {
       @include media($desktop) {
 		width: 72.5%;
@@ -19,7 +19,7 @@
 	padding: 0px 0px !important;
 	@include media($tablet) {
 		position: relative !important;
-			top:-3.4rem !important;
+			top:-4.2rem !important;
 			display: inline-block !important;
 			width: 12rem !important;
 	}

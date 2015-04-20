@@ -121,10 +121,12 @@ function program_search() {
     array_push($prices, $price);
     $region = getTerm($node, "field_continent");
     array_push($regions, $region);
+    $type = getTerm($node, "field_program_type");
+    array_push($types, $type);
     // $program_type = getTerm($node, "field_program_type");
     // array_push($types, $program_type);
     
-    $card = "<li class='card'><a class='url' href=/{$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p><p class='country'>$country</p><p class='price'>$price</p><p class='region'>$region</p><p class='priority'>$priority</p><p class='enrollment_required'>$enrollment_required[value]</p>
+    $card = "<li class='card'><a class='url' href=/{$link}><div class='img-wrap'><img class='image' src=$header_background></div><div class='content'><h5 class='title'>$title</h5><p class='term'>$term</p><p class='discipline'>$discipline</p><p class='country'>$country</p><p class='price'>$price</p><p class='region'>$region</p><p class='priority'>$priority</p><p class='enrollment_required'>$enrollment_required[value]</p><p class='type'>$type</p>
     </div></a>";
 
     

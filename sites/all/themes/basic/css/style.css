@@ -519,7 +519,7 @@ div.status {
 }
 
 /* line 1, ../sass/_program.scss */
-.country, .price, .region, .priority, .enrollment_required {
+.country, .price, .region, .priority, .enrollment_required, .type {
   display: none;
 }
 
@@ -814,7 +814,7 @@ div.status {
 /* line 3, ../sass/_breadcrumbs.scss */
 #breadcrumbs {
   padding-left: 0px !important;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 @media screen and (min-width: 769px) {
   /* line 3, ../sass/_breadcrumbs.scss */
@@ -838,7 +838,7 @@ div.status {
   /* line 17, ../sass/_breadcrumbs.scss */
   #togglesavedProgramDisplay {
     position: relative !important;
-    top: -3.4rem !important;
+    top: -4.2rem !important;
     display: inline-block !important;
     width: 12rem !important;
   }
@@ -1169,7 +1169,7 @@ nav a {
   width: 14rem;
   float: right;
   position: relative;
-  top: -3.4rem;
+  top: -4.2rem;
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
