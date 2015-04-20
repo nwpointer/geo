@@ -17,14 +17,12 @@
 	$(function(){
 
 		$("td.views-field-title").each(function(){
-			// if(this).find("a").html != "Spring Semester"{
-			// 	$(this).parent().hide();
-			// }
 			if ($(this).find("a").html() != $("h1.title").html()){
-				$(this).parent().hide();
-
+				$(this).parent().remove();
 			}
+			$(this).remove();
 		});
+		$("th.views-field-title").remove();
 
 		$("#menu-toggle").click(function(){
 			$('nav #primary').toggle();
