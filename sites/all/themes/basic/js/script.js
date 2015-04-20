@@ -10,19 +10,27 @@
 // wrapping it with an "anonymous closure". See:
 // - https://drupal.org/node/1446420
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
+function filterPriceTable($){
+	$("td.views-field-title").each(function(){
+		if ($(this).find("a").html() != $("h1.title").html()){
+			$(this).parent().remove();
+		}
+		$(this).remove();
+	});
+	$("th.views-field-title").remove();
+	if($("#block-views-price_table-block tr").size() <=1){
+		$("#block-views-price_table-block").remove();
+	}
+}
+
+
 (function ($, Drupal, window, document, undefined) {
 
 	
 
 	$(function(){
-
-		$("td.views-field-title").each(function(){
-			if ($(this).find("a").html() != $("h1.title").html()){
-				$(this).parent().remove();
-			}
-			$(this).remove();
-		});
-		$("th.views-field-title").remove();
+		// filter price table
+		filterPriceTable($);
 
 		$("#menu-toggle").click(function(){
 			$('nav #primary').toggle();

@@ -166,7 +166,7 @@ jQuery("#secondary-menu").toggle();});
 
       <?php if ($page['sidebar_first']): ?>
         <aside id="sidebar-first" class="column sidebar first">
-
+          <div id="favorite-toggle"></div>
           <?php print render($page['sidebar_first']); ?>
         </aside>
       <?php endif; ?> <!-- /sidebar-first -->
@@ -174,7 +174,6 @@ jQuery("#secondary-menu").toggle();});
       <?php if ($page['sidebar_second']): ?>
         
         <aside id="sidebar-second" class="column sidebar second">
-          <div id="favorite-toggle"></div>
           <?php print render($page['sidebar_second']); ?>
         </aside>
       <?php endif; ?> <!-- /sidebar-second -->
