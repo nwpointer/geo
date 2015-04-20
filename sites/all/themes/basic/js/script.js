@@ -29,9 +29,10 @@ function filterPriceTable($){
 	
 
 	$(function(){
-		// filter price table
+
 		filterPriceTable($);
 
+		// toggle main menu
 		$("#menu-toggle").click(function(){
 			$('nav #primary').toggle();
 			$("#menu-toggle").toggleClass('active');
@@ -39,6 +40,7 @@ function filterPriceTable($){
 		
 		// $("h2.block-title").stick_in_parent();
 
+		// register toggle saved programs 
 		$("#savedProgramDisplay").click(function(){
 			$("#savedProgramDisplay").slideToggle(100);
 		});

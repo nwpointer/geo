@@ -1170,12 +1170,12 @@ nav a {
   float: right;
   position: relative;
   top: -4.2rem;
-  background: rgba(255, 255, 255, 0.3);
+  background: #FEE87F;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 /* line 103, ../sass/_custom.scss */
 #bar input[type="submit"]:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #FEE87F;
 }
 
 /* line 108, ../sass/_custom.scss */

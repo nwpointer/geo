@@ -100,7 +100,7 @@
   // Shift it to the left 9 columns to place it in the far left column.
   @include shift(-11);
   .sidebar-first & {
-    @include shift(-15);
+    // @include shift(-15);
   }
   @if $responsive {
     // Similar logic for tablets.

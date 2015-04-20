@@ -97,14 +97,16 @@ nav a {
 		float: right;
 		position: relative;
 		top: -4.2rem;
-		background:rgba(255,255,255,.3);
+		background:#FEE87F;
 		border: 1px solid rgba(255,255,255,.3);
 	}
 	input[type="submit"]:hover{
-		background:rgba(255,255,255,.2)
+		background:#FEE87F;
 	}
 }
-
+#breadcrumbs input#togglesavedProgramDisplay{
+	color:red !important;
+}
 .container{
 	padding: 0 1rem !important;
 }

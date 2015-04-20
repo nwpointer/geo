@@ -208,10 +208,6 @@
 #sidebar-first:last-child {
   margin-right: 0;
 }
-/* line 102, ../sass/layout.scss */
-.sidebar-first #sidebar-first {
-  margin-left: -127.65957%;
-}
 @media screen and (max-width: 768px) {
   /* line 97, ../sass/layout.scss */
   #sidebar-first {
