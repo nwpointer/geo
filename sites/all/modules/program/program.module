@@ -173,7 +173,7 @@ function program_search() {
     <br><br>
     
     <div id="catagories">
-      <select class="discipline_s" multiple data-placeholder="<span>Choose a </span> disipline">'. generateOptionHTML($disciplines) . '
+      <select class="discipline_s" multiple data-placeholder="<span>Choose a </span> discipline">'. generateOptionHTML($disciplines) . '
       </select>
 
       <select class="country_s" multiple data-placeholder="<span>Choose a</span> country">'. generateOptionHTML($countries) . '

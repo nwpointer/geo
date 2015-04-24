@@ -82,37 +82,13 @@ jQuery("#secondary-menu").toggle();});
   <!-- ______________________ MAIN _______________________ -->
 
   <div id="main">
-      <div id="barwrapper">
-        <div>
-          <div id="bar" class="containsbreadcrumbs">
-                <ul id="breadcrumbs">
-              <?php 
-                $bc = drupal_get_breadcrumb();
-                foreach ($bc as $crumb) {
-                  if ($crumb = '<a href="/">Home</a>'){
-                    $crumb = '<a href="/"><img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-128.png" alt=""></a>';
-                  }
-                  print("<li><span>". $crumb . "</span></li>");
-                }
-                if(isset($node)){
-                  if(isset($node->field_country)){
-                    print "<li><span><a href='/programs'>programs</a></span></li>";
-                    $country = $node->field_country['und'][0]['taxonomy_term']->name ;
-                    print "<li><span><a href='/programs/countries/". $country ."'>". $country . "</a></span></li>"; 
-                  }
-                  else{
-                  print("<li><span><a>". drupal_get_title() . "</a></span></li>");
-                }
-                }
-                else{
-                  print("<li><span><a>". drupal_get_title() . "</a></span></li>");
-                }
-              ?>
-            </ul> 
-            <input type="submit" id="togglesavedProgramDisplay" value="my favorites">
-        </div>
-        </div>
+
+    <div id="secondaryBar">
+      <div class="container">
+        <input type="submit" id="togglesavedProgramDisplay" value="my favorites">
+      </div>
     </div>
+  
     <div id="savedProgramDisplay">
       <div id="page">
         <ul id="favorites-list">
@@ -120,6 +96,30 @@ jQuery("#secondary-menu").toggle();});
       </div>
     </div>
     <div class="container">
+      <ul id="breadcrumbs" style="margin-bottom: .75rem;">
+        <?php 
+          $bc = drupal_get_breadcrumb();
+          foreach ($bc as $crumb) {
+            if ($crumb = '<a href="/">Home</a>'){
+              $crumb = '<a href="/"><img src="https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/home-128.png" alt=""></a>';
+            }
+            print("<li><span>". $crumb . "</span></li>");
+          }
+          if(isset($node)){
+            if(isset($node->field_country)){
+              print "<li><span><a href='/programs'>programs</a></span></li>";
+              $country = $node->field_country['und'][0]['taxonomy_term']->name ;
+              print "<li><span><a href='/programs/countries/". $country ."'>". $country . "</a></span></li>"; 
+            }
+            else{
+            // print("<li><span><a>". drupal_get_title() . "</a></span></li>");
+          }
+          }
+          else{
+            // print("<li><span><a>". drupal_get_title() . "</a></span></li>");
+          }
+        ?>
+      </ul> 
       <?php if ($title): ?>
         <h1 class="title"><?php print $title; ?></h1>
       <?php endif; ?>
@@ -166,14 +166,13 @@ jQuery("#secondary-menu").toggle();});
 
       <?php if ($page['sidebar_first']): ?>
         <aside id="sidebar-first" class="column sidebar first">
-          <div id="favorite-toggle"></div>
           <?php print render($page['sidebar_first']); ?>
         </aside>
       <?php endif; ?> <!-- /sidebar-first -->
 
       <?php if ($page['sidebar_second']): ?>
-        
         <aside id="sidebar-second" class="column sidebar second">
+        <div id="favorite-toggle" style="width:100%"></div>
           <?php print render($page['sidebar_second']); ?>
         </aside>
       <?php endif; ?> <!-- /sidebar-second -->

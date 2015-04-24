@@ -74,10 +74,9 @@ nav a {
 #barwrapper{
 	background: #FED201;
 	height: 4rem;
-	overflow-x: auto;
-	overflow-y:hidden;
+	overflow:hidden;
 	margin-bottom: 3rem;
-
+	
 }
 #barwrapper div{
 	
@@ -95,13 +94,14 @@ nav a {
 		margin-top: 0rem;
 		width: 14rem;
 		float: right;
+		color: rgba(0, 0, 0, 0.4);
+		font-weight: 700;
 		position: relative;
-		top: -4.2rem;
-		background:#FEE87F;
-		border: 1px solid rgba(255,255,255,.3);
+		top: .7rem;
+		background:rgba(255,255,255,.35);
 	}
 	input[type="submit"]:hover{
-		background:#FEE87F;
+		background:rgba(255,255,255,.45);
 	}
 }
 #breadcrumbs input#togglesavedProgramDisplay{
@@ -135,4 +135,47 @@ html, body .front{
 #logo img{
 	height: 4rem;
   margin-top: 2rem;
+}
+
+
+#favorite-toggle{
+	display:none;
+}
+
+.node-type-program #favorite-toggle{
+	display:block;
+	width:100% !important;
+}
+
+// yellow bar thing!
+#secondaryBar{
+	background:$highlight;
+	line-height:3.75rem;
+	height:3.75rem;
+	margin-bottom:3rem;
+	overflow: hidden;
+
+	.container{
+		position:relative;
+		overflow: hidden;
+		height:3.75rem;
+	}
+
+	#togglesavedProgramDisplay{
+
+		line-height: 2.5rem;
+		height: 2.5rem;
+		position:absolute;
+		right:0px;
+		top:.625rem;
+
+		background:rgba(255,255,255,.3);
+		color:rgba(0, 0, 0, 0.4);
+		font-weight: 700;
+		border:1px solid rgba(255,255,255,.2);
+
+		&:hover{
+			background:rgba(255,255,255,.4);
+		}
+	}
 }
