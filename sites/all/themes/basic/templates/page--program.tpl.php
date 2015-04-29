@@ -5,7 +5,16 @@
   <!-- ______________________ HEADER _______________________ -->
 
   <header id="header">
+    <div id="headerbackingwrapper">
+    <?php 
+    $backgroundsrc = $node->field_header_background["und"][0]['uri']; 
+    print_r("<img id='headerbacking' src='" . file_create_url($backgroundsrc) . "'>" );
+
+    ?>
+    </div>
     <div class="container">
+
+    
 
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">

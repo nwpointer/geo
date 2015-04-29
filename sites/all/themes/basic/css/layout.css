@@ -306,6 +306,11 @@
   padding: 0;
 }
 
+/* line 168, ../sass/layout.scss */
+#navigation {
+  position: relative;
+  z-index: 1;
+}
 /* line 169, ../sass/layout.scss */
 #navigation li {
   list-style-type: none;
