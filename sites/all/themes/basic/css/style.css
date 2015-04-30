@@ -1136,27 +1136,22 @@ hr {
   border: 1px solid #f4f4ee;
 }
 
-/* line 58, ../sass/_custom.scss */
-nav a {
-  text-transform: capitalize;
-}
-
-/* line 62, ../sass/_custom.scss */
+/* line 59, ../sass/_custom.scss */
 #main {
   margin-bottom: 3rem;
 }
 
-/* line 67, ../sass/_custom.scss */
+/* line 64, ../sass/_custom.scss */
 .front #breadcrumbs {
   display: none;
 }
 
-/* line 71, ../sass/_custom.scss */
+/* line 68, ../sass/_custom.scss */
 #savedProgramDisplay {
   display: none;
 }
 
-/* line 74, ../sass/_custom.scss */
+/* line 71, ../sass/_custom.scss */
 #barwrapper {
   background: #FED201;
   height: 4rem;
@@ -1164,7 +1159,7 @@ nav a {
   margin-bottom: 3rem;
 }
 
-/* line 81, ../sass/_custom.scss */
+/* line 78, ../sass/_custom.scss */
 #barwrapper div {
   max-width: 68em;
   margin-left: auto;
@@ -1177,7 +1172,7 @@ nav a {
   clear: both;
 }
 
-/* line 85, ../sass/_custom.scss */
+/* line 82, ../sass/_custom.scss */
 #bar {
   float: left;
   display: block;
@@ -1192,7 +1187,7 @@ nav a {
 #bar:last-child {
   margin-right: 0;
 }
-/* line 93, ../sass/_custom.scss */
+/* line 90, ../sass/_custom.scss */
 #bar input[type="submit"] {
   margin-top: 0rem;
   width: 14rem;
@@ -1203,63 +1198,63 @@ nav a {
   top: .7rem;
   background: rgba(255, 255, 255, 0.35);
 }
-/* line 103, ../sass/_custom.scss */
+/* line 100, ../sass/_custom.scss */
 #bar input[type="submit"]:hover {
   background: rgba(255, 255, 255, 0.45);
 }
 
-/* line 107, ../sass/_custom.scss */
+/* line 104, ../sass/_custom.scss */
 #breadcrumbs input#togglesavedProgramDisplay {
   color: red !important;
 }
 
-/* line 110, ../sass/_custom.scss */
+/* line 107, ../sass/_custom.scss */
 .container {
   padding: 0 1rem !important;
 }
 
-/* line 114, ../sass/_custom.scss */
+/* line 111, ../sass/_custom.scss */
 html, body .front {
   min-height: 100vh;
 }
 
-/* line 118, ../sass/_custom.scss */
+/* line 115, ../sass/_custom.scss */
 .front {
   background: #1F1F1F;
 }
-/* line 121, ../sass/_custom.scss */
+/* line 118, ../sass/_custom.scss */
 .front #main {
   margin-bottom: 0px;
 }
-/* line 124, ../sass/_custom.scss */
+/* line 121, ../sass/_custom.scss */
 .front #main .container {
   display: none !important;
 }
 
-/* line 129, ../sass/_custom.scss */
+/* line 126, ../sass/_custom.scss */
 .explore {
   width: 100%;
   margin-bottom: 3rem;
 }
 
-/* line 135, ../sass/_custom.scss */
+/* line 132, ../sass/_custom.scss */
 #logo img {
   height: 4rem;
   margin-top: 2rem;
 }
 
-/* line 141, ../sass/_custom.scss */
+/* line 138, ../sass/_custom.scss */
 #favorite-toggle {
   display: none;
 }
 
-/* line 145, ../sass/_custom.scss */
+/* line 142, ../sass/_custom.scss */
 .node-type-program #favorite-toggle {
   display: block;
   width: 100% !important;
 }
 
-/* line 151, ../sass/_custom.scss */
+/* line 148, ../sass/_custom.scss */
 #secondaryBar {
   background: #fed201;
   line-height: 3.75rem;
@@ -1267,13 +1262,13 @@ html, body .front {
   margin-bottom: 3rem;
   overflow: hidden;
 }
-/* line 158, ../sass/_custom.scss */
+/* line 155, ../sass/_custom.scss */
 #secondaryBar .container {
   position: relative;
   overflow: hidden;
   height: 3.75rem;
 }
-/* line 164, ../sass/_custom.scss */
+/* line 161, ../sass/_custom.scss */
 #secondaryBar #togglesavedProgramDisplay {
   line-height: 2.5rem;
   height: 2.5rem;
@@ -1285,7 +1280,7 @@ html, body .front {
   font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-/* line 177, ../sass/_custom.scss */
+/* line 174, ../sass/_custom.scss */
 #secondaryBar #togglesavedProgramDisplay:hover {
   background: rgba(255, 255, 255, 0.4);
 }
