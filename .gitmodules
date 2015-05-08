@@ -1,6 +1,6 @@
-[submodule "sites/all/modules/program"]
-	path = sites/all/modules/program
-	url = https://github.com/nwpointer/geostudyabroadprogramsmodule.git
 [submodule "sites/all/themes/basic"]
 	path = sites/all/themes/basic
+	url = https://github.com/nwpointer/geostudyabroadtheme.git
+[submodule "sites/all/modules/program"]
+	path = sites/all/modules/program
 	url = https://github.com/nwpointer/geostudyabroadtheme.git
