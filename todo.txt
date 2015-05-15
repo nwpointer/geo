@@ -1,0 +1,9 @@
+
+Commit changes to smaller breadcrumbs.
+Finesse display of Staff Directory to look exactly as Arcadia’s.
+
+D: Debug Programs header image display.
+D:Change first filter title to say “Subject,” not Discipline. 
+
+U: Commit new Cost Tables feature.
+U: Fix Programs sidebar to display Right Side.
